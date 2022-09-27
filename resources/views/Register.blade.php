@@ -14,6 +14,7 @@
 
 <body class="body">
   <div class="cont-wrapper">
+    <div class="mask"></div>
     <div class="logo d-grid gap-2 position-relative">
       <div class="d-flex align-items-center">
         <img src="/src/img/logo.png" alt="logo">

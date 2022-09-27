@@ -24,8 +24,20 @@
     top: 3.5rem;
     width: 60rem;
     height: 40rem;
-    background: rgba(250, 248, 253, 0.7);
+    background-image: url("/src/img/sign-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 20px;
+}
+.cont-wrapper .mask {
+    position: absolute;
+    left: 0rem;
+    width: 60rem;
+    height: 40rem;
+    border-radius: 20px;
+    background-color: rgba(250, 248, 253, 0.7);
+    opacity: 0.4;
+    z-index: 1;
 }
 
 .logo {
@@ -35,6 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .logo>div h1 {
@@ -60,7 +73,9 @@
     position: relative;
     left: -1rem;
 }
-
+.log-form {
+    z-index: 2;
+}
 .log-form h1 {
     font-family: 'Inter';
     font-style: normal;
