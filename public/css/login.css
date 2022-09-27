@@ -19,10 +19,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5rem;
-    left: 8rem;
+    padding: 2rem;
+    left: 18rem;
     top: 3.5rem;
-    width: 80rem;
+    width: 60rem;
     height: 40rem;
     background: rgba(250, 248, 253, 0.7);
     border-radius: 20px;
@@ -55,6 +55,10 @@
 
     color: #000000;
 
+}
+.logo>div .title {
+    position: relative;
+    left: -1rem;
 }
 
 .log-form h1 {

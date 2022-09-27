@@ -14,12 +14,18 @@
 
 <body class="body">
   <div class="cont-wrapper">
-    <div class="logo">
-      <img src="/src/img/logo.png" alt="">
-      <div>
-        <h1>G-Pay</h1>
-        <p>Invoice & Billings</p>
+    <div class="logo d-grid gap-2 position-relative">
+      <div class="d-flex align-items-center">
+        <img src="/src/img/logo.png" alt="logo">
+        <div class="title">
+          <h1>G-Pay</h1>
+          <p>Invoice & Billings</p>
+        </div>
       </div>
+      <div>
+        <img class="w-75" src="/src/img/com.svg" alt="com">
+      </div>
+
     </div>
     <div class="log-form">
       <h1>Welcome to G-Pay!</h1>
