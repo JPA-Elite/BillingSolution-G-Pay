@@ -12,6 +12,6 @@
         "vite": "^3.0.0"
     },
     "dependencies": {
-        "mongodb": "^4.9.1"
+        "mongodb": "^4.10.0"
     }
 }
