@@ -430,7 +430,9 @@ button:not(:disabled) {
     padding: 0;
     border-style: none
 }
-
+.cursor-pointer {
+    cursor: pointer !important
+}
 textarea {
     resize: vertical
 }
@@ -8124,6 +8126,10 @@ fieldset:disabled .btn {
     position: sticky !important
 }
 
+.-top-18px {
+    top: -18px !important
+}
+
 .top-0 {
     top: 0 !important
 }
@@ -8134,6 +8140,10 @@ fieldset:disabled .btn {
 
 .top-100 {
     top: 100% !important
+}
+
+.bottom-7px {
+    bottom: 7px !important
 }
 
 .bottom-0 {
@@ -8308,6 +8318,7 @@ fieldset:disabled .btn {
 .border-opacity-100 {
     --bs-border-opacity: 1
 }
+
 .w-5 {
     width: 5% !important
 }
@@ -8315,18 +8326,23 @@ fieldset:disabled .btn {
 .w-10 {
     width: 10% !important
 }
+
 .w-15 {
     width: 15% !important
 }
+
 .w-18 {
     width: 18% !important
 }
+
 .w-20 {
     width: 20% !important
 }
+
 .w-22 {
     width: 22% !important
 }
+
 .w-25 {
     width: 25% !important
 }
@@ -8338,6 +8354,7 @@ fieldset:disabled .btn {
 .w-50 {
     width: 50% !important
 }
+
 .w-60 {
     width: 60% !important
 }
@@ -8346,6 +8363,7 @@ fieldset:disabled .btn {
 .w-75 {
     width: 75% !important
 }
+
 .w-90 {
     width: 90% !important
 }
@@ -8808,6 +8826,10 @@ fieldset:disabled .btn {
     padding: 3rem !important
 }
 
+.p-6 {
+    padding: 4rem !important
+}
+
 .px-0 {
     padding-right: 0 !important;
     padding-left: 0 !important
@@ -9015,6 +9037,7 @@ fieldset:disabled .btn {
 .fs-6 {
     font-size: 1rem !important
 }
+
 .fs-7 {
     font-size: 0.8rem !important
 }
@@ -9170,6 +9193,7 @@ fieldset:disabled .btn {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important
 }
+
 .text-purple {
     --bs-text-opacity: 1;
     color: #6D60F7 !important
@@ -9250,6 +9274,7 @@ fieldset:disabled .btn {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important
 }
+
 .bg-purple {
     --bs-bg-opacity: 1;
     background: #6D60F7 !important;
