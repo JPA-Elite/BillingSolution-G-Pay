@@ -282,7 +282,23 @@
     </div>
 
     <footer>
-    
+        <div class="d-flex">
+            <img src="/src/img/logo.png" alt="logo">
+            <div class="title">
+                <h1 class="text-purple">G-Pay</h1>
+                <p class="text-light">Invoice & Billings</p>
+            </div>
+            <div class="social-media-links">
+            <img src="/src/img/linkedin.png" alt="">
+            <img src="/src/img/twitter.png" alt="">
+            <img src="/src/img/facebook.png" alt="">
+            <img src="/src/img/youtube.png" alt="">
+
+
+
+
+            </div>
+        </div>
     </footer>
 
 </body>
