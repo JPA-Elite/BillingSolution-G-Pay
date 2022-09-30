@@ -430,9 +430,11 @@ button:not(:disabled) {
     padding: 0;
     border-style: none
 }
+
 .cursor-pointer {
     cursor: pointer !important
 }
+
 textarea {
     resize: vertical
 }
