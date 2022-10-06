@@ -99,8 +99,8 @@
     width: 120px;
 }
 .log-form .button-group button:hover {
-    color: rgba(0, 0, 0, 0.555) !important;
-    font-weight: bold;
+    color: rgba(255, 255, 255, 0.562) !important;
+   
 }
 
 .login-form {
