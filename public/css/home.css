@@ -101,17 +101,18 @@ ul li {
 	display: grid;
 }
 
-.f-pop-up>div {
+.f-pop-up>a {
 	padding: 10px;
 	height: 100%;
+	text-decoration: none;
 }
 
-.f-pop-up>div h6 {
+.f-pop-up>a h6 {
 	font-weight: bold;
 	color: rgba(0, 0, 0, 0.48);
 }
 
-.f-pop-up>div:hover {
+.f-pop-up>a:hover {
 	background: rgba(0, 109, 211, 0.425);
 }
 
@@ -149,17 +150,18 @@ ul li {
 	display: grid;
 }
 
-.s-pop-up>div {
+.s-pop-up>a {
 	padding: 10px;
 	height: 100%;
+	text-decoration: none;
 }
 
-.s-pop-up>div h6 {
+.s-pop-up>a h6 {
 	font-weight: bold;
 	color: rgba(0, 0, 0, 0.48);
 }
 
-.s-pop-up>div:hover {
+.s-pop-up>a:hover {
 	background: rgba(0, 109, 211, 0.425);
 }
 
@@ -478,6 +480,10 @@ footer>div:nth-child(2) a {
 	line-height: 35px;
 	color: #9D9D9D;
 	text-decoration: none;
+	transition: 0.2s all;
+}
+footer>div:nth-child(2) a:hover{
+	color: #0059AC;
 }
 
 footer .logo-img {

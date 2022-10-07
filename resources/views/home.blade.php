@@ -14,72 +14,104 @@
 <body class="body">
     <nav>
         <div class="d-flex align-items-end gap-5">
-            <div class="logo d-grid gap-2">
-                <div class="d-flex">
-                    <img src="/src/img/logo.png" alt="logo">
-                    <div class="title">
-                        <h1 class="text-purple">G-Pay</h1>
-                        <p>Invoice & Billings</p>
+            <a href="/homepage" class="text-decoration-none">
+                <div class="logo d-grid gap-2">
+                    <div class="d-flex">
+                        <img src="/src/img/logo.png" alt="logo">
+                        <div class="title">
+                            <h1 class="text-purple">G-Pay</h1>
+                            <p>Invoice & Billings</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <ul class="d-flex gap-4 ">
                 <div class="d-flex align-items-end gap-1 features">
                     <li>Features</li>
                     <li><img class="w-50" src="/src/img/arrow-down.svg" alt="arrow-down"></li>
                     <div class="f-pop-up">
-                        <div>
-                            <h6>Clients</h6>
-                        </div>
-                        <div>
-                            <h6>Mobile</h6>
-                        </div>
-                        <div>
-                            <h6>Payments</h6>
-                        </div>
-                        <div>
-                            <h6>Mileage Tracking</h6>
-                        </div>
-                        <div>
-                            <h6>Expenses & Receipts</h6>
-                        </div>
-                        <div>
-                            <h6>Invoicing</h6>
-                        </div>
+                        <a href="/features-client">
+                            <h6>
+                                Clients
+                            </h6>
+                        </a>
+                        <a href="/features-client">
+                            <h6>
+                                Mobile
+                            </h6>
+                        </a>
 
-                        <div>
-                            <h6>Estimates</h6>
-                        </div>
+                        <a href="/features-client">
+                            <h6>
+                                Payments
+                            </h6>
+                        </a>
+                        <a href="/features-client">
+                            <h6>
+                                Mileage Tracking
+                            </h6>
+                        </a>
+                        <a href="/features-client">
+                            <h6>
+                                Expenses & Receipts
+                            </h6>
+                        </a>
+                        <a href="/features-client">
+                            <h6>
+                                Invoicing
+                            </h6>
+                        </a>
+                        <a href="/features-client">
+                            <h6>
+                                Estimates
+                            </h6>
+                        </a>
                     </div>
                 </div>
                 <div class="d-flex align-items-end gap-1 emp-type">
                     <li>Who it’s for</li>
                     <li><img class="w-50" src="/src/img/arrow-down.svg" alt="arrow-down"></li>
                     <div class="s-pop-up">
-                        <div>
-                            <h6>Self-Employed Professionals</h6>
-                        </div>
-                        <div>
-                            <h6>Freelancers</h6>
-                        </div>
-                        <div>
-                            <h6>Businesses with Contractors
+                        <a href="/features-client">
+                            <h6>
+                                Self-Employed Professionals
                             </h6>
-                        </div>
-                        <div>
-                            <h6>Businesses with Employee
-                            </h6>
-                        </div>
-                        <div>
-                            <h6>Expenses & Receipts</h6>
-                        </div>
-                        <div>
-                            <h6>Unemployed</h6>
-                        </div>
+                        </a>
 
-                        <div>
-                            <h6>Students</h6>
-                        </div>
+                        <a href="/features-client">
+                            <h6>
+                                Freelancers
+                            </h6>
+                        </a>
+
+                        <a href="/features-client">
+                            <h6>
+                                Businesses with Contractors
+                            </h6>
+                        </a>
+                        <a href="/features-client">
+                            <h6>
+                                Businesses with Employee
+                            </h6>
+                        </a>
+
+                        <a href="/features-client">
+                            <h6>
+                                Expenses & Receipts
+                            </h6>
+                        </a>
+                        <a href="/features-client">
+                            <h6>
+                                Unemployed
+                            </h6>
+                        </a>
+
+                        <a href="/features-client">
+                            <h6>
+                                Students
+                            </h6>
+                        </a>
+
                     </div>
                 </div>
                 <li>Projects</li>
