@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features - Clients | G-Pay</title>
+    <title>Features - Mobile | G-Pay</title>
     <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/home.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/features.css') }}">
@@ -130,104 +130,194 @@
 
     </nav>
 
+    <div class="back-image">
 
-    <div class="cl-background">
-        <h1>Stay Connected to Clients With <br>
-            Better Client Management</h1>
+        <div>
+            <h1 class="mb-4">Work Anywhere with the<br>
+                G-Pay Mobile Accounting<br>
+                App</h1>
+            <p class="mb-5">Keep your finger on the pulse of your small business wherever<br>
+                you are. With the G-Pay mobile accounting app, you will easily<br>
+                stay connected with your clients and be able to take care of<br>
+                your accounting anywhere – from coffee shop to mountaintop.</p>
 
-        <div class="cust-btn">
-            <p>Try Client Management</p>
+
+            <div class="d-flex  align-items-center gap-3">
+                <a href="https://youtube.com"> <img class="logo-img" src="/src/img/appstore.png" alt="appstore"></a>
+                <a href=""><img class="logo-img" src="/src/img/googleplay.png" alt="google play"></a>
+
+            </div>
         </div>
-
-        <img src="/src/img/client_pic.png" alt="">
+        <div class="back-image-mask"></div>
     </div>
-    <h1 class="text-center mb-4">Stay Connected to Clients With <br>
-        Better Client Management</h1>
 
-    <a href="https://youtube.com" class="text-decoration-none">
-        <div class="cust-btn ">
-            <p>Try it Free</p>
+    <div class="mobile-cont-pg ">
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/mileage.svg" alt="mileage">
+            <div class="text-center">
+                <h2>Track Your Mileage On-<br>
+                    The-Go, as You Go</h2>
+
+                <p> Keep your finger on the pulse of your small business<br>
+                    wherever you are. With the G-Pay mobile accounting app, you<br>
+                    will easily stay connected with your clients and be able to take<br>
+                    care of your accounting anywhere – from coffee shop to mountaintop.
+                </p>
+                <div class="cust-btn">
+                    <p>Get the App</p>
+                </div>
+
+            </div>
+
+
         </div>
-    </a>
 
-    <div class="cl-pg cl-pg1 mt-7">
-        <div class="c1-circle-bg"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">Accurate Billing Starts By<br>
-                    Tracking Client Work</h2>
-                <p>Keep clients informed and engaged with Projects, so<br>
-                    you’re always on the same page. And log every billable<br> minute with Time Tracking to record all work and<br>
-                    send more accurate invoices.</p>
-                <div class="cust-btn mt-3">
-                    <p>Try it Free</p>
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="text-center">
+                <h2>Create Professional <br>
+                    Looking Invoices on the Go</h2>
+
+                <p> Just finished delivering that big project? Send your client an<br>
+                    invoice right from their office and get paid by the time you get<br> home.
+                </p>
+                <div class="cust-btn">
+                    <p>Get the App</p>
+                </div>
+
+            </div>
+
+
+            <img src="/src/img/invoices.png" alt="mileage">
+
+        </div>
+
+
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/paper.png" alt="mileage">
+            <div class="text-center">
+                <h2>Say Goodbye to Paper<br>
+                    Receipts</h2>
+
+                <p> Picking up the tab for a client lunch or buying supplies for a<br>
+                    new project? Snap a picture of the receipt and G-Pay will<br>
+                    automatically capture the merchant, totals, and taxes for you.<br>
+                    Yep – expense tracking just got a lot easier.
+                </p>
+                <div class="cust-btn">
+                    <p>Get the App</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="text-center">
+                <h2>Stay on Top of Your <br>
+                    Important Conversations</h2>
+
+                <p> Respond to your clients’ questions and feedback right from<br>
+                    the mobile accounting so even when you’re on the go, your<br>
+                    conversations are kept in one place.
+                </p>
+                <div class="cust-btn">
+                    <p>Get the App</p>
+                </div>
+
+            </div>
+
+
+            <img src="/src/img/converse.png" alt="mileage">
+
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/update.png" alt="mileage">
+            <div class="text-center">
+                <h2>Never Miss an<br>
+                    Update</h2>
+
+                <p> Know instantly when a client has viewed their invoice or <br>
+                    when an invoice has become overdue so you can always stay on <br>
+                    top of your business.
+                </p>
+                <a href="https://youtube.com" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Get the App</p>
+                    </div>
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center features-app-set">
+        <div class="">
+            <h2 class="text-center">All the Powerful Features of<br>
+                the G-Pay App</h2>
+            <div class="text-start mt-4">
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Create and send professional invoices</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Snap pictures of receipts</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Manage expenses on the go</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Stay on top of important updates</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Chat with clients</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Data synced across all devices</p>
+
                 </div>
             </div>
-            <img src="/src/img/track_client.png" alt="">
         </div>
-
-
-    </div>
-
-    <div class="cl-pg cl-pg2 mt-1">
-        <div class="c1-circle-bg"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">Build Client Trust By Staying<br> Connected
-                </h2>
-                <p>Communication and transparency are great ways to<br>
-                    keep clients interested in their project. With Client<br>
-                    Portal, Comments, Project Collaboration, File Sharing<br>
-                    and more, relationships blossom.</p>
-                <div class="cust-btn mt-3">
-                    <p>Try it Free</p>
-                </div>
+        <div class="text-center ">
+            <h4>
+                Download<br>
+                the<br>
+                Free G-Pay App
+            </h4>
+            <div class="d-flex justify-content-center align-items-center gap-4">
+                <a href="https://youtube.com"> <img class="logo-img" src="/src/img/appstore.png" alt="appstore"></a>
+                <a href=""><img class="logo-img" src="/src/img/googleplay.png" alt="google play"></a>
             </div>
-            <img src="/src/img/trust_client.png" alt="">
         </div>
-
-
     </div>
-    <div class="cl-pg cl-pg3 mt-1">
-        <div class="c1-circle-bg"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">Use Client Info to Grow<br>
-                    Your Business </h2>
-                <p>Client reports (Client Account Statement, Revenue by<br>
-                    Client, Time Entry Details, Invoice Details, Payments <br>
-                    Collected, Retainer Summary) tell you which clients<br>
-                    help and hinder your business.</p>
-                <div class="cust-btn mt-3">
-                    <p>Try it Free</p>
-                </div>
-            </div>
-            <img src="/src/img/grow_client.png" alt="">
-        </div>
-
-
-    </div>
-
-    <div class="cl-pg cl-pg4 mt-1">
-        <div class="c1-circle-bg"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="">
-                <h2 class="mb-3">Foster Loyalty With<br> Client Credits</h2>
-
-                <p>Track loyalty discounts, refund prior work, or take<br>
-                    prepayments through Credits so you know where you<br>
-                    stand with each client. Then, auto-apply credits to <br>
-                    invoices to keep your books accurate.</p>
-                <div class="cust-btn mt-3">
-                    <p>Try it Free</p>
-                </div>
-            </div>
-            <img src="/src/img/foster_client.png" alt="">
-        </div>
-
-
-    </div>
-
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>

@@ -8415,7 +8415,10 @@ fieldset:disabled .btn {
 }
 
 .w-auto {
-    width: auto !important
+    width: auto !important;
+}
+.w-multiple {
+    width: 200px !important;
 }
 
 .mw-100 {

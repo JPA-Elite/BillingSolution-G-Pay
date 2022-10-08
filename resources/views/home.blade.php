@@ -14,7 +14,7 @@
 <body class="body">
     <nav>
         <div class="d-flex align-items-end gap-5">
-            <a href="/homepage" class="text-decoration-none">
+            <a href="/Gpay.com/homepage/" class="text-decoration-none">
                 <div class="logo d-grid gap-2">
                     <div class="d-flex">
                         <img src="/src/img/logo.png" alt="logo">
@@ -30,23 +30,23 @@
                     <li>Features</li>
                     <li><img class="w-50" src="/src/img/arrow-down.svg" alt="arrow-down"></li>
                     <div class="f-pop-up">
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-client/">
                             <h6>
                                 Clients
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-mobile">
                             <h6>
                                 Mobile
                             </h6>
                         </a>
 
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-payments/">
                             <h6>
                                 Payments
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-mileage-tracking/">
                             <h6>
                                 Mileage Tracking
                             </h6>

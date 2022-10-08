@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features - Clients | G-Pay</title>
+    <title>Features - Mileage Tracking | G-Pay</title>
     <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/home.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/features.css') }}">
@@ -131,103 +131,171 @@
     </nav>
 
 
-    <div class="cl-background">
-        <h1>Stay Connected to Clients With <br>
-            Better Client Management</h1>
+    <div class="back-image back-image-mileage d-flex justify-content-center">
 
-        <div class="cust-btn">
-            <p>Try Client Management</p>
-        </div>
+        <div class="text-center d-grid align-items-center justify-content-center ">
+            <h1 class="">Never Miss a Trip With Our<br>
+                Automated Mileage Tracker App</h1>
 
-        <img src="/src/img/client_pic.png" alt="">
-    </div>
-    <h1 class="text-center mb-4">Stay Connected to Clients With <br>
-        Better Client Management</h1>
-
-    <a href="https://youtube.com" class="text-decoration-none">
-        <div class="cust-btn ">
-            <p>Try it Free</p>
-        </div>
-    </a>
-
-    <div class="cl-pg cl-pg1 mt-7">
-        <div class="c1-circle-bg"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">Accurate Billing Starts By<br>
-                    Tracking Client Work</h2>
-                <p>Keep clients informed and engaged with Projects, so<br>
-                    you’re always on the same page. And log every billable<br> minute with Time Tracking to record all work and<br>
-                    send more accurate invoices.</p>
-                <div class="cust-btn mt-3">
+            <a href="https://youtube.com" class="text-decoration-none  m-auto">
+                <div class="cust-btn cust-btn-mileage">
                     <p>Try it Free</p>
                 </div>
-            </div>
-            <img src="/src/img/track_client.png" alt="">
+            </a>
+
         </div>
-
-
+        <div class="back-image-mask"></div>
     </div>
 
-    <div class="cl-pg cl-pg2 mt-1">
-        <div class="c1-circle-bg"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">Build Client Trust By Staying<br> Connected
-                </h2>
-                <p>Communication and transparency are great ways to<br>
-                    keep clients interested in their project. With Client<br>
-                    Portal, Comments, Project Collaboration, File Sharing<br>
-                    and more, relationships blossom.</p>
-                <div class="cust-btn mt-3">
+    <div class="mobile-cont-pg ">
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/online-p.svg" alt="mileage">
+            <div class="text-center">
+                <h2>Online Payments Seamlessly<br>
+                    Link with G-Pay</h2>
+                <p> G-Pay Payments lets your customers pay directly through <br>
+                    invoices and automatically records each payment in your <br>
+                    account. It’s fast, easy, secure and perfectly integrated.
+                </p>
+                <div class="cust-btn">
                     <p>Try it Free</p>
                 </div>
+
             </div>
-            <img src="/src/img/trust_client.png" alt="">
+
+
         </div>
 
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="text-center">
+                <h2>Set Up Online<br>
+                    Payments in a Single Click</h2>
 
-    </div>
-    <div class="cl-pg cl-pg3 mt-1">
-        <div class="c1-circle-bg"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">Use Client Info to Grow<br>
-                    Your Business </h2>
-                <p>Client reports (Client Account Statement, Revenue by<br>
-                    Client, Time Entry Details, Invoice Details, Payments <br>
-                    Collected, Retainer Summary) tell you which clients<br>
-                    help and hinder your business.</p>
-                <div class="cust-btn mt-3">
+                <p> One click is all that’s needed to accept credit card payments<br>
+                    right on invoices. Then it’s just a few more steps, so G-Pay <br>
+                    deposits your money into the right account. Fast and easy, just <br>
+                    like you’d expect.
+                </p>
+                <div class="cust-btn">
                     <p>Try it Free</p>
                 </div>
+
             </div>
-            <img src="/src/img/grow_client.png" alt="">
+
+
+            <img src="/src/img/p2.png" alt="mileage">
+
         </div>
 
 
-    </div>
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/p3.png" alt="mileage">
+            <div class="text-center">
+                <h2>Checkout Links: <br>
+                    Accept Payments…Fast</h2>
 
-    <div class="cl-pg cl-pg4 mt-1">
-        <div class="c1-circle-bg"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="">
-                <h2 class="mb-3">Foster Loyalty With<br> Client Credits</h2>
-
-                <p>Track loyalty discounts, refund prior work, or take<br>
-                    prepayments through Credits so you know where you<br>
-                    stand with each client. Then, auto-apply credits to <br>
-                    invoices to keep your books accurate.</p>
-                <div class="cust-btn mt-3">
+                <p> Post Checkout Links on your website, social, or anywhere <br>
+                    else online to simply let customers click and pay.
+                </p>
+                <div class="cust-btn">
                     <p>Try it Free</p>
                 </div>
+
             </div>
-            <img src="/src/img/foster_client.png" alt="">
+
+
         </div>
+
+
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="text-center">
+                <h2>Advanced Payments:<br>
+                    A Better Virtual Terminal</h2>
+
+                <p> G-Pay Advanced Payments lets you accept credit card <br>
+                    payments online, in person and over the phone.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
+                </div>
+
+            </div>
+
+
+            <img src="/src/img/p4.png" alt="mileage">
+
+        </div>
+
 
 
     </div>
 
+    <div class="d-flex justify-content-center align-items-center features-app-set">
+        <div class="">
+            <h2 class="text-center">
+                Robust Payment Features<br>
+                To Boot</h2>
+            <div class="text-start mt-4">
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Offer clients flexibility with Payment<br>
+                        Schedules and Partial Payments</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Request deposits to control your cash flow</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Accept international currencies with Stripe</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Auto-generated Payments Collected Reports</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Fast and easy bank deposits</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Processing fees are automatically
+                        imported as expenses
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center app-set-info">
+            <img class="w-multiple" src="/src/img/boost.png" alt="">
+
+            <p class="text-center app-header-txt">80% of users that accept online<br>
+                payments agree<br>
+                that it improves client relationships.</p>
+
+            <div class="cust-btn">
+                <p>Try it Free</p>
+            </div>
+            <p class="text-center copy-info">No credit card required. Cancel anytime.</p>
+        </div>
+    </div>
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
@@ -240,7 +308,7 @@
         <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex gap-5">
                 <div class="d-flex">
-                    <img class="logo-img" src="/src/img/logo.png" alt="logo">
+                    <img class="logo-img " src="/src/img/logo.png" alt="logo">
                     <div class="title">
                         <h1 class="text-purple fs-2">G-Pay</h1>
                         <p class="text-light">Invoice & Billings</p>
