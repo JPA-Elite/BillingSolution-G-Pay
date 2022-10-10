@@ -52,17 +52,17 @@
                                 Mileage Tracking
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-expenses&receipts/">
                             <h6>
                                 Expenses & Receipts
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-invoices/">
                             <h6>
                                 Invoicing
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-estimates/">
                             <h6>
                                 Estimates
                             </h6>

@@ -52,17 +52,17 @@
                                 Mileage Tracking
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-expenses&receipts">
                             <h6>
                                 Expenses & Receipts
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-invoices/">
                             <h6>
                                 Invoicing
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-estimates/">
                             <h6>
                                 Estimates
                             </h6>
@@ -142,20 +142,22 @@
                     <p>Try it Free</p>
                 </div>
             </a>
-
+            <img src="/src/img/m1.png" alt="">
         </div>
+
         <div class="back-image-mask"></div>
     </div>
 
     <div class="mobile-cont-pg ">
         <div class="d-flex justify-content-between align-items-center">
-            <img src="/src/img/online-p.svg" alt="mileage">
+            <img src="/src/img/trip.png" alt="mileage">
             <div class="text-center">
-                <h2>Online Payments Seamlessly<br>
-                    Link with G-Pay</h2>
-                <p> G-Pay Payments lets your customers pay directly through <br>
-                    invoices and automatically records each payment in your <br>
-                    account. It’s fast, easy, secure and perfectly integrated.
+                <h2>Log Trips as You Drive, <br>
+                    Hands-Free</h2>
+                <p> Every time your car moves in the name of business it’s an<br>
+                    expense you can claim at tax time. FreshBooks Mileage <br>
+                    Tracking automatically logs each trip and also saves your travel <br>
+                    history.
                 </p>
                 <div class="cust-btn">
                     <p>Try it Free</p>
@@ -168,13 +170,12 @@
 
         <div class="d-flex justify-content-between align-items-center ">
             <div class="text-center">
-                <h2>Set Up Online<br>
-                    Payments in a Single Click</h2>
+                <h2>More Organized While<br>
+                    on the Road</h2>
 
-                <p> One click is all that’s needed to accept credit card payments<br>
-                    right on invoices. Then it’s just a few more steps, so G-Pay <br>
-                    deposits your money into the right account. Fast and easy, just <br>
-                    like you’d expect.
+                <p> The last thing you need is paper trip logs. Easily swipe your<br>
+                    screen to classify a trip as business or personal, then send a <br>
+                    mileage report directly to your email or download it from G-Pay.
                 </p>
                 <div class="cust-btn">
                     <p>Try it Free</p>
@@ -183,19 +184,20 @@
             </div>
 
 
-            <img src="/src/img/p2.png" alt="mileage">
+            <img src="/src/img/road.png" alt="mileage">
 
         </div>
 
 
         <div class="d-flex justify-content-between align-items-center">
-            <img src="/src/img/p3.png" alt="mileage">
+            <img src="/src/img/tax.png" alt="mileage">
             <div class="text-center">
-                <h2>Checkout Links: <br>
-                    Accept Payments…Fast</h2>
+                <h2>Be Tax Compliant<br>
+                    and Get Your Best Return</h2>
 
-                <p> Post Checkout Links on your website, social, or anywhere <br>
-                    else online to simply let customers click and pay.
+                <p> G-Pay Mileage Tracking shows potential tax deductions for<br>
+                    every business trip. Download accurate and ready-to-be-filed <br>
+                    reports to deduct every mile and reduce your taxable income.
                 </p>
                 <div class="cust-btn">
                     <p>Try it Free</p>
@@ -206,94 +208,51 @@
 
         </div>
 
-
-        <div class="d-flex justify-content-between align-items-center ">
-            <div class="text-center">
-                <h2>Advanced Payments:<br>
-                    A Better Virtual Terminal</h2>
-
-                <p> G-Pay Advanced Payments lets you accept credit card <br>
-                    payments online, in person and over the phone.
-                </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
-
-            </div>
-
-
-            <img src="/src/img/p4.png" alt="mileage">
-
-        </div>
 
 
 
     </div>
 
-    <div class="d-flex justify-content-center align-items-center features-app-set">
-        <div class="">
-            <h2 class="text-center">
-                Robust Payment Features<br>
-                To Boot</h2>
-            <div class="text-start mt-4">
-                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
-                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
-                    </svg>
-                    <p>Offer clients flexibility with Payment<br>
-                        Schedules and Partial Payments</p>
-
-                </div>
-                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
-                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
-                    </svg>
-                    <p>Request deposits to control your cash flow</p>
-
-                </div>
-                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
-                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
-                    </svg>
-                    <p>Accept international currencies with Stripe</p>
-
-                </div>
-                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
-                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
-                    </svg>
-                    <p>Auto-generated Payments Collected Reports</p>
-
-                </div>
-                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
-                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
-                    </svg>
-                    <p>Fast and easy bank deposits</p>
-
-                </div>
-                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
-                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
-                    </svg>
-                    <p>Processing fees are automatically
-                        imported as expenses
-                    </p>
-
-                </div>
-            </div>
-        </div>
-        <div class="text-center app-set-info">
-            <img class="w-multiple" src="/src/img/boost.png" alt="">
-
-            <p class="text-center app-header-txt">80% of users that accept online<br>
-                payments agree<br>
-                that it improves client relationships.</p>
-
-            <div class="cust-btn">
+    <div class="d-flex justify-content-center align-items-center features-app-set features-app-mileage">
+        <div class="w-50">
+            <p>WHAT ELSE?</p>
+            <h1>Do Even More <br>
+                With Mileage Tracking</h1>
+            <div class="cust-btn cust-btn-mileage-app">
                 <p>Try it Free</p>
             </div>
-            <p class="text-center copy-info">No credit card required. Cancel anytime.</p>
+
+            <p class="copy-info">No credit card required. Cancel anytime.</p>
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-75 h-100 ">
+            <div class=" h-100 w-50 text-center">
+                <h4>Handy Reports</h4>
+                <p >Easily download and share insightful reports with<br> your team</p>
+                <img class="w-50" src="/src/img/report.png" alt="">
+            </div>
+            <div class="mileage-features  w-50">
+                <div>
+                    <h5 >Edit and Adjust<br>
+                        Trip Details</h5>
+                    <p>Manually edit trips in and<br> discrepancy</p>
+                </div>
+                <div>
+                    <h5>Easy On/Off<br>
+                        Toggle</h5>
+                    <p>Easily turn Mileage<br> Tracking on and off at <br>anytime</p>
+                </div>
+                <div>
+                    <h5 >Local Rates<br>
+                        In-App</h5>
+                    <p>Check mileage allowance<br> rates for your country</p>
+                </div>
+                <div>
+                    <h5 >Easily Find <br>
+                        Logged Trips</h5>
+                    <p>Sort and filter all trips by<br> date range</p>
+                </div>
+            </div>
+
         </div>
     </div>
 

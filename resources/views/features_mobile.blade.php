@@ -52,17 +52,17 @@
                                 Mileage Tracking
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-expenses&receipts/">
                             <h6>
                                 Expenses & Receipts
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-invoices/">
                             <h6>
                                 Invoicing
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/Gpay.com/features-estimates/">
                             <h6>
                                 Estimates
                             </h6>
@@ -130,7 +130,7 @@
 
     </nav>
 
-    <div class="back-image">
+    <div class="back-image back-image-mobile">
 
         <div>
             <h1 class="mb-4">Work Anywhere with the<br>
@@ -259,7 +259,7 @@
 
     <div class="d-flex justify-content-center align-items-center features-app-set">
         <div class="">
-            <h2 class="text-center">All the Powerful Features of<br>
+            <h2 >All the Powerful Features of<br>
                 the G-Pay App</h2>
             <div class="text-start mt-4">
                 <div class="d-flex justify-align-content-sm-start align-items-center gap-2">

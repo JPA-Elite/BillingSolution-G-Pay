@@ -168,9 +168,12 @@
     width: 100%;
     height: 607px;
     background: url("/src/img/mobile.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; 
     padding: 5rem;
+}
+.back-image-mobile{
+    background: url("/src/img/mobile.png") !important;
 }
 
 .back-image h1 {
@@ -275,7 +278,7 @@
     margin-top: 10px;
 }
 
-.features-app-set .app-set-info .copy-info {
+.features-app-set .copy-info {
     position: relative;
     top: 4rem;
     font-size: 14px;
@@ -286,10 +289,16 @@
     background-image: url('/src/img/back-mileage.png');
     background-size: cover;
     background-repeat: no-repeat;
+    margin-bottom: 22rem;
 }
 
 .back-image-mileage>div h1 {
-    color: rgba(255, 255, 255, 0.747) !important;
+    color: rgb(255, 255, 255) !important;
+}
+.back-image-mileage>div img {
+    width: 80%;
+    margin: auto;
+    padding-top: 2rem;
 }
 
 .back-image-mileage .back-image-mask {
@@ -306,8 +315,10 @@
     cursor: pointer;
     text-align: center;
     margin: auto;
+    margin-bottom: 30px;
     position: relative;
-    top: -120px;
+    top: 10px;
+
 }
 
 
@@ -316,7 +327,69 @@
     font-size: 20px;
 
 }
+.cust-btn-mileage-app{
+    margin: 0 !important;
+    position: relative;
+    top: 50px;
+}
 
+/* features - mileage */
+
+.mileage-features{
+    background-color: #1690E7;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.mileage-features > div{
+    background-color: #2F317A;
+    padding: 20px;
+    margin: 1px;
+    color: #9D9D9D;
+}
+.mileage-features > div p{
+    color: #9D9D9D;
+}
+
+.features-app-mileage > div:nth-child(2){
+    padding: 0 !important;
+    height: 400px;
+}
+.features-app-mileage > div:nth-child(2) p {
+    font-size: 12px;
+    
+}
+.features-app-mileage > div:nth-child(2) h5 {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+/* features - expenses&re4ceipts */
+.back-image-expense{
+    background-image: url("/src/img/expense.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* features - expenses&re4ceipts */
+.back-image-invoice{
+    background-image: url("/src/img/invoice_back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 250px;
+}
+
+.invoice-img-label{
+    z-index: 10;
+    width: 80%;
+    position: relative;
+    top: 80px;
+}
+/* features - estimates */
+.back-image-estimates{
+    background-image: url("/src/img/estimates_back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
 /* Footer */
 .fo-page {
     position: relative;

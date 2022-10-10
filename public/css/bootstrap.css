@@ -5556,7 +5556,9 @@ fieldset:disabled .btn {
     list-style-type: none;
     counter-reset: section
 }
-
+.list-style-type-bullet{
+    list-style-type:disc !important ;
+}
 .list-group-numbered>.list-group-item::before {
     content: counters(section, ".") ". ";
     counter-increment: section
