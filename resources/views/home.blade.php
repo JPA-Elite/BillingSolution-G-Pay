@@ -135,7 +135,7 @@
 
     <div class="search-bar">
 
-        <div class="input-group mb-3 position-relative h-100">
+        <div class="input-group mb-3 position-relative h-100" style="z-index: 1;">
             <span class="input-group-text"><img class="w-50 m-auto" src="/src/img/search.png" alt=""></span>
             <input type="search" class="form-control" placeholder="Search for your concerns...">
         </div>

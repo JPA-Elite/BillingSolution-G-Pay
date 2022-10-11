@@ -15,9 +15,9 @@
 	overflow-x: hidden;
 }
 
-.body::-webkit-scrollbar {
+/* .body::-webkit-scrollbar {
 	display: none;
-}
+} */
 
 nav {
 	z-index: 5;
