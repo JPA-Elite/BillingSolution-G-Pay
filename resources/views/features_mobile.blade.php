@@ -115,8 +115,8 @@
 
                     </div>
                 </div>
-                <li>Projects</li>
-                <li>About Us</li>
+                <a href="/Gpay.com/about_us/" class=""><li>Pricing</li></a>
+                <a href="/Gpay.com/about_us/" class=""><li>About Us</li></a>
             </ul>
         </div>
 
@@ -371,13 +371,13 @@
             <div>
                 <h1>FEATURES</h1>
                 <div>
-                    <a href="">Clients</a><br>
-                    <a href="">Mobile</a><br>
-                    <a href="">Payments</a><br>
-                    <a href="">Mileage Tracking</a><br>
-                    <a href="">Expenses & Receipts</a><br>
-                    <a href="">Invoicing</a><br>
-                    <a href="">Estimates</a><br>
+                    <a href="/Gpay.com/features-client/">Clients</a><br>
+                    <a href="/Gpay.com/features-mobile/">Mobile</a><br>
+                    <a href="/Gpay.com/features-payments/">Payments</a><br>
+                    <a href="/Gpay.com/features-mileage-tracking/">Mileage Tracking</a><br>
+                    <a href="/Gpay.com/features-expenses&receipts/">Expenses & Receipts</a><br>
+                    <a href="/Gpay.com/features-invoices/">Invoicing</a><br>
+                    <a href="/Gpay.com/features-estimates/">Estimates</a><br>
                 </div>
             </div>
             <div class="ver-line"></div>
@@ -400,7 +400,7 @@
                     <a href="">Accounting Templates</a><br>
                     <a href="">Invoice Template</a><br>
                     <a href="">Sitemap</a><br>
-                    <a href="">About Us</a><br>
+                    <a href="/Gpay.com/about_us/">About Us</a><br>
                     <a href="">Support</a><br>
                     <a href="">Contact Us</a><br>
                 </div>
