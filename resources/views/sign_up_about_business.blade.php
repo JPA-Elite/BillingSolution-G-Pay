@@ -30,61 +30,119 @@
             <div class="d-grid justify-content-start align-items-center m-auto pt-3 b-cont">
                 <div class="">
                     <p class="label-txt">What’s your company name?*</p>
-                    <input type="text" class=" input-b" placeholder="">
+                    <input type="text" class="company_name input-b" placeholder="" name="company_name">
 
                 </div>
-                <div class="">
+                <div class="pt-3">
 
-                    <p class="label-txt">What does your company do?*</p>
-                    <input type="tel" class=" input-b" placeholder="Choose industry">
-
+                    <p class="label-txt">What does your business do?*</p>
+                    <!-- <input type="tel" class="company_do input-b" placeholder="Choose industry" name="company_do"> -->
+                    <select class="company_do" name="company_do" id="">
+                        <option value=""></option>
+                        <option value="Construction, Trade & Home Services">Construction, Trade & Home Services</option>
+                        <option value="Creative Professionals">Creative Professionals</option>
+                        <option value="Marketing, Communications & Media">Marketing, Communications & Media</option>
+                        <option value="Development & Programming">Development & Programming</option>
+                        <option value="Management Consulting">Management Consulting</option>
+                        <option value="Information Technology & Support">Information Technology & Support</option>
+                        <option value="Accounting & Finance">Accounting & Finance</option>
+                        <option value="Automotive & Transport">Automotive & Transport</option>
+                        <option value="Health & Wellnes">Health & Wellness</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </div>
-                <div class="">
+                <div class="pt-3">
 
                     <p class="label-txt">How would you describe your business? *
                     </p>
-                    <input type="tel" class=" input-b" placeholder="Choose an option">
-
+                    <!-- <input type="tel" class="describe_business input-b" placeholder="Choose an option" name="describe_business"> -->
+                    <select class="describe_business" name="describe_business" id="">
+                        <option value=""></option>
+                        <option value="It’s launching soon">It’s launching soon</option>
+                        <option value="It’s part-time or supplements my main income">It’s part-time or supplements my
+                            main income</option>
+                        <option value="It’s a new business but it’s my full-time focus">It’s a new business but it’s my
+                            full-time focus</option>
+                        <option value="It’s been my full-time focus for over a year">It’s been my full-time focus for
+                            over a year</option>
+                    </select>
                 </div>
 
-                <div class="">
+                <div class="pt-3">
                     <p class="label-txt">What's your estimated revenue this year? *
                     </p>
-                    <div class="d-flex justify-content-start align-items-center gap-2">
+                    <div class=" d-flex justify-content-start align-items-center gap-2">
                         <div>
-                            <input type="text" placeholder="USD - US Dollar">
+                            <!-- <input class="currency" name="currency" type="text" placeholder="USD - US Dollar"> -->
+                            <select class="currency" name="currency" id="">
+                                <option value="USD - US Dollar">USD - US Dollar</option>
+                                <option value="EUR - Euro">EUR - Euro</option>
+                                <option value="AED - United Arab Emirates dirham">AED - United Arab Emirates dirham
+                                </option>
+                                <option value="PHP - Philippine Peso">PHP - Philippine Peso</option>
+                                <option value="Other">Other</option>
+                            </select>
                         </div>
-                        <div>
-                            <input type="text" placeholder="Estimated Revenue">
+                        <div class="demo-currency">
+
+                            <!-- <input class="estimate_revenue" name="estimate_revenue" type="text" placeholder="Estimated Revenue"> -->
+                            <select class="estimate_revenue" name="estimate_revenue" id="">
+                                <option value=""></option>
+                                <option value="Up to $30,000">Up to $30,000</option>
+                                <option value="$31,000 to $75,000">$31,000 to $75,000</option>
+                                <option value="$76,000 to $125,000<">$76,000 to $125,000</option>
+                                <option value="$126,000 t">$126,000 to $500,000</option>
+                                <option value="$500,000 or more">$500,000 or more</option>
+                            </select>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="">
+                <div class="pt-3">
 
                     <p class="label-txt">How long does it take to complete your services? *
                     </p>
-                    <input type="tel" class=" input-b" placeholder="Choose an option">
+                    <!-- <input type="tel" class=" input-b" placeholder="Choose an option"> -->
+
+                    <select class="long_service" name="long_service" id="">
+                        <option value=""></option>
+                        <option value="Real-time or within a few hours">Real-time or within a few hours</option>
+                        <option value="Less than a week">Less than a week</option>
+                        <option value="More than a week but less than a month">More than a week but less than a month
+                        </option>
+                        <option value="More than a month">More than a month</option>
+
+                    </select>
 
                 </div>
 
-                <div class="">
+                <div class="pt-3">
 
                     <p class="label-txt">What do you currently use to bill your customers? *
                     </p>
-                    <input type="tel" class=" input-b" placeholder="Choose an option">
+                    <!-- <input type="tel" class=" input-b" placeholder="Choose an option"> -->
+                    <select class="current_bill" name="current_bill" id="">
+                        <option value=""></option>
+                        <option class=" " value="Pen and paper">Pen and paper</option>
+                        <option class=" " value="Spreadsheets and Word documents">Spreadsheets and Word documents
+                        </option>
+                        <option class=" " value="I don't use anything right now">I don't use anything right now</option>
+                        <option class=" " value="Another accounting software">Another accounting software</option>
+
+                    </select>
+
 
                 </div>
 
-                <div class="">
-                    <p class="label-txt">How customized is your offering for customers? *
+                <div class="pt-3">
+                    <p class="label-txt cust-txt">How customized is your offering for customers? *
                     </p>
                     <div class="d-flex justify-content-start align-items-center gap-2">
-                        <button class="customized-btn">
+                        <button class="customized-btn btn-ml">
                             More or Less The Same
                         </button>
-                        <button class="customized-btn">
+                        <button class="customized-btn btn-dc">
                             Different or customized
                         </button>
                     </div>
@@ -97,7 +155,7 @@
                 <div class="line"></div>
                 <div class="d-flex justify-content-start align-items-center gap-3">
                     <a href="/Gpay.com/register/"><button class="next-button">Back</button></a>
-                    <a href=""><button class="next-button n-b-extend">Save & Finished</button></a>
+                    <a href="#"><button class="next-button n-b-extend save_extend_btn">Save & Finished</button></a>
                 </div>
 
 
@@ -141,6 +199,80 @@
 
         </div>
     </div>
+
+    <script>
+        // Profile information
+        const save_extend_btn = document.querySelector('.save_extend_btn');
+        const company_name = document.querySelector('.company_name');
+        const company_do = document.querySelector('.company_do');
+        const describe_business = document.querySelector('.describe_business');
+        const currency = document.querySelector('.currency');
+        const estimate_revenue = document.querySelector('.estimate_revenue');
+        const long_service = document.querySelector('.long_service');
+        const current_bill = document.querySelector('.current_bill');
+        const btn_ml = document.querySelector('.btn-ml');
+        const btn_dc = document.querySelector('.btn-dc');
+        const cust_txt = document.querySelector('.cust-txt');
+        const demo_currency = document.querySelector('.demo-currency');
+
+        currency.addEventListener('click', function() {
+            if (this.value == "USD - US Dollar") {
+
+                demo_currency.innerHTML = `
+                <select>
+                <option value="Up to $30,000">Up to $30,000</option>
+                <option value="$31,000 to $75,000">$31,000 to $75,000</option>
+                <option value="$76,000 to $125,000<">$76,000 to $125,000</option>
+                <option value="$126,000 t">$126,000 to $500,000</option>
+                <option value="$500,000 or more">$500,000 or more</option>
+                </select>
+                `;
+            } else {
+                demo_currency.innerHTML =
+                    `<input style="padding:7px;width:92%" class="estimate_revenue" name="estimate_revenue" type="number" class="w-100" placeholder="Input an amount...">`;
+
+            }
+        });
+        save_extend_btn.addEventListener("click", function() {
+            if (company_name.value == "") {
+                company_name.style.borderColor = "#842029";
+                company_name.placeholder = "*This field must not be empty!";
+            }
+            if (company_do.value == "") {
+                company_do.style.borderColor = "#842029";
+                // l_name.placeholder = "*This field must not be empty!";
+            }
+            if (describe_business.value == "") {
+                describe_business.style.borderColor = "#842029";
+                // locate.placeholder = "*This field must not be empty!";
+            }
+            if (currency.value == "") {
+                currency.style.borderColor = "#842029";
+                // phone.placeholder = "*This field must not be empty!";
+            }
+            if (estimate_revenue.value == "") {
+                estimate_revenue.style.borderColor = "#842029";
+                // phone.placeholder = "*This field must not be empty!";
+            }
+            if (long_service.value == "") {
+                long_service.style.borderColor = "#842029";
+                // phone.placeholder = "*This field must not be empty!";
+            }
+            if (current_bill.value == "") {
+                current_bill.style.borderColor = "#842029";
+                // phone.placeholder = "*This field must not be empty!";
+            }
+            if (current_bill.value == "") {
+                current_bill.style.borderColor = "#842029";
+                // phone.placeholder = "*This field must not be empty!";
+            } else {
+                window.location.href = "/Gpay.com/register/";
+            }
+        });
+    </script>
+    <script src="{{ URL::asset('/js/jquery.js') }}"></script>
+    <script src="{{ URL::asset('/js/function.js') }}"></script>
+
 
 
 

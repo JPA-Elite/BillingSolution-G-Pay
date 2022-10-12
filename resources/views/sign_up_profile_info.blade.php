@@ -31,30 +31,31 @@
                 <div class="d-flex justify-content-start align-items-center gap-2">
                     <div>
                         <p class="label-txt">First Name*</p>
-                        <input type="text">
+                        <input class="f-name" name="f-name" type="text">
                     </div>
                     <div>
                         <p class="label-txt">Last Name*</p>
-                        <input type="text">
+                        <input class="l-name" name="l-name" type="text">
                     </div>
                 </div>
                 <div class="">
 
                     <p class="label-txt">Where are you located?*</p>
-                    <input type="text" class="w-100">
+                    <input class="location" name="location" type="text" class="w-100">
 
                 </div>
                 <div class="">
 
                     <p class="label-txt">Phone number*</p>
-                    <input type="tel" class="w-100">
+                    <input class="phone" name="phone" type="number" class="w-100">
 
                 </div>
             </div>
 
             <div class="d-grid ">
                 <div class="line"></div>
-                <a href="/Gpay.com/sign_up-about_business/"><button class="next-button">Next</button></a>
+                <!-- /Gpay.com/sign_up-about_business/ -->
+                <a href="#" class="pro-sub"><button class="next-button">Next</button></a>
             </div>
         </div>
 
@@ -93,8 +94,39 @@
 
         </div>
     </div>
+    <script>
+        // Profile information
+        const pro_sub = document.querySelector('.pro-sub');
+        const f_name = document.querySelector('.f-name');
+        const l_name = document.querySelector('.l-name');
+        const locate = document.querySelector('.location');
+        const phone = document.querySelector('.phone');
+
+        pro_sub.addEventListener("click", function() {
+            if (f_name.value == "") {
+                f_name.style.borderColor = "#842029";
+                f_name.placeholder = "*This field must not be empty!";
 
 
+            }
+            if (l_name.value == "") {
+                l_name.style.borderColor = "#842029";
+                l_name.placeholder = "*This field must not be empty!";
+            }
+            if (locate.value == "") {
+                locate.style.borderColor = "#842029";
+                locate.placeholder = "*This field must not be empty!";
+            }
+            if (phone.value == "") {
+                phone.style.borderColor = "#842029";
+                phone.placeholder = "*This field must not be empty!";
+            } else {
+                window.location.href = "/Gpay.com/sign_up-about_business/";
+            }
+        });
+    </script>
+    <script src="{{ URL::asset('/js/jquery.js') }}"></script>
+    <script src="{{ URL::asset('/js/function.js') }}"></script>
 
 
 </body>
