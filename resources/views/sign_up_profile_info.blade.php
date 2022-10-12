@@ -54,7 +54,7 @@
 
             <div class="d-grid ">
                 <div class="line"></div>
-                <button class="next-button">Next</button>
+                <a href="/Gpay.com/sign_up-about_business/"><button class="next-button">Next</button></a>
             </div>
         </div>
 

@@ -23,46 +23,94 @@
                 </div>
             </div>
 
-            <h1>Welcome!<br>
-                Let's Get You Set Up!
+            <h1>Tell us about your business!<br>
+                so we can tailor your<br> experience
             </h1>
 
-            <div class="d-grid justify-content-start align-items-center m-auto pt-3">
-                <div class="d-flex justify-content-start align-items-center gap-2">
-                    <div>
-                        <p class="label-txt">First Name*</p>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <p class="label-txt">Last Name*</p>
-                        <input type="text">
-                    </div>
-                </div>
+            <div class="d-grid justify-content-start align-items-center m-auto pt-3 b-cont">
                 <div class="">
-
-                    <p class="label-txt">Where are you located?*</p>
-                    <input type="text" class="w-100">
+                    <p class="label-txt">What’s your company name?*</p>
+                    <input type="text" class=" input-b" placeholder="">
 
                 </div>
                 <div class="">
 
-                    <p class="label-txt">Phone number*</p>
-                    <input type="tel" class="w-100">
+                    <p class="label-txt">What does your company do?*</p>
+                    <input type="tel" class=" input-b" placeholder="Choose industry">
 
                 </div>
+                <div class="">
+
+                    <p class="label-txt">How would you describe your business? *
+                    </p>
+                    <input type="tel" class=" input-b" placeholder="Choose an option">
+
+                </div>
+
+                <div class="">
+                    <p class="label-txt">What's your estimated revenue this year? *
+                    </p>
+                    <div class="d-flex justify-content-start align-items-center gap-2">
+                        <div>
+                            <input type="text" placeholder="USD - US Dollar">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Estimated Revenue">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="">
+
+                    <p class="label-txt">How long does it take to complete your services? *
+                    </p>
+                    <input type="tel" class=" input-b" placeholder="Choose an option">
+
+                </div>
+
+                <div class="">
+
+                    <p class="label-txt">What do you currently use to bill your customers? *
+                    </p>
+                    <input type="tel" class=" input-b" placeholder="Choose an option">
+
+                </div>
+
+                <div class="">
+                    <p class="label-txt">How customized is your offering for customers? *
+                    </p>
+                    <div class="d-flex justify-content-start align-items-center gap-2">
+                        <button class="customized-btn">
+                            More or Less The Same
+                        </button>
+                        <button class="customized-btn">
+                            Different or customized
+                        </button>
+                    </div>
+
+                </div>
+
             </div>
 
             <div class="d-grid ">
                 <div class="line"></div>
-                <button class="next-button">Next</button>
+                <div class="d-flex justify-content-start align-items-center gap-3">
+                    <a href="/Gpay.com/register/"><button class="next-button">Back</button></a>
+                    <a href=""><button class="next-button n-b-extend">Save & Finished</button></a>
+                </div>
+
+
             </div>
+
+
         </div>
 
         <div class="sign-pg-right">
 
             <div>
                 <div class="d-flex justify-content-center ">
-                    <div class="indicator"></div>
+                    <div class="indicator i-2"></div>
                     <div>
                         <p class="txt-indicate">Enter your profile information</p>
                         <br>
@@ -75,7 +123,7 @@
                         <p>Contact Support</p>
                         <img class="log" src="/src/img/question.png" alt="">
                     </a>
-                    <a href="/Gpay.com/register/" class="d-flex align-items-center justify-content-center cursor-pointer">
+                    <a href="/Gpay.com/sign_up-profile_information/" class="d-flex align-items-center justify-content-center cursor-pointer">
                         <p>Back</p>
                         <img class="log" src="/src/img/back.png" alt="">
                     </a>
