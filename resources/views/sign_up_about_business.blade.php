@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -58,12 +62,12 @@
                     <!-- <input type="tel" class="describe_business input-b" placeholder="Choose an option" name="describe_business"> -->
                     <select class="describe_business" name="describe_business" id="">
                         <option value=""></option>
-                        <option value="It’s launching soon">It’s launching soon</option>
-                        <option value="It’s part-time or supplements my main income">It’s part-time or supplements my
+                        <option value="Its launching soon">It’s launching soon</option>
+                        <option value="Its part-time or supplements my main income">It’s part-time or supplements my
                             main income</option>
-                        <option value="It’s a new business but it’s my full-time focus">It’s a new business but it’s my
+                        <option value="Its a new business but it’s my full-time focus">It’s a new business but it’s my
                             full-time focus</option>
-                        <option value="It’s been my full-time focus for over a year">It’s been my full-time focus for
+                        <option value="Its been my full-time focus for over a year">It’s been my full-time focus for
                             over a year</option>
                     </select>
                 </div>
@@ -215,11 +219,12 @@
         const cust_txt = document.querySelector('.cust-txt');
         const demo_currency = document.querySelector('.demo-currency');
 
+
         currency.addEventListener('click', function() {
             if (this.value == "USD - US Dollar") {
 
                 demo_currency.innerHTML = `
-                <select>
+                <select  class="describe_business" name="describe_business" id="">
                 <option value="Up to $30,000">Up to $30,000</option>
                 <option value="$31,000 to $75,000">$31,000 to $75,000</option>
                 <option value="$76,000 to $125,000<">$76,000 to $125,000</option>
@@ -266,9 +271,44 @@
                 current_bill.style.borderColor = "#842029";
                 // phone.placeholder = "*This field must not be empty!";
             } else {
-                window.location.href = "/Gpay.com/register/";
+                // Profile information
+                //    const save_extend_btn = document.querySelector('.save_extend_btn');
+                //         const company_name = document.querySelector('.company_name');
+                //         const company_do = document.querySelector('.company_do');
+                //         const describe_business = document.querySelector('.describe_business');
+                //         const currency = document.querySelector('.currency');
+                //         const estimate_revenue = document.querySelector('.estimate_revenue');
+                //         const long_service = document.querySelector('.long_service');
+                //         const current_bill = document.querySelector('.current_bill');
+                //         const btn_ml = document.querySelector('.btn-ml');
+                //         const btn_dc = document.querySelector('.btn-dc');
+                //         const cust_txt = document.querySelector('.cust-txt');
+                //         const demo_currency = document.querySelector('.demo-currency');
+                createCookie("company_name", company_name.value, "1");
+                createCookie("company_do", company_do.value, "1");
+                createCookie("describe_business", describe_business.value, "1");
+                createCookie("currency", currency.value, "1");
+                createCookie("estimate_revenue", estimate_revenue.value, "1");
+                createCookie("long_service", long_service.value, "1");
+                createCookie("current_bill", current_bill.value, "1");
+                window.location.href = "/Gpay.com/demo/";
             }
         });
+
+        // Function to create the cookie
+        function createCookie(name, value, days) {
+            var expires;
+
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toGMTString();
+            } else {
+                expires = "";
+            }
+            document.cookie = escape(name) + "=" +
+                escape(value) + expires + "; path=/";
+        }
     </script>
     <script src="{{ URL::asset('/js/jquery.js') }}"></script>
     <script src="{{ URL::asset('/js/function.js') }}"></script>

@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -27,7 +32,7 @@
                 Let's Get You Set Up!
             </h1>
 
-            <div class="d-grid justify-content-start align-items-center m-auto pt-3">
+            <div class="d-grid justify-content-start align-items-center m-auto pt-3 b-cont">
                 <div class="d-flex justify-content-start align-items-center gap-2">
                     <div>
                         <p class="label-txt">First Name*</p>
@@ -50,12 +55,18 @@
                     <input class="phone" name="phone" type="number" class="w-100">
 
                 </div>
+                <div class="">
+
+                    <p class="label-txt">Email Address*</p>
+                    <input class="email" name="email" type="text" class="w-100">
+
+                </div>
             </div>
 
             <div class="d-grid ">
                 <div class="line"></div>
                 <!-- /Gpay.com/sign_up-about_business/ -->
-                <a href="#" class="pro-sub"><button class="next-button">Next</button></a>
+                <a href="#" class="pro-sub"><button class="next-button" type="submit">Next</button></a>
             </div>
         </div>
 
@@ -101,6 +112,7 @@
         const l_name = document.querySelector('.l-name');
         const locate = document.querySelector('.location');
         const phone = document.querySelector('.phone');
+        const email = document.querySelector('.email');
 
         pro_sub.addEventListener("click", function() {
             if (f_name.value == "") {
@@ -120,10 +132,46 @@
             if (phone.value == "") {
                 phone.style.borderColor = "#842029";
                 phone.placeholder = "*This field must not be empty!";
+            }
+
+            if (!(ValidateEmail(email))) {
+                email.style.borderColor = "#842029";
+                email.placeholder = "*This field must not be empty!";
             } else {
+                createCookie("f_name", f_name.value, "1");
+                createCookie("l_name", l_name.value, "1");
+                createCookie("location", locate.value, "1");
+                createCookie("phone", phone.value, "1");
+                createCookie("email", email.value, "1");
                 window.location.href = "/Gpay.com/sign_up-about_business/";
             }
+
+
         });
+
+        function ValidateEmail(email) {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (email.value.match(mailformat)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        // Function to create the cookie
+        function createCookie(name, value, days) {
+            var expires;
+
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toGMTString();
+            } else {
+                expires = "";
+            }
+            document.cookie = escape(name) + "=" +
+                escape(value) + expires + "; path=/";
+        }
     </script>
     <script src="{{ URL::asset('/js/jquery.js') }}"></script>
     <script src="{{ URL::asset('/js/function.js') }}"></script>
