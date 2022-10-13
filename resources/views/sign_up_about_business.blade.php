@@ -65,7 +65,7 @@ session_start();
                         <option value="Its launching soon">It’s launching soon</option>
                         <option value="Its part-time or supplements my main income">It’s part-time or supplements my
                             main income</option>
-                        <option value="Its a new business but it’s my full-time focus">It’s a new business but it’s my
+                        <option value="Its a new business but its my full-time focus">It’s a new business but it’s my
                             full-time focus</option>
                         <option value="Its been my full-time focus for over a year">It’s been my full-time focus for
                             over a year</option>
@@ -224,7 +224,7 @@ session_start();
             if (this.value == "USD - US Dollar") {
 
                 demo_currency.innerHTML = `
-                <select  class="describe_business" name="describe_business" id="">
+                <select  class="describe_business estimate_revenue" name="describe_business" id="">
                 <option value="Up to $30,000">Up to $30,000</option>
                 <option value="$31,000 to $75,000">$31,000 to $75,000</option>
                 <option value="$76,000 to $125,000<">$76,000 to $125,000</option>
@@ -284,6 +284,7 @@ session_start();
                 //         const btn_dc = document.querySelector('.btn-dc');
                 //         const cust_txt = document.querySelector('.cust-txt');
                 //         const demo_currency = document.querySelector('.demo-currency');
+                const estimate_revenue = document.querySelector('.estimate_revenue');
                 createCookie("company_name", company_name.value, "1");
                 createCookie("company_do", company_do.value, "1");
                 createCookie("describe_business", describe_business.value, "1");
@@ -291,7 +292,7 @@ session_start();
                 createCookie("estimate_revenue", estimate_revenue.value, "1");
                 createCookie("long_service", long_service.value, "1");
                 createCookie("current_bill", current_bill.value, "1");
-                window.location.href = "/Gpay.com/demo/";
+                window.location.href = "/Gpay.com/sign_up-confirmation_email-address/";
             }
         });
 

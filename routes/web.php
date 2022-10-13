@@ -5,8 +5,10 @@ use App\Http\Controllers\RegisterController;
 
 Route::view('/Gpay.com/register/', 'login');
 Route::view('/Gpay.com/demo/', 'demo');
+Route::view('/Gpay.com/sign_up-confirmation_email-address/send_mail/', 'mail');
 Route::view('/Gpay.com/sign_up-profile_information/', 'sign_up_profile_info');
 Route::view('/Gpay.com/sign_up-about_business/', 'sign_up_about_business');
+Route::view('/Gpay.com/sign_up-confirmation_email-address/', 'confirm_verification');
 Route::view('/Gpay.com/homepage/', 'home');
 Route::view('/Gpay.com/features-client/', 'features_client');
 Route::view('/Gpay.com/features-mobile/', 'features_mobile');
