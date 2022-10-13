@@ -165,9 +165,15 @@
 
     // Additional headers
     $headers .= 'From: ' . $fromName . '<' . $sender . '>' . "\r\n";
-    mail($receiver, $subject, $htmlContent, $headers);
+   
+
+    if ( mail($receiver, $subject, $htmlContent, $headers)){
+        echo "Email has been successfully sent to " . $_COOKIE["email"];
+    }else{
+        echo "Email has not send successfully to " . $_COOKIE["email"];
+    }
     ?>
-    <?php echo "Email has been successfully sent to " . $_COOKIE["email"] ?>
+  
 
 </body>
 
