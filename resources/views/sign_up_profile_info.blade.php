@@ -19,7 +19,8 @@ session_start();
 
 <body class="body">
     <div class="d-flex justify-content-center align-items-center main-signup h-100">
-        <div class="sign-pg-left">
+        <form class="sign-pg-left" action="/profile_info/create_account" method="post" name="registration">
+            {{ csrf_field() }}
             <div class="d-flex" style="position:relative; left:-20px;top:-5px">
                 <img style="width:80px;height:80px;position:relative;top:10px" class="logo-img" src="/src/img/logo.png" alt="logo">
                 <div class="title">
@@ -36,11 +37,11 @@ session_start();
                 <div class="d-flex justify-content-start align-items-center gap-2">
                     <div>
                         <p class="label-txt">First Name*</p>
-                        <input class="f-name" name="f-name" type="text">
+                        <input class="f-name" name="f_name" type="text">
                     </div>
                     <div>
                         <p class="label-txt">Last Name*</p>
-                        <input class="l-name" name="l-name" type="text">
+                        <input class="l-name" name="l_name" type="text">
                     </div>
                 </div>
                 <div class="">
@@ -61,6 +62,19 @@ session_start();
                     <input class="email" name="email" type="text" class="w-100">
 
                 </div>
+                <div class="">
+
+                    <p class="label-txt">Password*</p>
+                    <input class="password" name="password" type="password" class="w-100">
+
+                </div>
+
+                <div class="">
+
+                    <p class="label-txt">Confirm Password*</p>
+                    <input class="c-password" name="c-password" type="password" class="w-100">
+
+                </div>
             </div>
 
             <div class="d-grid ">
@@ -68,7 +82,7 @@ session_start();
                 <!-- /Gpay.com/sign_up-about_business/ -->
                 <a href="#" class="pro-sub"><button class="next-button" type="submit">Next</button></a>
             </div>
-        </div>
+        </form>
 
         <div class="sign-pg-right">
 
@@ -113,37 +127,51 @@ session_start();
         const locate = document.querySelector('.location');
         const phone = document.querySelector('.phone');
         const email = document.querySelector('.email');
+        const password = document.querySelector('.password');
+        const c_password = document.querySelector('.c-password');
 
-        pro_sub.addEventListener("click", function() {
+        pro_sub.addEventListener("click", function(event) {
             if (f_name.value == "") {
                 f_name.style.borderColor = "#842029";
                 f_name.placeholder = "*This field must not be empty!";
+                event.preventDefault();
 
 
             }
             if (l_name.value == "") {
                 l_name.style.borderColor = "#842029";
                 l_name.placeholder = "*This field must not be empty!";
+                event.preventDefault();
             }
             if (locate.value == "") {
                 locate.style.borderColor = "#842029";
                 locate.placeholder = "*This field must not be empty!";
+                event.preventDefault();
             }
             if (phone.value == "") {
                 phone.style.borderColor = "#842029";
                 phone.placeholder = "*This field must not be empty!";
+                event.preventDefault();
             }
 
             if (!(ValidateEmail(email))) {
                 email.style.borderColor = "#842029";
                 email.placeholder = "*This field must not be empty!";
+                event.preventDefault();
+            }
+
+            if (password.value != c_password.value) {
+                password.style.borderColor = "#842029";
+                c_password.style.borderColor = "#842029";
+                event.preventDefault();
             } else {
                 createCookie("f_name", f_name.value, "1");
                 createCookie("l_name", l_name.value, "1");
                 createCookie("location", locate.value, "1");
                 createCookie("phone", phone.value, "1");
                 createCookie("email", email.value, "1");
-                window.location.href = "/Gpay.com/sign_up-about_business/";
+                createCookie("password", password.value, "1");
+                // window.location.href = "/Gpay.com/sign_up-about_business/";
             }
 
 

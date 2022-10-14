@@ -30,11 +30,8 @@
     </div>
     <div class="log-form">
       <h1>Welcome to G-Pay!</h1>
-      <form class="form-control login-form p-5" action="register/create_account" method="post" name="registration">
-        <!-- <div class="mb-3">
-          <label for="name" class="form-label fw-bold">Name</label>
-          <input type="text" name="name" id="name" class="form-control" placeholder="Input name">
-        </div> -->
+      <form class="form-control login-form p-5" action="/Gpay.com/register/login" method="post" name="registration">
+        {{ csrf_field() }}
         <div class="mb-3">
           <label for="email" class="form-label fw-bold">Email</label>
           <input type="email" name="email" id="email" class="form-control" placeholder="Input email">

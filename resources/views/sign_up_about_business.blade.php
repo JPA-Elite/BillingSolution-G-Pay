@@ -1,5 +1,8 @@
 <?php
-session_start();
+
+//   use App\Models\Profile_info;
+//   use Illuminate\Routing\Controller as Controller;
+//   use Illuminate\Http\Request;
 ?>
 
 <!doctype html>
@@ -18,7 +21,8 @@ session_start();
 
 <body class="body">
     <div class="d-flex justify-content-center align-items-center main-signup h-100">
-        <div class="sign-pg-left">
+        <div class="sign-pg-left" name="registration">
+            {{ csrf_field() }}
             <div class="d-flex" style="position:relative; left:-20px;top:-5px">
                 <img style="width:80px;height:80px;position:relative;top:10px" class="logo-img" src="/src/img/logo.png" alt="logo">
                 <div class="title">
@@ -143,12 +147,12 @@ session_start();
                     <p class="label-txt cust-txt">How customized is your offering for customers? *
                     </p>
                     <div class="d-flex justify-content-start align-items-center gap-2">
-                        <button class="customized-btn btn-ml">
-                            More or Less The Same
-                        </button>
-                        <button class="customized-btn btn-dc">
-                            Different or customized
-                        </button>
+                        <input style="cursor:pointer; text-align:center;font-weight:400" type="button" value=" More or Less The Same" class="customized-btn btn-ml">
+
+
+                        <input style="cursor:pointer; text-align:center;font-weight:400" type="button" value="  Different or customized" class="customized-btn btn-dc">
+
+
                     </div>
 
                 </div>
@@ -158,15 +162,15 @@ session_start();
             <div class="d-grid ">
                 <div class="line"></div>
                 <div class="d-flex justify-content-start align-items-center gap-3">
-                    <a href="/Gpay.com/register/"><button class="next-button">Back</button></a>
-                    <a href="#"><button class="next-button n-b-extend save_extend_btn">Save & Finished</button></a>
+                    <a href="/Gpay.com/register/"><input class="next-button" type="button" value="Back" style="cursor:pointer; text-align:center;font-weight:400"></a>
+                    <a href="#"><button class="next-button n-b-extend save_extend_btn" type="submit">Save & Finished</button></a>
                 </div>
 
 
             </div>
-
-
         </div>
+
+
 
         <div class="sign-pg-right">
 
@@ -238,37 +242,45 @@ session_start();
 
             }
         });
-        save_extend_btn.addEventListener("click", function() {
+        save_extend_btn.addEventListener("click", function(event) {
             if (company_name.value == "") {
                 company_name.style.borderColor = "#842029";
                 company_name.placeholder = "*This field must not be empty!";
+
             }
             if (company_do.value == "") {
                 company_do.style.borderColor = "#842029";
+
                 // l_name.placeholder = "*This field must not be empty!";
             }
             if (describe_business.value == "") {
                 describe_business.style.borderColor = "#842029";
+
                 // locate.placeholder = "*This field must not be empty!";
             }
             if (currency.value == "") {
                 currency.style.borderColor = "#842029";
+
                 // phone.placeholder = "*This field must not be empty!";
             }
             if (estimate_revenue.value == "") {
                 estimate_revenue.style.borderColor = "#842029";
+
                 // phone.placeholder = "*This field must not be empty!";
             }
             if (long_service.value == "") {
                 long_service.style.borderColor = "#842029";
+
                 // phone.placeholder = "*This field must not be empty!";
             }
             if (current_bill.value == "") {
                 current_bill.style.borderColor = "#842029";
+
                 // phone.placeholder = "*This field must not be empty!";
             }
             if (current_bill.value == "") {
                 current_bill.style.borderColor = "#842029";
+
                 // phone.placeholder = "*This field must not be empty!";
             } else {
                 // Profile information
@@ -292,7 +304,8 @@ session_start();
                 createCookie("estimate_revenue", estimate_revenue.value, "1");
                 createCookie("long_service", long_service.value, "1");
                 createCookie("current_bill", current_bill.value, "1");
-                window.location.href = "/Gpay.com/sign_up-confirmation_email-address/";
+                window.location.href = '/Gpay.com/sign_up-confirmation_email-address/';
+
             }
         });
 
@@ -313,6 +326,45 @@ session_start();
     </script>
     <script src="{{ URL::asset('/js/jquery.js') }}"></script>
     <script src="{{ URL::asset('/js/function.js') }}"></script>
+
+
+    <?php
+    // class sign_up_about_business extends Controller
+    // {
+    //     protected function create_info(Request $account)
+    //     {
+    //         $register = new Profile_info();
+
+    //         // Profile Information
+    //         // $f_name = validate_data($_COOKIE["f_name"]);
+    //         // $l_name = validate_data($_COOKIE["l_name"]);
+    //         // $location = validate_data($_COOKIE["location"]);
+    //         // $phone = validate_data($_COOKIE["phone"]);
+    //         // $email = validate_data($_COOKIE["email"]);
+
+    //         // $f_name = "hello";
+    //         // $l_name = "hi";
+    //         // $location = "23f";
+    //         // $phone = "wdfwf";
+    //         // $email = "fwfw";
+
+    //         return $register->create_account($account);
+    //     }
+
+
+    //     // function validate_data($data)
+    //     // {
+    //     //     $data = trim($data);
+    //     //     $data = stripslashes($data);
+    //     //     $data = htmlspecialchars($data);
+    //     //     return $data;
+    //     // }
+    // }
+
+    // $create_information = new sign_up_about_business();
+    // $create_information->create_info();
+    // 
+    ?>
 
 
 

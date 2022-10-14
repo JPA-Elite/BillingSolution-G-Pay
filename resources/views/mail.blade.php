@@ -169,6 +169,7 @@
 
     if ( mail($receiver, $subject, $htmlContent, $headers)){
         echo "Email has been successfully sent to " . $_COOKIE["email"];
+        echo '<script>window.location.href = "/Gpay.com/sign_up-confirmation_email-address/send_mail/send_successfully";</script>';
     }else{
         echo "Email has not send successfully to " . $_COOKIE["email"];
     }

@@ -1,21 +1,17 @@
 <?php
 
 namespace App\Models;
-use DB;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Register extends Model
+class Register extends Eloquent
 {
-    function create_account($account){
-        DB::table('accounts')->insert([
-            'email' => $account->email2,
-            'password' => $account->password
-        ]);
+    protected $connection = 'mongodb';
+    protected $collection = 'profile_info';
+    
+    protected $fillable = [
+        'first_name', 'last_name','Address', 'phone', 'email', 'password'
+    ];
 
-        return redirect('/contact');
-        
-    }
 }
-
-
