@@ -14,7 +14,7 @@
 <body class="body">
     <nav>
         <div class="d-flex align-items-end gap-5">
-            <a href="/Gpay.com/homepage/" class="text-decoration-none">
+            <a href="/gpay.com/homepage/" class="text-decoration-none">
                 <div class="logo d-grid gap-2">
                     <div class="d-flex">
                         <img src="/src/img/logo.png" alt="logo">
@@ -30,38 +30,38 @@
                     <li>Features</li>
                     <li><img class="w-50" src="/src/img/arrow-down.svg" alt="arrow-down"></li>
                     <div class="f-pop-up">
-                        <a href="/Gpay.com/features-client/">
+                        <a href="/gpay.com/features-client/">
                             <h6>
                                 Clients
                             </h6>
                         </a>
-                        <a href="/Gpay.com/features-mobile">
+                        <a href="/gpay.com/features-mobile">
                             <h6>
                                 Mobile
                             </h6>
                         </a>
 
-                        <a href="/Gpay.com/features-payments/">
+                        <a href="/gpay.com/features-payments/">
                             <h6>
                                 Payments
                             </h6>
                         </a>
-                        <a href="/Gpay.com/features-mileage-tracking/">
+                        <a href="/gpay.com/features-mileage-tracking/">
                             <h6>
                                 Mileage Tracking
                             </h6>
                         </a>
-                        <a href="/Gpay.com/features-expenses&receipts/">
+                        <a href="/gpay.com/features-expenses&receipts/">
                             <h6>
                                 Expenses & Receipts
                             </h6>
                         </a>
-                        <a href="/Gpay.com/features-invoices/">
+                        <a href="/gpay.com/features-invoices/">
                             <h6>
                                 Invoicing
                             </h6>
                         </a>
-                        <a href="/Gpay.com/features-estimates/">
+                        <a href="/gpay.com/features-estimates/">
                             <h6>
                                 Estimates
                             </h6>
@@ -72,41 +72,41 @@
                     <li>Who it’s for</li>
                     <li><img class="w-50" src="/src/img/arrow-down.svg" alt="arrow-down"></li>
                     <div class="s-pop-up">
-                        <a href="/features-client">
+                        <a href="/gpay.com/whoitsfor-self-employed-professionals/">
                             <h6>
                                 Self-Employed Professionals
                             </h6>
                         </a>
 
-                        <a href="/features-client">
+                        <a href="/gpay.com/whoitsfor-freelancers/">
                             <h6>
                                 Freelancers
                             </h6>
                         </a>
 
-                        <a href="/features-client">
+                        <a href="/gpay.com/whoitsfor-business_with_constractor/">
                             <h6>
                                 Businesses with Contractors
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/gpay.com/whoitsfor-business_with_employees/">
                             <h6>
                                 Businesses with Employee
                             </h6>
                         </a>
 
-                        <a href="/features-client">
+                        <a href="/gpay.com/features-expenses&receipts/">
                             <h6>
                                 Expenses & Receipts
                             </h6>
                         </a>
-                        <a href="/features-client">
+                        <a href="/gpay.com/whoitsfor_unemployed/">
                             <h6>
                                 Unemployed
                             </h6>
                         </a>
 
-                        <a href="/features-client">
+                        <a href="/gpay.com/whoitsfor_students/">
                             <h6>
                                 Students
                             </h6>
@@ -114,8 +114,9 @@
 
                     </div>
                 </div>
-                <a href="/Gpay.com/about_us/" class=""><li>Pricing</li></a>
-                <a href="/Gpay.com/about_us/" class=""><li>About Us</li></a>
+                <a href="/gpay.com/pricing/"><li>Pricing</li></a>
+                <a href="/gpay.com/about_us/"><li>About Us</li></a>
+                
             </ul>
         </div>
 
@@ -358,25 +359,25 @@
             <div>
                 <h1>FEATURES</h1>
                 <div>
-                    <a href="/Gpay.com/features-client/">Clients</a><br>
-                    <a href="/Gpay.com/features-mobile/">Mobile</a><br>
-                    <a href="/Gpay.com/features-payments/">Payments</a><br>
-                    <a href="/Gpay.com/features-mileage-tracking/">Mileage Tracking</a><br>
-                    <a href="/Gpay.com/features-expenses&receipts/">Expenses & Receipts</a><br>
-                    <a href="/Gpay.com/features-invoices/">Invoicing</a><br>
-                    <a href="/Gpay.com/features-estimates/">Estimates</a><br>
+                    <a href="/gpay.com/features-client/">Clients</a><br>
+                    <a href="/gpay.com/features-mobile/">Mobile</a><br>
+                    <a href="/gpay.com/features-payments/">Payments</a><br>
+                    <a href="/gpay.com/features-mileage-tracking/">Mileage Tracking</a><br>
+                    <a href="/gpay.com/features-expenses&receipts/">Expenses & Receipts</a><br>
+                    <a href="/gpay.com/features-invoices/">Invoicing</a><br>
+                    <a href="/gpay.com/features-estimates/">Estimates</a><br>
                 </div>
             </div>
             <div class="ver-line"></div>
             <div>
                 <h1>WHO IT’S FOR</h1>
                 <div>
-                    <a href="">Self-Employed Professionals</a><br>
-                    <a href="">Freelancers</a><br>
-                    <a href="">Businesses with Contractors</a><br>
-                    <a href="">Businesses with Employee</a><br>
-                    <a href="">Unemployed</a><br>
-                    <a href="">Students</a><br>
+                    <a href="/gpay.com/whoitsfor-self-employed-professionals/">Self-Employed Professionals</a><br>
+                    <a href="/gpay.com/whoitsfor-freelancers/">Freelancers</a><br>
+                    <a href="/gpay.com/whoitsfor-business_with_constractor/">Businesses with Contractors</a><br>
+                    <a href="/gpay.com/whoitsfor-business_with_employees/">Businesses with Employee</a><br>
+                    <a href="/gpay.com/whoitsfor_unemployed/">Unemployed</a><br>
+                    <a href="/gpay.com/whoitsfor_students/">Students</a><br>
                 </div>
             </div>
             <div class="ver-line"></div>
@@ -387,7 +388,7 @@
                     <a href="">Accounting Templates</a><br>
                     <a href="">Invoice Template</a><br>
                     <a href="">Sitemap</a><br>
-                    <a href="/Gpay.com/about_us/">About Us</a><br>
+                    <a href="/gpay.com/about_us/">About Us</a><br>
                     <a href="">Support</a><br>
                     <a href="">Contact Us</a><br>
                 </div>

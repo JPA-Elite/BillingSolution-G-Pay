@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | G-Pay</title>
+    <title>Who it's For - Freelancers | G-Pay</title>
     <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/home.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/features.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/WIF_busi_with_cons.css') }}">
     <link href="{{ URL::asset('/css/bootstrap.css') }}" rel="stylesheet">
 </head>
 
@@ -130,84 +130,118 @@
 
     </nav>
 
-    <div class="text-center about_bg_back">
-        <h1>Our Mission:</h1>
-        <h4>Execute Extraordinary Experiences Everyday to<br>
-            Help Owners Grow
-        </h4>
-        <div class=""></div>
 
+    <div class="back-image">
+        <div>
+
+            <h1 class="mb-4">Accounting Software for <br>
+                Businesses With Contractors</h1>
+            <a href="https://youtube.com" class="text-decoration-none">
+                <br>
+                <div class="cust-btn ">
+                    <p>Talk to a Specialist</p>
+                </div>
+                <br>
+                <p> Learn How G-Pay Is Designed To Support Your Business
+                </p>
+            </a>
+
+        </div>
+        <div class="back-image-mask"></div>
     </div>
-    <div class="bg-dark-blue about_nav_down">
-        <ul>
-            <li>Overview</li>
-            <li>Our Story</li>
-            <li>Team</li>
-            <li>Values</li>
-        </ul>
-    </div>
 
+    <div class="mobile-cont-pg ">
+        <div class="d-flex justify-content-between align-items-center">
 
-    <div class="cl-pg cl-pg1 mt-7 cl-pg-about   ">
-        <div class="c1-circle-bg c1-circle-bg-story"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">G-Pay Story</h2>
-                <p>It started when one of our teammates create <br>
-                    an interesting ideas about a site which is more <br>
-                    basically can change the flow in business.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Read more our story</p>
+            <div class="text-center">
+                <h2>Track Time, Expenses, and <br>
+                    Project Profitability in One Place</h2>
+                <p>Allow contractors to track time, log expenses,
+                    and update projects with unique roles and permissions.
+                    Plus, put your payroll on autopilot with the Gusto integration and automate every pay day.
+                </p>
+                <div class="cust-btn">
+                    <p>Talk to a Specialist</p>
                 </div>
             </div>
-            <div class="logo logo-about d-grid gap-2">
-                <div class="d-flex">
-                    <img src="/src/img/logo.png" alt="logo">
-                    <div class="title">
-                        <h1 class="text-purple">G-Pay</h1>
-                        <p>Invoice & Billings</p>
+            <img src="/src/img/image 45.png" alt="mileage">
+
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center ">
+            <img src="/src/img/image 46.png" alt="mileage">
+            <div class="text-center">
+
+                <h2>Manage Your Bills and Bill <br>
+                    Payments With Accounts Payable</h2>
+
+                <p>Track exactly where you stand with every bill and vendor,
+                    so that you never miss another payment.
+                </p>
+                <div class="cust-btn">
+                    <p>Talk to a Specialist</p>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div class="text-center">
+                <h2>Set Your Team up for Success <br>
+                    With Custom Onboarding</h2>
+
+                <p> Get a helping hand
+                    from the start with training for you and <br> your team
+                    to ensure everyone can hit the ground running.
+                </p>
+                <div class="cust-btn">
+                    <p>Talk to a Specialist</p>
+                </div>
+            </div>
+            <img src="/src/img/image 47.png" alt="mileage">
+        </div>
+    </div>
+    <div class="form">
+        <div class="content_form">
+            <h2>Fill in This Form and We’ll Be in Touch</h2>
+            <p>One of our Account Specialists will contact you within 24 hours. <br>
+                All fields are required.</p>
+            <ul>
+                <li class="input_field">
+                    <input type="text" placeholder="Company">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Phone">
+                    <input type="text" placeholder="Country">
+                    <input type="text" placeholder="Company Size">
+                    <input type="text" placeholder="Industry">
+                </li>
+                <div class="checkbox_btn">
+                    <input type="checkbox">
+                    <div class="cust-btn">
+                        <p>Submit</p>
                     </div>
+
                 </div>
+
+            </ul>
+            <div class="privacy" style="text-align: center;">
+                <p>By clicking the button above I confirm that I have read and agree to
+                    the G-Pay <br> <span>privacy policy.</span> </p>
             </div>
+
+
+
+
+
         </div>
-
-
     </div>
-
-    <div class="cl-pg cl-pg2 mt-0 cl-pg-about">
-        <div class="c1-circle-bg c1-circle-bg-team"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">G-Pay Team</h2>
-                <p>Meet the dedicated group of individuals who <br>
-                    are striving every day to ensure that you’re<br>
-                    focusing on your business, not on your <br>
-                    accounting.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Meet the G-Pay Team</p>
-                </div>
-            </div>
-            <img src="/src/img/team.png" alt="">
-        </div>
-
-
-    </div>
-    <div class="cl-pg cl-pg3 cl-pg3-values mt-0 text-center cl-pg-about">
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid align-items-center  justify-content-center">
-                <h2 class="mb-3">G-Pay Values </h2>
-                <p class="cl-pg3-values-phrase">G-Pay takes pride in developin services built for business owners, putting them first.<br>
-                    For us, that starts with company and employee culture, and the foundation of our culture is<br>
-                    defined by our PORCHFEST values. the values</p>
-                <div class="cust-btn mt-3 cust-btn-about-values">
-                    <p>Read more our Values</p>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
@@ -220,7 +254,7 @@
         <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex gap-5">
                 <div class="d-flex">
-                    <img class="logo-img" src="/src/img/logo.png" alt="logo">
+                    <img class="logo-img " src="/src/img/logo.png" alt="logo">
                     <div class="title">
                         <h1 class="text-purple fs-2">G-Pay</h1>
                         <p class="text-light">Invoice & Billings</p>
@@ -261,13 +295,13 @@
             <div>
                 <h1>FEATURES</h1>
                 <div>
-                    <a href="/gpay.com/features-client/">Clients</a><br>
-                    <a href="/gpay.com/features-mobile/">Mobile</a><br>
-                    <a href="/gpay.com/features-payments/">Payments</a><br>
-                    <a href="/gpay.com/features-mileage-tracking/">Mileage Tracking</a><br>
-                    <a href="/gpay.com/features-expenses&receipts/">Expenses & Receipts</a><br>
-                    <a href="/gpay.com/features-invoices/">Invoicing</a><br>
-                    <a href="/gpay.com/features-estimates/">Estimates</a><br>
+                    <a href="">Clients</a><br>
+                    <a href="">Mobile</a><br>
+                    <a href="">Payments</a><br>
+                    <a href="">Mileage Tracking</a><br>
+                    <a href="">Expenses & Receipts</a><br>
+                    <a href="">Invoicing</a><br>
+                    <a href="">Estimates</a><br>
                 </div>
             </div>
             <div class="ver-line"></div>
@@ -290,7 +324,7 @@
                     <a href="">Accounting Templates</a><br>
                     <a href="">Invoice Template</a><br>
                     <a href="">Sitemap</a><br>
-                    <a href="/gpay.com/about_us/">About Us</a><br>
+                    <a href="">About Us</a><br>
                     <a href="">Support</a><br>
                     <a href="">Contact Us</a><br>
                 </div>

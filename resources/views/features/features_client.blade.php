@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | G-Pay</title>
+    <title>Features - Clients | G-Pay</title>
     <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/home.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/features.css') }}">
@@ -130,79 +130,99 @@
 
     </nav>
 
-    <div class="text-center about_bg_back">
-        <h1>Our Mission:</h1>
-        <h4>Execute Extraordinary Experiences Everyday to<br>
-            Help Owners Grow
-        </h4>
-        <div class=""></div>
 
+    <div class="cl-background">
+        <h1>Stay Connected to Clients With <br>
+            Better Client Management</h1>
+
+        <div class="cust-btn">
+            <p>Try Client Management</p>
+        </div>
+
+        <img src="/src/img/client_pic.png" alt="">
     </div>
-    <div class="bg-dark-blue about_nav_down">
-        <ul>
-            <li>Overview</li>
-            <li>Our Story</li>
-            <li>Team</li>
-            <li>Values</li>
-        </ul>
-    </div>
+    <h1 class="text-center mb-4">Stay Connected to Clients With <br>
+        Better Client Management</h1>
 
+    <a href="https://youtube.com" class="text-decoration-none">
+        <div class="cust-btn ">
+            <p>Try it Free</p>
+        </div>
+    </a>
 
-    <div class="cl-pg cl-pg1 mt-7 cl-pg-about   ">
-        <div class="c1-circle-bg c1-circle-bg-story"></div>
+    <div class="cl-pg cl-pg1 mt-7">
+        <div class="c1-circle-bg"></div>
         <div class="c1-content d-flex justify-content-center align-items-center gap-10">
             <div class="d-grid">
-                <h2 class="mb-3">G-Pay Story</h2>
-                <p>It started when one of our teammates create <br>
-                    an interesting ideas about a site which is more <br>
-                    basically can change the flow in business.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Read more our story</p>
+                <h2 class="mb-3">Accurate Billing Starts By<br>
+                    Tracking Client Work</h2>
+                <p>Keep clients informed and engaged with Projects, so<br>
+                    you’re always on the same page. And log every billable<br> minute with Time Tracking to record all work and<br>
+                    send more accurate invoices.</p>
+                <div class="cust-btn mt-3">
+                    <p>Try it Free</p>
                 </div>
             </div>
-            <div class="logo logo-about d-grid gap-2">
-                <div class="d-flex">
-                    <img src="/src/img/logo.png" alt="logo">
-                    <div class="title">
-                        <h1 class="text-purple">G-Pay</h1>
-                        <p>Invoice & Billings</p>
-                    </div>
-                </div>
-            </div>
+            <img src="/src/img/track_client.png" alt="">
         </div>
 
 
     </div>
 
-    <div class="cl-pg cl-pg2 mt-0 cl-pg-about">
-        <div class="c1-circle-bg c1-circle-bg-team"></div>
+    <div class="cl-pg cl-pg2 mt-1">
+        <div class="c1-circle-bg"></div>
         <div class="c1-content d-flex justify-content-center align-items-center gap-10">
             <div class="d-grid">
-                <h2 class="mb-3">G-Pay Team</h2>
-                <p>Meet the dedicated group of individuals who <br>
-                    are striving every day to ensure that you’re<br>
-                    focusing on your business, not on your <br>
-                    accounting.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Meet the G-Pay Team</p>
+                <h2 class="mb-3">Build Client Trust By Staying<br> Connected
+                </h2>
+                <p>Communication and transparency are great ways to<br>
+                    keep clients interested in their project. With Client<br>
+                    Portal, Comments, Project Collaboration, File Sharing<br>
+                    and more, relationships blossom.</p>
+                <div class="cust-btn mt-3">
+                    <p>Try it Free</p>
                 </div>
             </div>
-            <img src="/src/img/team.png" alt="">
+            <img src="/src/img/trust_client.png" alt="">
         </div>
 
 
     </div>
-    <div class="cl-pg cl-pg3 cl-pg3-values mt-0 text-center cl-pg-about">
+    <div class="cl-pg cl-pg3 mt-1">
+        <div class="c1-circle-bg"></div>
         <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid align-items-center  justify-content-center">
-                <h2 class="mb-3">G-Pay Values </h2>
-                <p class="cl-pg3-values-phrase">G-Pay takes pride in developin services built for business owners, putting them first.<br>
-                    For us, that starts with company and employee culture, and the foundation of our culture is<br>
-                    defined by our PORCHFEST values. the values</p>
-                <div class="cust-btn mt-3 cust-btn-about-values">
-                    <p>Read more our Values</p>
+            <div class="d-grid">
+                <h2 class="mb-3">Use Client Info to Grow<br>
+                    Your Business </h2>
+                <p>Client reports (Client Account Statement, Revenue by<br>
+                    Client, Time Entry Details, Invoice Details, Payments <br>
+                    Collected, Retainer Summary) tell you which clients<br>
+                    help and hinder your business.</p>
+                <div class="cust-btn mt-3">
+                    <p>Try it Free</p>
                 </div>
             </div>
+            <img src="/src/img/grow_client.png" alt="">
+        </div>
+
+
+    </div>
+
+    <div class="cl-pg cl-pg4 mt-1">
+        <div class="c1-circle-bg"></div>
+        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
+            <div class="">
+                <h2 class="mb-3">Foster Loyalty With<br> Client Credits</h2>
+
+                <p>Track loyalty discounts, refund prior work, or take<br>
+                    prepayments through Credits so you know where you<br>
+                    stand with each client. Then, auto-apply credits to <br>
+                    invoices to keep your books accurate.</p>
+                <div class="cust-btn mt-3">
+                    <p>Try it Free</p>
+                </div>
+            </div>
+            <img src="/src/img/foster_client.png" alt="">
         </div>
 
 

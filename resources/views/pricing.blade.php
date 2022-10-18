@@ -8,6 +8,7 @@
     <title>About Us | G-Pay</title>
     <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/home.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/pricing.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/features.css') }}">
     <link href="{{ URL::asset('/css/bootstrap.css') }}" rel="stylesheet">
 </head>
@@ -131,79 +132,178 @@
     </nav>
 
     <div class="text-center about_bg_back">
-        <h1>Our Mission:</h1>
-        <h4>Execute Extraordinary Experiences Everyday to<br>
-            Help Owners Grow
-        </h4>
+        <h1>Plans That Serve You and Your Clients</h1>
+        <main class="d-flex align-items-center switch-col">
+            <h5>Monthly</h5>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+            <h5>Yearly</h5>
+        </main>
+
         <div class=""></div>
 
     </div>
-    <div class="bg-dark-blue about_nav_down">
-        <ul>
-            <li>Overview</li>
-            <li>Our Story</li>
-            <li>Team</li>
-            <li>Values</li>
-        </ul>
-    </div>
 
-
-    <div class="cl-pg cl-pg1 mt-7 cl-pg-about   ">
-        <div class="c1-circle-bg c1-circle-bg-story"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">G-Pay Story</h2>
-                <p>It started when one of our teammates create <br>
-                    an interesting ideas about a site which is more <br>
-                    basically can change the flow in business.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Read more our story</p>
-                </div>
+    <div class="pricing-tags">
+        <div class="price-list">
+            <div>
+                <h2>Lite</h2>
+                <p>For professionals with <br>
+                    basic needs</p>
             </div>
-            <div class="logo logo-about d-grid gap-2">
-                <div class="d-flex">
-                    <img src="/src/img/logo.png" alt="logo">
-                    <div class="title">
-                        <h1 class="text-purple">G-Pay</h1>
-                        <p>Invoice & Billings</p>
-                    </div>
-                </div>
+            <div>
+                <img src="/src/img/15.png" alt="">
+                <h3>5 Billable Clients</h3>
+
+                <button>Try it Free</button><br>
+                <small>Buy Now</small>
+
+                <h2>TOP FEATURES</h2>
+
+                <ul>
+                    <li>Send unlimited invoices to up to 5 clients</li>
+                    <li>Track unlimited expenses</li>
+                    <li>Send unlimited estimates</li>
+                    <li>Get paid with credit cards and
+                        bank transfers</li>
+                    <li>Track sales tax & see reports</li>
+                    <li>Access anywhere on iOS and Android</li>
+                </ul>
+
+                <a href=""> See Full Plan Details</a>
+
+                <h2>ADD-ONS</h2>
+                <ul>
+                    <li>Team Members ($10/person/mo)</li>
+                    <li>Gusto Payroll (talk to our Specialists to learn more)
+                    </li>
+                </ul>
+
+                <button>Try it Free</button><br>
+                <small>Buy Now</small>
+
+            </div>
+        </div>
+        <div class="price-list">
+            <div>
+                <h2>Lite</h2>
+                <p>For professionals with <br>
+                    basic needs</p>
+            </div>
+            <div>
+                <img src="/src/img/15.png" alt="">
+                <h3>5 Billable Clients</h3>
+
+                <button>Try it Free</button><br>
+                <small>Buy Now</small>
+
+                <h2>TOP FEATURES</h2>
+
+                <ul>
+                    <li>Send unlimited invoices to up to 5 clients</li>
+                    <li>Track unlimited expenses</li>
+                    <li>Send unlimited estimates</li>
+                    <li>Get paid with credit cards and
+                        bank transfers</li>
+                    <li>Track sales tax & see reports</li>
+                    <li>Access anywhere on iOS and Android</li>
+                </ul>
+
+                <a href=""> See Full Plan Details</a>
+
+                <h2>ADD-ONS</h2>
+                <ul>
+                    <li>Team Members ($10/person/mo)</li>
+                    <li>Gusto Payroll (talk to our Specialists to learn more)
+                    </li>
+                </ul>
+
+                <button>Try it Free</button><br>
+                <small>Buy Now</small>
+
+            </div>
+        </div>
+        <div class="price-list">
+            <div>
+                <h2>Lite</h2>
+                <p>For professionals with <br>
+                    basic needs</p>
+            </div>
+            <div>
+                <img src="/src/img/15.png" alt="">
+                <h3>5 Billable Clients</h3>
+
+                <button>Try it Free</button><br>
+                <small>Buy Now</small>
+
+                <h2>TOP FEATURES</h2>
+
+                <ul>
+                    <li>Send unlimited invoices to up to 5 clients</li>
+                    <li>Track unlimited expenses</li>
+                    <li>Send unlimited estimates</li>
+                    <li>Get paid with credit cards and
+                        bank transfers</li>
+                    <li>Track sales tax & see reports</li>
+                    <li>Access anywhere on iOS and Android</li>
+                </ul>
+
+                <a href=""> See Full Plan Details</a>
+
+                <h2>ADD-ONS</h2>
+                <ul>
+                    <li>Team Members ($10/person/mo)</li>
+                    <li>Gusto Payroll (talk to our Specialists to learn more)
+                    </li>
+                </ul>
+
+                <button>Try it Free</button><br>
+                <small>Buy Now</small>
+
+            </div>
+        </div>
+        <div class="price-list">
+            <div>
+                <h2>Lite</h2>
+                <p>For professionals with <br>
+                    basic needs</p>
+            </div>
+            <div>
+                <img src="/src/img/15.png" alt="">
+                <h3>5 Billable Clients</h3>
+
+                <button>Try it Free</button><br>
+                <small>Buy Now</small>
+
+                <h2>TOP FEATURES</h2>
+
+                <ul>
+                    <li>Send unlimited invoices to up to 5 clients</li>
+                    <li>Track unlimited expenses</li>
+                    <li>Send unlimited estimates</li>
+                    <li>Get paid with credit cards and
+                        bank transfers</li>
+                    <li>Track sales tax & see reports</li>
+                    <li>Access anywhere on iOS and Android</li>
+                </ul>
+
+                <a href=""> See Full Plan Details</a>
+
+                <h2>ADD-ONS</h2>
+                <ul>
+                    <li>Team Members ($10/person/mo)</li>
+                    <li>Gusto Payroll (talk to our Specialists to learn more)
+                    </li>
+                </ul>
+
+                <button>Try it Free</button><br>
+                <small>Buy Now</small>
+
             </div>
         </div>
 
-
-    </div>
-
-    <div class="cl-pg cl-pg2 mt-0 cl-pg-about">
-        <div class="c1-circle-bg c1-circle-bg-team"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">G-Pay Team</h2>
-                <p>Meet the dedicated group of individuals who <br>
-                    are striving every day to ensure that you’re<br>
-                    focusing on your business, not on your <br>
-                    accounting.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Meet the G-Pay Team</p>
-                </div>
-            </div>
-            <img src="/src/img/team.png" alt="">
-        </div>
-
-
-    </div>
-    <div class="cl-pg cl-pg3 cl-pg3-values mt-0 text-center cl-pg-about">
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid align-items-center  justify-content-center">
-                <h2 class="mb-3">G-Pay Values </h2>
-                <p class="cl-pg3-values-phrase">G-Pay takes pride in developin services built for business owners, putting them first.<br>
-                    For us, that starts with company and employee culture, and the foundation of our culture is<br>
-                    defined by our PORCHFEST values. the values</p>
-                <div class="cust-btn mt-3 cust-btn-about-values">
-                    <p>Read more our Values</p>
-                </div>
-            </div>
-        </div>
 
 
     </div>

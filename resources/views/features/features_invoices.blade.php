@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | G-Pay</title>
+    <title>Features - Invoices | G-Pay</title>
     <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/home.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/features.css') }}">
@@ -130,84 +130,196 @@
 
     </nav>
 
-    <div class="text-center about_bg_back">
-        <h1>Our Mission:</h1>
-        <h4>Execute Extraordinary Experiences Everyday to<br>
-            Help Owners Grow
-        </h4>
-        <div class=""></div>
 
-    </div>
-    <div class="bg-dark-blue about_nav_down">
-        <ul>
-            <li>Overview</li>
-            <li>Our Story</li>
-            <li>Team</li>
-            <li>Values</li>
-        </ul>
-    </div>
+    <div class="back-image back-image-invoice">
 
-
-    <div class="cl-pg cl-pg1 mt-7 cl-pg-about   ">
-        <div class="c1-circle-bg c1-circle-bg-story"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">G-Pay Story</h2>
-                <p>It started when one of our teammates create <br>
-                    an interesting ideas about a site which is more <br>
-                    basically can change the flow in business.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Read more our story</p>
+        <div>
+            <h1 class="mb-4">Invoice Software <br>
+                That Saves You Time</h1>
+            <p class="mb-5">G-Pay makes small business invoicing and billing so simple,<br>
+                you’ll be amazed at the time you have to focus on doing what <br>
+                you love and how much faster you get paid. Who would have <br>
+                thought invoice generator software could do that?</p>
+            <a href="https://youtube.com" class="text-decoration-none">
+                <div class="cust-btn ">
+                    <p>Try it Free</p>
                 </div>
+            </a>
+            <div class="d-flex justify-content-center w-100">
+                <img class="invoice-img-label" src="/src/img/invoice_bottom.png" alt="">
             </div>
-            <div class="logo logo-about d-grid gap-2">
-                <div class="d-flex">
-                    <img src="/src/img/logo.png" alt="logo">
-                    <div class="title">
-                        <h1 class="text-purple">G-Pay</h1>
-                        <p>Invoice & Billings</p>
-                    </div>
+
+
+
+
+        </div>
+        <div class="back-image-mask"></div>
+    </div>
+
+
+
+    <div class="mobile-cont-pg ">
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/ach.png" alt="mileage">
+            <div class="text-center">
+                <h2>Accept Credit Cards <br>
+                    and ACH and Get Paid Faster</h2>
+                <p> No more chasing clients for checks or waiting in the line at <br>
+                    the bank. Let your clients pay their preferred way, online, and <br>get paid up to 11 days faster.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
                 </div>
+
             </div>
+
+
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="text-center">
+                <h2>Put Your Business on <br>
+                    Auto‑Pilot</h2>
+                <p>
+                    From sending reminders to securely charging your client’s<br>
+                    credit card, you can automate as much (or as little) of your<br>
+                    business with G-Pay. Let G-Pay follow-up with clients so you<br>
+                    can focus your time on what matters most.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
+                </div>
+
+            </div>
+
+
+            <img src="/src/img/auto.png" alt="mileage">
+
         </div>
 
 
-    </div>
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/upfront.png" alt="mileage">
+            <div class="text-center">
+                <h2>Get Paid Upfront with <br>
+                    Deposits</h2>
 
-    <div class="cl-pg cl-pg2 mt-0 cl-pg-about">
-        <div class="c1-circle-bg c1-circle-bg-team"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">G-Pay Team</h2>
-                <p>Meet the dedicated group of individuals who <br>
-                    are striving every day to ensure that you’re<br>
-                    focusing on your business, not on your <br>
-                    accounting.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Meet the G-Pay Team</p>
+                <p> No more paying expenses out of pocket or waiting until the <br>
+                    end of a project to get paid. Request a deposit on your invoice <br>
+                    and you’ll sleep peacefully knowing you’ll get the money you<br>
+                    need at the start.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
                 </div>
+
             </div>
-            <img src="/src/img/team.png" alt="">
+
+
         </div>
 
 
-    </div>
-    <div class="cl-pg cl-pg3 cl-pg3-values mt-0 text-center cl-pg-about">
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid align-items-center  justify-content-center">
-                <h2 class="mb-3">G-Pay Values </h2>
-                <p class="cl-pg3-values-phrase">G-Pay takes pride in developin services built for business owners, putting them first.<br>
-                    For us, that starts with company and employee culture, and the foundation of our culture is<br>
-                    defined by our PORCHFEST values. the values</p>
-                <div class="cust-btn mt-3 cust-btn-about-values">
-                    <p>Read more our Values</p>
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="text-center">
+                <h2>Establish a Stable <br>
+                    Cashflow with Retainers</h2>
+
+                <p> Negotiate fixed pricing with your clients upfront. Whether<br>
+                    it’s for a specific timeline or project, establish a stable cash <br>
+                    flow and make it easier to forecast upcoming workload and<br>
+                    income.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
                 </div>
+
             </div>
+
+
+            <img src="/src/img/pilot.png" alt="mileage">
+
         </div>
 
 
+
+
+
+
     </div>
 
+    <div class="d-flex justify-content-center align-items-center features-app-set">
+        <div class="">
+            <h2>
+                Even More Powerful Invoicing<br>
+                Features</h2>
+            <div class="text-start mt-4">
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Add invoice due dates</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Customize invoice payment term</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Automatically calculate taxes</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Preview invoices before sending</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Choose your preferred currency</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Instant updates when an invoice has been viewed
+                        and paid
+                    </p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Automatically track inventory billed on invoices
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center app-set-info">
+            <img class="w-multiple" src="/src/img/owner.png" alt="">
+
+            <p class="text-center app-header-txt">That by switching to G-Pay <br>
+                the average small business owner<br>
+                saves 192 hours* every year…</p>
+
+            <div class="cust-btn">
+                <p>Try it Free</p>
+            </div>
+            <p class="text-center copy-info">No credit card required. Cancel anytime.</p>
+        </div>
+    </div>
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>

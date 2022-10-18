@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | G-Pay</title>
+    <title>Features - Expenses & Receipts | G-Pay</title>
     <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/home.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/features.css') }}">
@@ -130,84 +130,219 @@
 
     </nav>
 
-    <div class="text-center about_bg_back">
-        <h1>Our Mission:</h1>
-        <h4>Execute Extraordinary Experiences Everyday to<br>
-            Help Owners Grow
-        </h4>
-        <div class=""></div>
 
-    </div>
-    <div class="bg-dark-blue about_nav_down">
-        <ul>
-            <li>Overview</li>
-            <li>Our Story</li>
-            <li>Team</li>
-            <li>Values</li>
-        </ul>
-    </div>
+    <div class="back-image back-image-expense">
 
-
-    <div class="cl-pg cl-pg1 mt-7 cl-pg-about   ">
-        <div class="c1-circle-bg c1-circle-bg-story"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">G-Pay Story</h2>
-                <p>It started when one of our teammates create <br>
-                    an interesting ideas about a site which is more <br>
-                    basically can change the flow in business.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Read more our story</p>
+        <div>
+            <h1 class="mb-4">Expense Tracking<br>
+                Made Simple</h1>
+            <p class="mb-5">G-Pay powerful and simple expense tracker makes tracking<br>
+                business expenses ridiculously easy. You’ll know at a glance<br>
+                what you’re spending and how profitable you are, without the <br>
+                headache of spreadsheets or shoeboxes of receipts.</p>
+            <a href="https://youtube.com" class="text-decoration-none">
+                <div class="cust-btn ">
+                    <p>Try it Free</p>
                 </div>
-            </div>
-            <div class="logo logo-about d-grid gap-2">
-                <div class="d-flex">
-                    <img src="/src/img/logo.png" alt="logo">
-                    <div class="title">
-                        <h1 class="text-purple">G-Pay</h1>
-                        <p>Invoice & Billings</p>
-                    </div>
+            </a>
+
+        </div>
+        <div class="back-image-mask"></div>
+    </div>
+
+    <div class="mobile-cont-pg ">
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/track.png" alt="mileage">
+            <div class="text-center">
+                <h2>Track Your Business Expenses <br>
+                    Without Lifting a Finger</h2>
+                <p> Connect your bank account or credit card to G-Pay and say<br>
+                    goodbye to manual entry. Every day your G-Pay account will be <br>
+                    updated with your most recent spending so your business is<br>
+                    always automatically up-to-date.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
                 </div>
+
             </div>
+
+
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="text-center">
+                <h2>Automatic Mobile Receipt <br>
+                    Scanning</h2>
+                <p>
+                <ul class="text-start list-style-type-bullet">
+                    <li> The fastest way to log and categorize expenses in your account.</li>
+                    <li>Scan and save paper and digital receipts </li>
+                    <li>Auto-capture the merchant, totals, and taxes</li>
+                    <li>Email receipts directly to your account to capture transactions</li>
+                </ul>
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
+                </div>
+
+            </div>
+
+
+            <img src="/src/img/scanning.png" alt="mileage">
+
         </div>
 
 
-    </div>
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/lose.png" alt="mileage">
+            <div class="text-center">
+                <h2>Never Lose Another<br>
+                    Receipt</h2>
 
-    <div class="cl-pg cl-pg2 mt-0 cl-pg-about">
-        <div class="c1-circle-bg c1-circle-bg-team"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">G-Pay Team</h2>
-                <p>Meet the dedicated group of individuals who <br>
-                    are striving every day to ensure that you’re<br>
-                    focusing on your business, not on your <br>
-                    accounting.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Meet the G-Pay Team</p>
+                <p> Stop worrying about having to remember every last detail<br>
+                    yourself. Snap a picture of a receipt, log it, and let G-Pay keep <br>
+                    things organized for you in the cloud.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
                 </div>
+
             </div>
-            <img src="/src/img/team.png" alt="">
+
+
         </div>
 
 
-    </div>
-    <div class="cl-pg cl-pg3 cl-pg3-values mt-0 text-center cl-pg-about">
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid align-items-center  justify-content-center">
-                <h2 class="mb-3">G-Pay Values </h2>
-                <p class="cl-pg3-values-phrase">G-Pay takes pride in developin services built for business owners, putting them first.<br>
-                    For us, that starts with company and employee culture, and the foundation of our culture is<br>
-                    defined by our PORCHFEST values. the values</p>
-                <div class="cust-btn mt-3 cust-btn-about-values">
-                    <p>Read more our Values</p>
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="text-center">
+                <h2>Make Tax Time a <br>
+                    Breeze</h2>
+
+                <p> Categorization of expenses in G-Pay is made with tax time <br>
+                    in mind, so it’s easy for you (or your accountant) to file. At tax<br>
+                    time you have all the information you need without any of the<br> complexity.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
                 </div>
+
             </div>
+
+
+            <img src="/src/img/breeze.png" alt="mileage">
+
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/bill.png" alt="mileage">
+            <div class="text-center">
+                <h2>Easily Bill Your Client<br>
+                    For Expenses</h2>
+
+                <p> Forget about leaving money on the table. With G-Pay you<br>
+                    can quickly mark your business expenses as billable, add a <br>
+                    markup and then automatically pull them onto an invoice for<br>
+                    your client.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
+                </div>
+
+            </div>
+
+
         </div>
 
 
+        <div class="d-flex justify-content-between align-items-center ">
+            <div>
+                <h2>Keep Project Spending<br>
+                    On Track</h2>
+
+                <p> Tracking expenses in G-Pay means that your team can keep <br>
+                    tabs on what they’re spending on projects. It also means you<br>
+                    can keep a close eye on how things are tracking to budget.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
+                </div>
+
+            </div>
+
+
+            <img src="/src/img/spend.png" alt="mileage">
+
+        </div>
+
+
+
     </div>
 
+    <div class="d-flex justify-content-center align-items-center features-app-set">
+        <div class="">
+            <h2 class="text-center">
+                Other Ways G-Pay <br>
+                Makes Expense Tracking Easy</h2>
+            <div class="text-start mt-4">
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Multi-currency expenses</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Auto-categorization of expenses</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Tax friendly categories</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Easily assign recurring expenses</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Automatically import expenses from your bank</p>
+
+                </div>
+                <div class="d-flex justify-align-content-sm-start align-items-center gap-2">
+                    <svg class="position-relative" style="top: -7px;" width="15" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1893 30.0234L0.439322 16.6763C-0.146441 15.8745 -0.146441 14.5743 0.439322 13.7724L2.56059 10.8684C3.14636 10.0665 4.09616 10.0665 4.68192 10.8684L11.25 19.8596L25.3181 0.601402C25.9038 -0.200467 26.8536 -0.200467 27.4394 0.601402L29.5607 3.50536C30.1464 4.30723 30.1464 5.60737 29.5607 6.40932L12.3107 30.0235C11.7248 30.8254 10.7751 30.8254 10.1893 30.0234Z" fill="#277C19" />
+                    </svg>
+                    <p>Easily mark expenses to rebill to a client later
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center app-set-info">
+            <img class="w-multiple" src="/src/img/save_expense.png" alt="">
+
+            <p class="text-center app-header-txt">With the time and energy you’ll<br>
+                save every month,<br>
+                G-Pay ends up paying for itself…</p>
+
+            <div class="cust-btn">
+                <p>Try it Free</p>
+            </div>
+            <p class="text-center copy-info">No credit card required. Cancel anytime.</p>
+        </div>
+    </div>
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>

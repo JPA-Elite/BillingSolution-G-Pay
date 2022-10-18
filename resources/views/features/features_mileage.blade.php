@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | G-Pay</title>
+    <title>Features - Mileage Tracking | G-Pay</title>
     <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/home.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/features.css') }}">
@@ -130,84 +130,131 @@
 
     </nav>
 
-    <div class="text-center about_bg_back">
-        <h1>Our Mission:</h1>
-        <h4>Execute Extraordinary Experiences Everyday to<br>
-            Help Owners Grow
-        </h4>
-        <div class=""></div>
 
-    </div>
-    <div class="bg-dark-blue about_nav_down">
-        <ul>
-            <li>Overview</li>
-            <li>Our Story</li>
-            <li>Team</li>
-            <li>Values</li>
-        </ul>
-    </div>
+    <div class="back-image back-image-mileage d-flex justify-content-center">
 
+        <div class="text-center d-grid align-items-center justify-content-center ">
+            <h1 class="">Never Miss a Trip With Our<br>
+                Automated Mileage Tracker App</h1>
 
-    <div class="cl-pg cl-pg1 mt-7 cl-pg-about   ">
-        <div class="c1-circle-bg c1-circle-bg-story"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">G-Pay Story</h2>
-                <p>It started when one of our teammates create <br>
-                    an interesting ideas about a site which is more <br>
-                    basically can change the flow in business.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Read more our story</p>
+            <a href="https://youtube.com" class="text-decoration-none  m-auto">
+                <div class="cust-btn cust-btn-mileage">
+                    <p>Try it Free</p>
                 </div>
-            </div>
-            <div class="logo logo-about d-grid gap-2">
-                <div class="d-flex">
-                    <img src="/src/img/logo.png" alt="logo">
-                    <div class="title">
-                        <h1 class="text-purple">G-Pay</h1>
-                        <p>Invoice & Billings</p>
-                    </div>
+            </a>
+            <img src="/src/img/m1.png" alt="">
+        </div>
+
+        <div class="back-image-mask"></div>
+    </div>
+
+    <div class="mobile-cont-pg ">
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/trip.png" alt="mileage">
+            <div class="text-center">
+                <h2>Log Trips as You Drive, <br>
+                    Hands-Free</h2>
+                <p> Every time your car moves in the name of business it’s an<br>
+                    expense you can claim at tax time. FreshBooks Mileage <br>
+                    Tracking automatically logs each trip and also saves your travel <br>
+                    history.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
                 </div>
+
             </div>
+
+
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="text-center">
+                <h2>More Organized While<br>
+                    on the Road</h2>
+
+                <p> The last thing you need is paper trip logs. Easily swipe your<br>
+                    screen to classify a trip as business or personal, then send a <br>
+                    mileage report directly to your email or download it from G-Pay.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
+                </div>
+
+            </div>
+
+
+            <img src="/src/img/road.png" alt="mileage">
+
         </div>
 
 
-    </div>
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="/src/img/tax.png" alt="mileage">
+            <div class="text-center">
+                <h2>Be Tax Compliant<br>
+                    and Get Your Best Return</h2>
 
-    <div class="cl-pg cl-pg2 mt-0 cl-pg-about">
-        <div class="c1-circle-bg c1-circle-bg-team"></div>
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid">
-                <h2 class="mb-3">G-Pay Team</h2>
-                <p>Meet the dedicated group of individuals who <br>
-                    are striving every day to ensure that you’re<br>
-                    focusing on your business, not on your <br>
-                    accounting.</p>
-                <div class="cust-btn mt-3 cust-btn-about">
-                    <p>Meet the G-Pay Team</p>
+                <p> G-Pay Mileage Tracking shows potential tax deductions for<br>
+                    every business trip. Download accurate and ready-to-be-filed <br>
+                    reports to deduct every mile and reduce your taxable income.
+                </p>
+                <div class="cust-btn">
+                    <p>Try it Free</p>
                 </div>
+
             </div>
-            <img src="/src/img/team.png" alt="">
+
+
         </div>
 
 
+
+
     </div>
-    <div class="cl-pg cl-pg3 cl-pg3-values mt-0 text-center cl-pg-about">
-        <div class="c1-content d-flex justify-content-center align-items-center gap-10">
-            <div class="d-grid align-items-center  justify-content-center">
-                <h2 class="mb-3">G-Pay Values </h2>
-                <p class="cl-pg3-values-phrase">G-Pay takes pride in developin services built for business owners, putting them first.<br>
-                    For us, that starts with company and employee culture, and the foundation of our culture is<br>
-                    defined by our PORCHFEST values. the values</p>
-                <div class="cust-btn mt-3 cust-btn-about-values">
-                    <p>Read more our Values</p>
+
+    <div class="d-flex justify-content-center align-items-center features-app-set features-app-mileage">
+        <div class="w-50">
+            <p>WHAT ELSE?</p>
+            <h1>Do Even More <br>
+                With Mileage Tracking</h1>
+            <div class="cust-btn cust-btn-mileage-app">
+                <p>Try it Free</p>
+            </div>
+
+            <p class="copy-info">No credit card required. Cancel anytime.</p>
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-75 h-100 ">
+            <div class=" h-100 w-50 text-center">
+                <h4>Handy Reports</h4>
+                <p>Easily download and share insightful reports with<br> your team</p>
+                <img class="w-50" src="/src/img/report.png" alt="">
+            </div>
+            <div class="mileage-features  w-50">
+                <div>
+                    <h5>Edit and Adjust<br>
+                        Trip Details</h5>
+                    <p>Manually edit trips in and<br> discrepancy</p>
+                </div>
+                <div>
+                    <h5>Easy On/Off<br>
+                        Toggle</h5>
+                    <p>Easily turn Mileage<br> Tracking on and off at <br>anytime</p>
+                </div>
+                <div>
+                    <h5>Local Rates<br>
+                        In-App</h5>
+                    <p>Check mileage allowance<br> rates for your country</p>
+                </div>
+                <div>
+                    <h5>Easily Find <br>
+                        Logged Trips</h5>
+                    <p>Sort and filter all trips by<br> date range</p>
                 </div>
             </div>
+
         </div>
-
-
     </div>
-
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
