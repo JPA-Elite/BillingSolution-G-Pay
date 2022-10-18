@@ -147,6 +147,7 @@
     </div>
 
     <div class="pricing-tags">
+
         <div class="price-list">
             <div>
                 <h2>Lite</h2>
@@ -155,11 +156,16 @@
             </div>
             <div>
                 <img src="/src/img/15.png" alt="">
+                <br>
+                <br>
                 <h3>5 Billable Clients</h3>
-
+                <br>
                 <button>Try it Free</button><br>
-                <small>Buy Now</small>
 
+                <small>Buy Now</small>
+                <br>
+                <br>
+                <br>
                 <h2>TOP FEATURES</h2>
 
                 <ul>
@@ -173,7 +179,9 @@
                 </ul>
 
                 <a href=""> See Full Plan Details</a>
-
+                <br>
+                <br>
+                <br>
                 <h2>ADD-ONS</h2>
                 <ul>
                     <li>Team Members ($10/person/mo)</li>
@@ -187,37 +195,80 @@
             </div>
         </div>
         <div class="price-list">
+          
             <div>
-                <h2>Lite</h2>
-                <p>For professionals with <br>
-                    basic needs</p>
+                <h2>Plus</h2>
+                <p>For owners looking for more <br>
+                    automation and insights</p>
             </div>
             <div>
-                <img src="/src/img/15.png" alt="">
-                <h3>5 Billable Clients</h3>
+                <img src="/src/img/30.png" alt="">
+                <h3>50 Billable Clients</h3>
+                <br>
 
                 <button>Try it Free</button><br>
                 <small>Buy Now</small>
-
+                <br><br><br>
                 <h2>TOP FEATURES</h2>
 
                 <ul>
-                    <li>Send unlimited invoices to up to 5 clients</li>
-                    <li>Track unlimited expenses</li>
-                    <li>Send unlimited estimates</li>
-                    <li>Get paid with credit cards and
-                        bank transfers</li>
-                    <li>Track sales tax & see reports</li>
-                    <li>Access anywhere on iOS and Android</li>
+                    <li>Send unlimited invoices to up to 50 clients</li>
+                    <li>Automatically track expenses</li>
+                    <li>Automatically capture receipt data</li>
+                    <li>Send unlimited estimates and proposals</li>
+                    <li>Get paid with credit cards and bank transfers</li>
+                    <li>Set up recurring billing and client retainers</li>
                 </ul>
 
                 <a href=""> See Full Plan Details</a>
-
+                <br><br><br>
                 <h2>ADD-ONS</h2>
                 <ul>
                     <li>Team Members ($10/person/mo)</li>
                     <li>Gusto Payroll (talk to our Specialists to learn more)
                     </li>
+                    <li>Advanced Payments ($20/mo)
+                    </li>
+                </ul>
+
+                <button>Try it Free</button><br>
+                <small>Buy Now</small>
+
+            </div>
+            <label for="" class="price-label">Most Popular</label>
+        </div>
+        <div class="price-list">
+            <div>
+                <h2>Premium</h2>
+                <p>For growing businesses that<br>
+                    want to empower employees</p>
+            </div>
+            <div>
+                <img src="/src/img/55.png" alt="">
+                <h3>Unlimited Billable Clients</h3>
+                <br>
+                <button>Try it Free</button><br>
+                <small>Buy Now</small>
+                <br><br><br>
+                <h2>TOP FEATURES</h2>
+
+                <ul>
+                    <li>Send unlimited invoices to an unlimited amount of clients</li>
+                    <li>Track project profitability</li>
+                    <li>Customize email templates with dynamic fields</li>
+                    <li>Send unlimited estimates and proposals</li>
+                    <li>Get paid with checkout links</li>
+                    <li>Mobile mileage tracking</li>
+                </ul>
+
+                <a href=""> See Full Plan Details</a>
+                <br><br><br>
+                <h2>ADD-ONS</h2>
+                <ul>
+                    <li>Team Members ($10/person/mo)</li>
+                    <li>Gusto Payroll (talk to our Specialists to learn more)
+                    </li>
+                    <li>Advanced Payments ($20/mo)</li>
                 </ul>
 
                 <button>Try it Free</button><br>
@@ -227,75 +278,41 @@
         </div>
         <div class="price-list">
             <div>
-                <h2>Lite</h2>
-                <p>For professionals with <br>
-                    basic needs</p>
+                <h2>Select</h2>
+                <p>For businesses with <br>
+                    more complex needs</p>
             </div>
             <div>
-                <img src="/src/img/15.png" alt="">
-                <h3>5 Billable Clients</h3>
-
-                <button>Try it Free</button><br>
-                <small>Buy Now</small>
-
+                <img src="/src/img/custom.png" alt="">
+                <br>
+                <br>
+                <h3>Unlimited Billable Clients <br>
+                    and Specialized Features</h3>
+                <br>
+                <button>Request a Demo</button><br>
+                <small>Learn More</small>
+                <br><br><br>
                 <h2>TOP FEATURES</h2>
 
                 <ul>
-                    <li>Send unlimited invoices to up to 5 clients</li>
-                    <li>Track unlimited expenses</li>
-                    <li>Send unlimited estimates</li>
-                    <li>Get paid with credit cards and
-                        bank transfers</li>
-                    <li>Track sales tax & see reports</li>
+                    <li>Send unlimited invoices to an unlimited amount of clients</li>
+                    <li>Start with 2 team member accounts</li>
+                    <li>Get a dedicated account manager</li>
+                    <li>Get help migrating from other software</li>
+                    <li>Set up your account with custom onboarding services</li>
                     <li>Access anywhere on iOS and Android</li>
                 </ul>
 
                 <a href=""> See Full Plan Details</a>
-
+                <br>
+                <br>
+                <br>
                 <h2>ADD-ONS</h2>
                 <ul>
                     <li>Team Members ($10/person/mo)</li>
                     <li>Gusto Payroll (talk to our Specialists to learn more)
                     </li>
-                </ul>
-
-                <button>Try it Free</button><br>
-                <small>Buy Now</small>
-
-            </div>
-        </div>
-        <div class="price-list">
-            <div>
-                <h2>Lite</h2>
-                <p>For professionals with <br>
-                    basic needs</p>
-            </div>
-            <div>
-                <img src="/src/img/15.png" alt="">
-                <h3>5 Billable Clients</h3>
-
-                <button>Try it Free</button><br>
-                <small>Buy Now</small>
-
-                <h2>TOP FEATURES</h2>
-
-                <ul>
-                    <li>Send unlimited invoices to up to 5 clients</li>
-                    <li>Track unlimited expenses</li>
-                    <li>Send unlimited estimates</li>
-                    <li>Get paid with credit cards and
-                        bank transfers</li>
-                    <li>Track sales tax & see reports</li>
-                    <li>Access anywhere on iOS and Android</li>
-                </ul>
-
-                <a href=""> See Full Plan Details</a>
-
-                <h2>ADD-ONS</h2>
-                <ul>
-                    <li>Team Members ($10/person/mo)</li>
-                    <li>Gusto Payroll (talk to our Specialists to learn more)
-                    </li>
+                    <li>Advanced Payments ($20/mo)</li>
                 </ul>
 
                 <button>Try it Free</button><br>
