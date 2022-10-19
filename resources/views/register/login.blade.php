@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Registration Form | G-Pay</title>
-  <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
+  <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png')}}">
   <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/login.css') }}">
   <link href="{{ URL::asset('/css/bootstrap.css') }}" rel="stylesheet">
 
@@ -46,7 +46,7 @@
           </div>
           <div class="d-flex form-control p-0 pe-1 justify-content-between">
             <input type="password" name="password" id="pass" class="w-90 form-control" placeholder="Input password" required>
-            <svg width="24" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="eye-pass cursor-pointer" width="24" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_5_23)">
                 <path d="M33.4286 19.8C31.3929 15.375 28.8415 12.0656 25.7746 9.87187C26.5915 11.8219 27 13.9312 27 16.2C27 19.6687 26.1194 22.6359 24.3583 25.1016C22.5971 27.5672 20.4777 28.8 18 28.8C15.5223 28.8 13.4029 27.5672 11.6417 25.1016C9.88058 22.6359 9 19.6687 9 16.2C9 13.9312 9.40848 11.8219 10.2254 9.87187C7.15848 12.0656 4.60714 15.375 2.57143 19.8C4.35268 23.6437 6.58594 26.7047 9.2712 28.9828C11.9565 31.2609 14.8661 32.4 18 32.4C21.1339 32.4 24.0435 31.2609 26.7288 28.9828C29.4141 26.7047 31.6473 23.6437 33.4286 19.8ZM18.9643 9C18.9643 8.625 18.8705 8.30625 18.683 8.04375C18.4955 7.78125 18.2679 7.65 18 7.65C16.3259 7.65 14.8895 8.48906 13.6908 10.1672C12.4922 11.8453 11.8929 13.8562 11.8929 16.2C11.8929 16.575 11.9866 16.8937 12.1741 17.1562C12.3616 17.4187 12.5893 17.55 12.8571 17.55C13.125 17.55 13.3527 17.4187 13.5402 17.1562C13.7277 16.8937 13.8214 16.575 13.8214 16.2C13.8214 14.5875 14.2299 13.2094 15.0469 12.0656C15.8638 10.9219 16.8482 10.35 18 10.35C18.2679 10.35 18.4955 10.2187 18.683 9.95625C18.8705 9.69375 18.9643 9.375 18.9643 9ZM36 19.8C36 20.4375 35.8661 21.0844 35.5982 21.7406C33.7232 26.0531 31.202 29.5078 28.0346 32.1047C24.8672 34.7016 21.5223 36 18 36C14.4777 36 11.1328 34.6969 7.9654 32.0906C4.79799 29.4844 2.27679 26.0344 0.401786 21.7406C0.133929 21.0844 0 20.4375 0 19.8C0 19.1625 0.133929 18.5156 0.401786 17.8594C2.27679 13.5656 4.79799 10.1156 7.9654 7.50937C11.1328 4.90312 14.4777 3.6 18 3.6C21.5223 3.6 24.8672 4.90312 28.0346 7.50937C31.202 10.1156 33.7232 13.5656 35.5982 17.8594C35.8661 18.5156 36 19.1625 36 19.8Z" fill="black" />
               </g>
@@ -71,30 +71,20 @@
     </div>
 
   </div>
-  <!-- <div class="container" style="margin-top: 100px;">
-      <h1>Create an account</h1>
-      <form action="register/create_account" method="post" name="registration">
-        {{ csrf_field() }}
-        <div class="mb-3 row">
-          <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-          <div class="col-sm-10">
-            <input type="email" class="form-control" name="email2">
-          </div>
-        </div>
-        <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-          <div class="col-sm-10">
-            <input type="password" class="form-control" name="password">
-          </div>
-        </div>
-        <div class="d-grid gap-2">
-          <button class="btn btn-primary" type="submit">Register</button>
-        </div>
-      </form>
-    </div> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -->
+
+  <script>
+    pass
+    const input = document.querySelector('#pass');
+    const eye_pass = document.querySelector('.eye-pass');
+
+    eye_pass.addEventListener('click', function() {
+      if (input.type == "password") {
+        input.type = "text";
+      } else {
+        input.type = "password";
+      }
+    });
+  </script>
 </body>
-<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script> -->
 
 </html>

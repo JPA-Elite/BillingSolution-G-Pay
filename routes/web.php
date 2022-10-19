@@ -36,6 +36,11 @@ Route::view('/gpay.com/about_us/', 'about');
 Route::view('/gpay.com/pricing/', 'pricing');
 Route::view('/gpay.com/demo/', 'demo');
 
+
+// Dashboard Page
+Route::view('/gpay.com/dashboard/', 'dashboard/index');
+
+
 // Control request
 Route::get('/gpay.com/sign_up-confirmation_email-address/send_mail/send_successfully', [All_info_controller::class, 'create_all_info']);
 Route::post('/profile_info/create_account', [Profile_info_Controller::class, 'create_account']);

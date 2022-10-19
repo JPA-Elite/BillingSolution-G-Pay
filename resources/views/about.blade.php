@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | G-Pay</title>
-    <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
+    <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/home.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/features.css') }}">
     <link href="{{ URL::asset('/css/bootstrap.css') }}" rel="stylesheet">
@@ -27,9 +27,9 @@
                 </div>
             </a>
             <ul class="d-flex gap-4 ">
-                <div class="d-flex align-items-end gap-1 features">
-                    <li>Features</li>
-                    <li><img class="w-50" src="/src/img/arrow-down.svg" alt="arrow-down"></li>
+                <div class="d-flex align-items-end gap-1 features ">
+                    <li class="f1">Features</li>
+                    <li class="f1"><img class="w-50 " src="/src/img/arrow-down.svg" alt="arrow-down"></li>
                     <div class="f-pop-up">
                         <a href="/gpay.com/features-client/">
                             <h6>
@@ -70,8 +70,8 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-end gap-1 emp-type">
-                    <li>Who it’s for</li>
-                    <li><img class="w-50" src="/src/img/arrow-down.svg" alt="arrow-down"></li>
+                    <li class="f2">Who it’s for</li>
+                    <li class="f2"><img class="w-50" src="/src/img/arrow-down.svg" alt="arrow-down"></li>
                     <div class="s-pop-up">
                         <a href="/gpay.com/whoitsfor-self-employed-professionals/">
                             <h6>
@@ -115,17 +115,69 @@
 
                     </div>
                 </div>
-                <li>Projects</li>
-                <li>About Us</li>
+                <a href="/gpay.com/pricing/">
+                    <li>Pricing</li>
+                </a>
+                <a href="/gpay.com/about_us/">
+                    <li>About Us</li>
+                </a>
             </ul>
         </div>
 
-        <div class="d-flex align-items-end justify-content-center gap-0 user-info">
-            <div class="d-flex align-items-end justify-content-center gap-2 w-50">
-                <img class="w-30" src="/src/img/notify.svg" alt="notification">
-                <img class="w-30" src="/src/img/comment.svg" alt="messages">
+        <div class="d-flex align-items-center justify-content-center user-info">
+            <div class="d-flex align-items-end gap-1">
+                <li class="f3_pop">Help</li>
+                <li class="f3_pop"><img class="w-50" src="/src/img/arrow-down.svg" alt="arrow-down"></li>
+                <div class="t-pop-up">
+                    <a href="#">
+                        <h6>
+                            Accounting Software
+                        </h6>
+                    </a>
+
+                    <a href="#">
+                        <h6>
+                            Invoice Template
+                        </h6>
+                    </a>
+                    <a href="#">
+                        <h6>
+                            Billing Guide
+                        </h6>
+                    </a>
+                    <a href="#">
+                        <h6>
+                            Help Center
+                        </h6>
+                    </a>
+
+                    <a href="#">
+                        <h6>
+                            Help Docs
+                        </h6>
+                    </a>
+                    <a href="#">
+                        <h6>
+                            FAQS
+                        </h6>
+                    </a>
+                    <a href="#">
+                        <h6>
+                            Contact Us
+                        </h6>
+                    </a>
+                </div>
             </div>
-            <img class="w-22" src="/src/img/user.svg" alt="user">
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <a class="btn_nav" href="/gpay.com/register/">
+                    <li>Log in</li>
+                </a>
+                <a class="btn_nav nav-sign-up" href="/gpay.com/sign_up-profile_information/">
+                    <li>Sign up</li>
+                </a>
+            </div>
+
+
         </div>
 
     </nav>
@@ -274,12 +326,12 @@
             <div>
                 <h1>WHO IT’S FOR</h1>
                 <div>
-                    <a href="">Self-Employed Professionals</a><br>
-                    <a href="">Freelancers</a><br>
-                    <a href="">Businesses with Contractors</a><br>
-                    <a href="">Businesses with Employee</a><br>
-                    <a href="">Unemployed</a><br>
-                    <a href="">Students</a><br>
+                    <a href="/gpay.com/whoitsfor-self-employed-professionals/">Self-Employed Professionals</a><br>
+                    <a href="/gpay.com/whoitsfor-freelancers/">Freelancers</a><br>
+                    <a href="/gpay.com/whoitsfor-business_with_constractor/">Businesses with Contractors</a><br>
+                    <a href="/gpay.com/whoitsfor-business_with_employees/">Businesses with Employee</a><br>
+                    <a href="/gpay.com/whoitsfor_unemployed/">Unemployed</a><br>
+                    <a href="/gpay.com/whoitsfor_students/">Students</a><br>
                 </div>
             </div>
             <div class="ver-line"></div>
@@ -309,6 +361,7 @@
         </div>
         <p>© Copyrights 2022 G-Pay. All rights reserved.</p>
     </footer>
+    <script src="{{ URL::asset('/js/nav.js') }}"></script>
 
 </body>
 

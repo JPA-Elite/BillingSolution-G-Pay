@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign up - Confirmation - Email Address | G-Pay</title>
-    <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
+    <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/signup.css') }}">
     <link href="{{ URL::asset('/css/bootstrap.css') }}" rel="stylesheet">
 
@@ -18,7 +18,7 @@
             <a href="/gpay.com/register/" class="text-decoration-none">
                 <div class="logo  gap-2">
                     <div class="d-flex justify-content-center align-items-center">
-                        <img src="/src/img/logo.png" alt="logo">
+                        <img style="width:50px" src="/src/img/logo.png" alt="logo">
                         <div class="title t-verify">
                             <h1 class="text-purple">G-Pay</h1>
                             <p>Invoice & Billings</p>

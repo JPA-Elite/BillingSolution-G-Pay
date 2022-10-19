@@ -11,7 +11,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign up - Profile Information | G-Pay</title>
-    <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
+    <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/signup.css') }}">
     <link href="{{ URL::asset('/css/bootstrap.css') }}" rel="stylesheet">
 
@@ -22,7 +22,7 @@ session_start();
         <form class="sign-pg-left" action="/profile_info/create_account" method="post" name="registration">
             {{ csrf_field() }}
             <div class="d-flex" style="position:relative; left:-20px;top:-5px">
-                <img style="width:80px;height:80px;position:relative;top:10px" class="logo-img" src="/src/img/logo.png" alt="logo">
+                <img style="width:80px;height:80px;position:relative;top:5px;left:-10px" class="logo-img" src="/src/img/logo.png" alt="logo">
                 <div class="title">
                     <h1 class="text-purple">G-Pay</h1>
                     <p>Invoice & Billings</p>

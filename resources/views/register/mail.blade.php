@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign up - Confirmation - Email Address | G-Pay</title>
-    <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
+    <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/signup.css') }}">
     <link href="{{ URL::asset('/css/bootstrap.css') }}" rel="stylesheet">
 </head>
@@ -142,7 +142,7 @@
             <p>Thank you for signing up. Click the button below to access your<br> G-Pay account:</p>
         </div>
     
-        <a href="http://127.0.0.1:8000/gpay.com/demo/" style="text-decoration: none;">
+        <a href="http://127.0.0.1:8000/gpay.com/dashboard/" style="text-decoration: none;">
             <div class="button">
                 <p>Verify my Email</p>
             </div>
