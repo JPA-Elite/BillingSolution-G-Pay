@@ -168,6 +168,7 @@
     width: 100%;
     height: 607px;
     background: url("/src/img/hero-img.svg");
+    filter: hue-rotate(-10deg);
     background-repeat: no-repeat !important;
     background-size: cover !important;
     padding: 5rem;
@@ -222,7 +223,12 @@
     padding: 5rem;
     position: relative;
     margin: 5rem 0 0 0;
+    text-align: start !important;
 
+}
+.mobile-cont-pg  li {
+    list-style-type: disc;
+    text-align: start !important;
 }
 
 .mobile-cont-pg>div p {
@@ -342,6 +348,22 @@ input::placeholder {
     .form ul {
         position: absolute;
         left: 490px;
+        top: 150px;
+    }
+}
+
+
+@media only screen and (max-width: 1366px) {
+    .privacy p {
+        position: relative;
+        top: 570px;
+        right: 0px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .form ul {
+        position: absolute;
+        left: 400px;
         top: 150px;
     }
 }
