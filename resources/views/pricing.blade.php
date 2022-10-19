@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | G-Pay</title>
-    <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/favicon.ico')}}">
+    <title>Pricing | G-Pay</title>
+    <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/home.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/pricing.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/features.css') }}">
@@ -195,7 +195,7 @@
             </div>
         </div>
         <div class="price-list">
-          
+
             <div>
                 <h2>Plus</h2>
                 <p>For owners looking for more <br>
@@ -255,7 +255,7 @@
                 <ul>
                     <li>Send unlimited invoices to an unlimited amount of clients</li>
                     <li>Track project profitability</li>
-                    <li>Customize email templates with dynamic fields</li>
+                    <li>Customize email templates with dynamic<br> fields</li>
                     <li>Send unlimited estimates and proposals</li>
                     <li>Get paid with checkout links</li>
                     <li>Mobile mileage tracking</li>
@@ -325,6 +325,33 @@
 
     </div>
 
+    <div class="d-flex justify-content-center gap-5 bt-price">
+        <div class="text-center bt-price-div">
+            <img src="/src/img/check.png" alt="">
+            <h5>WE’VE GOT YOUR BACK</h5>
+            <p class="fw-normal">Our support staff is with you every step of the way,
+                starting the moment you make the switch from
+                spreadsheets or any other accounting software.</p>
+
+            <div class="bg-violet" style="width:100%;height:5px"></div>
+        </div>
+        <div class="text-center bt-price-div">
+            <img src="/src/img/check.png" alt="">
+            <h5>SAFE AND SECURE</h5>
+            <p class="fw-normal">G-Pay protects your personal info and your client’s info with industry-standard SSL and encryption so everything is always safe and secure.</p>
+
+            <div class="bg-violet" style="width: 100%;height:5px"></div>
+        </div>
+        <div class="text-center bt-price-div">
+            <img src="/src/img/check.png" alt="">
+            <h5>30-DAY GUARANTEE</h5>
+            <p class="fw-normal">Start a free 30-day trial today, no credit card required.
+                Once your trial ends you can cancel anytime and contact us for a full refund</p>
+
+            <div class="bg-violet" style="width: 100%;height:5px"></div>
+        </div>
+
+    </div>
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
@@ -426,7 +453,7 @@
         </div>
         <p>© Copyrights 2022 G-Pay. All rights reserved.</p>
     </footer>
-
+    <script src="{{ URL::asset('/js/nav.js') }}"></script>
 </body>
 
 </html>

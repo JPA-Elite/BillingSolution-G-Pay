@@ -9326,7 +9326,9 @@ fieldset:disabled .btn {
 .text-opacity-100 {
     --bs-text-opacity: 1
 }
-
+.bg-violet{
+    background: #6D60F7;
+}
 .bg-primary {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important
