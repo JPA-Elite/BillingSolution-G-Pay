@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION["email"] = $_COOKIE["email"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +14,8 @@
     <link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png')}}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/signup.css') }}">
     <link href="{{ URL::asset('/css/bootstrap.css') }}" rel="stylesheet">
+  
+
 </head>
 
 <body>
@@ -165,16 +172,16 @@
 
     // Additional headers
     $headers .= 'From: ' . $fromName . '<' . $sender . '>' . "\r\n";
-   
 
-    if ( mail($receiver, $subject, $htmlContent, $headers)){
+
+    if (mail($receiver, $subject, $htmlContent, $headers)) {
         echo "Email has been successfully sent to " . $_COOKIE["email"];
         echo '<script>window.location.href = "/gpay.com/sign_up-confirmation_email-address/send_mail/send_successfully";</script>';
-    }else{
+    } else {
         echo "Email has not send successfully to " . $_COOKIE["email"];
     }
     ?>
-  
+
 
 </body>
 
