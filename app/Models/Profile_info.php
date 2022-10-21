@@ -19,6 +19,6 @@ class Profile_info extends Model
 
         // ]);
 
-        echo "<script>window.location.href = '/Gpay.com/sign_up-about_business/'</script>";
+        echo "<script>window.location.href = '/gpay.com/sign_up-about_business/'</script>";
     }
 }

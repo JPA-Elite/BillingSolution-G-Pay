@@ -29,7 +29,8 @@ class All_info extends Model
             'Address' => $location,
             'phone' => $phone,
             'email' => $email,
-            'password' =>  $password
+            'password' =>  $password,
+            'date' => date("F d, Y - h:i:s A")
 
         ]);
 

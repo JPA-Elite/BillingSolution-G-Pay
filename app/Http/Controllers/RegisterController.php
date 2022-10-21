@@ -23,15 +23,15 @@ class RegisterController extends Controller
         if ($data){
              foreach($data as $i){
             if (($i -> email) == ($accounts->email) && ($i -> password) == ($accounts->password)){
-                echo "<script>window.location.href ='/Gpay.com/homepage/' </script>";
+                echo "<script>window.location.href ='/gpay.com/homepage/' </script>";
 
             }else{
-                echo "<script>window.location.href ='/Gpay.com/register/' </script>";
+                echo "<script>window.location.href ='/gpay.com/register/' </script>";
             }
         }
     }else{
         
-        echo "<script>window.location.href ='/Gpay.com/register/' </script>";
+        echo "<script>window.location.href ='/gpay.com/register/' </script>";
     }
     }
 }

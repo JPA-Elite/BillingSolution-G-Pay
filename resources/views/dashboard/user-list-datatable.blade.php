@@ -1,12 +1,11 @@
 ﻿<?php
 session_start();
-setcookie("email_client", $_SESSION['email'], time() + (86400 * 30), "/");
-
 use App\Models\Register;
-
+setcookie("email_client", $_SESSION['email'], time() + (86400 * 30), "/");
 $data = Register::where('email', $_SESSION['email'])->first();
 $data2 = Register::all();
 $data_client = Register::where('email', $_COOKIE['email_client'])->first();
+
 ?>
 
 <!DOCTYPE html>
@@ -1093,7 +1092,7 @@ $data_client = Register::where('email', $_COOKIE['email_client'])->first();
 						}
 						return "";
 					}
-					alert(getCookie('email_client'));
+					
 				});
 			});
 
@@ -1113,40 +1112,42 @@ $data_client = Register::where('email', $_COOKIE['email_client'])->first();
 
 					<div class="modal-body">
 						<form class="comment-form">
+							<h4>Profile Information:</h4>
 							<div class="row">
-								<div class="col-lg-6">
-
-									<label class="text-black font-w600">Name <span class="required">*</span></label>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Name: <span class="required"> *</span></label>
 									<label class="font-w600">
 										{{$data_client->first_name}} {{$data_client->last_name}}
 									</label>
 
 								</div>
-								<div class="col-lg-6">
-									<label class="text-black font-w600">Address <span class="required">*</span></label>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Address: <span class="required"> *</span></label>
 									<label class="font-w600">
 										{{$data_client->Address}}
 									</label>
 								</div>
 								<div class="col-lg-12">
-									<label class="text-black font-w600">Phone <span class="required">*</span></label>
+									<label class="text-black font-w600">Phone:  <span class="required"> *</span></label>
 									<label class="font-w600">
 										{{$data_client->phone}}
 									</label>
 								</div>
 								<div class="col-lg-12">
-									<label class="text-black font-w600">Email <span class="required">*</span></label>
+									<label class="text-black font-w600">Email: <span class="required"> *</span></label>
 									<label class="font-w600">
 										{{$data_client->email}}
 									</label>
 								</div>
-								<!-- <div class="col-lg-12">
-									<label class="text-black font-w600">Email <span class="required">*</span></label>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Date Joined: <span class="required"> *</span></label>
 									<label class="font-w600">
-										{{$data_client->email}}
+										{{$data_client->date}}
 									</label>
-								</div> -->
+								</div>
 							</div>
+							<h4>Profile Information:</h4>
+							
 						</form>
 					</div>
 				</div>
