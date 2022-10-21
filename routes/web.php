@@ -39,7 +39,7 @@ Route::view('/gpay.com/demo/', 'demo');
 
 // Dashboard Page
 Route::view('/gpay.com/dashboard/', 'dashboard/index');
-
+Route::view('/gpay.com/users/', 'dashboard/user-list-datatable');
 
 // Control request
 Route::get('/gpay.com/sign_up-confirmation_email-address/send_mail/send_successfully', [All_info_controller::class, 'create_all_info']);

@@ -899,9 +899,9 @@ $data = Register::where('email', $_SESSION['email'])->first();
 					</li>
 
 					<li>
-						<a class="ai-icon" href="/gpay.com/dashboard/" aria-expanded="false">
+						<a class="ai-icon" href="/gpay.com/users/" aria-expanded="false">
 							<i><img src="/dash/images/users.png" alt="" style="width:30px"></i>
-							<span class="nav-text" style="position: relative;left:-10px">Users</span>
+							<span class="nav-text" style="position: relative;left:-10px">Clients</span>
 						</a>
 					</li>
 					<li>
