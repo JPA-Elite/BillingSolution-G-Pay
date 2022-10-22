@@ -11,7 +11,7 @@ class Business_info extends Eloquent
   protected $collection = 'business_info';
 
   protected $fillable = [
-    'company_name', 'company_do', 'describe_business', 'currency_type', 'estimate_revenue', 
-    'long_service', 'current_bill'
+    'id','company_name', 'company_do', 'describe_business', 'currency_type', 'estimate_revenue', 
+    'long_service', 'current_bill', 'email'
   ];
 }

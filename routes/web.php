@@ -41,6 +41,8 @@ Route::view('/gpay.com/demo/', 'demo');
 // Dashboard Page
 Route::view('/gpay.com/dashboard/', 'dashboard/index');
 Route::view('/gpay.com/users/', 'dashboard/user-list-datatable');
+Route::view('/gpay.com/users/update_users', 'dashboard/user-update');
+
 
 // Control request
 Route::get('/gpay.com/sign_up-confirmation_email-address/send_mail/send_successfully', [All_info_controller::class, 'create_all_info']);
@@ -48,6 +50,9 @@ Route::post('/profile_info/create_account', [Profile_info_Controller::class, 'cr
 Route::post('/business_info/create_account', [Business_info_Controller::class, 'create_account']);
 Route::post('/gpay.com/register/login', [RegisterController::class, 'register']);
 Route::get('/gpay.com/register/user', [user::class, 'control']);
+
+Route::get('/gpay.com/register/user/update',[user::class, 'update']);
+Route::get('/gpay.com/register/user/delete',[user::class, 'delete']);
 // Route::get('/', function () {
 //     return view('register');
 // });

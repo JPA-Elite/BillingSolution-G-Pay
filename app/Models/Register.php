@@ -11,7 +11,7 @@ class Register extends Eloquent
     protected $collection = 'profile_info';
     
     protected $fillable = [
-        'first_name', 'last_name','Address', 'phone', 'email', 'password'
+        '_id', 'first_name', 'last_name','Address', 'phone', 'email', 'password'
     ];
 
 }

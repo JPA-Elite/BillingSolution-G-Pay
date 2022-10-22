@@ -6,7 +6,6 @@ use App\Models\Business_info;
 use App\Http\Controllers\user;
 
 $data = Register::where('email', $_SESSION['email'])->first();
-$data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 
 
 ?>
@@ -854,7 +853,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 				</nav>
 				<div class="sub-header">
 					<div class="d-flex align-items-center flex-wrap mr-auto">
-						<h5 class="dashboard_bar">Dashboard</h5>
+						<h5 class="dashboard_bar">Update User Information</h5>
 					</div>
 
 				</div>
@@ -942,134 +941,265 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 		<div class="content-body">
 			<div class="container-fluid">
 				<div class="card">
-					<div class="card-header d-sm-flex d-block">
-						<div class="mr-auto mb-sm-0 mb-3">
-							<h4 class="card-title mb-2">Client Listing</h4>
-							<span>Below shows the list of clients</span>
-						</div>
-						<a href="javascript:void(0);" class="btn btn-info light mr-3"><i class="las la-download scale3 mr-2"></i>Import Csv</a>
-						<a href="javascript:void(0);" class="btn btn-info">+ Add Client</a>
-					</div>
+
 					<div class="card-body">
-						<div class="table-responsive">
+						<form class="table-responsive">
 							<table class="table style-1" id="ListDatatableView">
-								<thead>
-									<tr>
-										<th>#</th>
-										<th>NAME OF CLIENTS</th>
-										<th>ADDRESS</th>
-										<th>DATE JOINED</th>
-										<th>FULL DETAILS</th>
-										<th>STATUS</th>
-										<th>ACTION</th>
-									</tr>
-								</thead>
+								<?php
+								$data2 = Register::find($_COOKIE['id_target']);
+								$data3 = Business_info::where('email', $data2->email)->first();
+								?>
+
 								<tbody>
-									<?php
-									$count = 1;
-									?>
-									@foreach($data2 as $i)
+									@if($data2 != null && $data3 != null)
 									<tr>
-										<td>
-											<h6>{{$count}}</h6>
-										</td>
-										<td>
-											<div class="media style-1">
-												<img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="img-fluid mr-2" alt="">
+
+										<td>First Name<div class="media style-1">
+
 												<div class="media-body">
-													<h6>{{$i->last_name}}, {{$i->first_name}}</h6>
-													<span><a id="client_email" href="#" class="__cf_email__" data-cfemail="6c060304020803092c0b010d0500420f0301">{{$i->email}}</a></span><br>
-													<span><a id="client_id" href="#" class="__cf_email__" data-cfemail="6c060304020803092c0b010d0500420f0301">{{$i->_id}}</a></span>
+													<small>previous value</small>
+													<h6>{{$data2 ->first_name}}</h6>
 												</div>
 											</div>
 										</td>
 										<td>
-											<div>
-												<h6>{{$i->Address}}</h6>
-												<span>COde:Ph</span>
+										    <input style="display: none;" id="c_id" type="text" placeholder="{{$data2 ->id}}">
+											<input id="first_name" type="text" placeholder="{{$data2 ->first_name}}">
+										</td>
+
+									</tr>
+									<tr>
+										<td>Last Name<div class="media style-1">
+
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data2 ->last_name}}</h6>
+												</div>
 											</div>
 										</td>
 										<td>
-											<div>
-												<h6 class="text-primary" style="color:#51A6F5 !important">{{$i->date}}</h6>
+											<input type="text" id="last_name" placeholder="{{$data2 ->last_name}}">
+										</td>
 
+									</tr>
+									<tr>
+										<td>Location<div class="media style-1">
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data2 ->Address}}</h6>
+												</div>
 											</div>
 										</td>
 										<td>
-											<a href="javascript:void(0);" class="btn btn-primary mb-1 info-btn" data-toggle="modal" data-target="#sendMessageModal">Show info</a>
-
+											<input type="text" id="address" placeholder="{{$data2 ->Address}}">
 										</td>
 
-										<td><span class="badge badge-warning">Active</span></td>
-										<td>
-											<div class="d-flex action-button">
-												<a href="javascript:void(0);" class="btn btn-info btn-xs light px-2 update">
-													<svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M17 3C17.2626 2.73735 17.5744 2.52901 17.9176 2.38687C18.2608 2.24473 18.6286 2.17157 19 2.17157C19.3714 2.17157 19.7392 2.24473 20.0824 2.38687C20.4256 2.52901 20.7374 2.73735 21 3C21.2626 3.26264 21.471 3.57444 21.6131 3.9176C21.7553 4.26077 21.8284 4.62856 21.8284 5C21.8284 5.37143 21.7553 5.73923 21.6131 6.08239C21.471 6.42555 21.2626 6.73735 21 7L7.5 20.5L2 22L3.5 16.5L17 3Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg>
-												</a>
-												<a href="javascript:void(0);" class="ml-2 btn btn-xs px-2 light btn-danger delete">
-													<svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M3 6H5H21" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-														<path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg>
 
-												</a>
+									</tr>
+									<tr>
+										<td>Phone number<div class="media style-1">
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data2 ->phone}}</h6>
+												</div>
 											</div>
+										</td>
+										<td>
+											<input type="text" id="phone" placeholder="{{$data2 ->phone}}">
 										</td>
 									</tr>
-									<script>
-										var delete_btn = document.querySelectorAll('.delete');
-										var update_btn = document.querySelectorAll('.update');
-										delete_btn.forEach((btn) => {
-											btn.addEventListener('click', function() {
-												var value = btn.parentElement.parentElement.parentElement.querySelector('#client_id').innerText;
-												createCookie("id_target", value, "1");
+									<tr>
+										<td>Email Address<div class="media style-1">
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data2 ->email}}</h6>
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="email" placeholder="{{$data2 ->email}}">
+										</td>
+									</tr>
+									<tr>
+										<td>Password<div class="media style-1">
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data2 ->password}}</h6>
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="password" id="pass" value="{{$data2 ->password}}"><br><br>
+											<input type="password" value="" placeholder="confirm password">
+										</td>
+									</tr>
+									<tr>
+										<td>Company Name<div class="media style-1">
 
-												document.querySelector('.modal-delete').style.display = "block";
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data3 ->company_name}}</h6>
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="c_name" placeholder="{{$data3 ->company_name}}">
+										</td>
+									</tr>
+									<tr>
+										<td>Company Do<div class="media style-1">
 
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data3 ->company_do}}</h6>
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="c_do" placeholder="{{$data3 ->company_do}}">
+										</td>
+									</tr>
+									<tr>
+										<td>Describe Business<div class="media style-1">
 
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data3 ->describe_business}}</h6>
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="d_busi" placeholder="{{$data3 ->describe_business}}">
+										</td>
+									</tr>
+									<tr>
+										<td>Currency Type<div class="media style-1">
 
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data3 ->currency_type}}</h6>
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="c_type" placeholder="{{$data3 ->currency_type}}">
+										</td>
+									</tr>
+									<tr>
+										<td>Estimate Revenue<div class="media style-1">
 
-											});
-										});
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data3 ->estimate_revenue}}</h6>
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="es_rev" placeholder="{{$data3 ->estimate_revenue}}">
+										</td>
+									</tr>
+									<tr>
+										<td>Running status<div class="media style-1">
 
-										update_btn.forEach((btn) => {
-											btn.addEventListener('click', function() {
-												var value = btn.parentElement.parentElement.parentElement.querySelector('#client_id').innerText;
-												createCookie("id_target", value, "1");
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data3 ->long_service}}</h6>
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="ser" placeholder="{{$data3 ->long_service}}">
+										</td>
+									</tr>
+									<tr>
+										<td>Current Billing<div class="media style-1">
 
-												// document.querySelector('.modal-delete').style.display = "block";
-												window.location.href = '/gpay.com/users/update_users';
+												<div class="media-body">
+													<small>previous value</small>
+													<h6>{{$data3 ->current_bill}}</h6>
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="c_bill" placeholder="{{$data3 ->current_bill}}">
+										</td>
+									</tr>
 
-
-
-											});
-										});
-
-										// Function to create the cookie
-										function createCookie(name, value, days) {
-											var expires;
-
-											if (days) {
-												var date = new Date();
-												date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-												expires = "; expires=" + date.toGMTString();
-											} else {
-												expires = "";
-											}
-											document.cookie = escape(name) + "=" +
-												escape(value) + expires + "; path=/";
-										}
-									</script>
-									<?php
-									$count++;
-									?>
-									@endforeach
+									@endif
 
 								</tbody>
+
 							</table>
-						</div>
+							<div style="display: flex;justify-content: right;align-items: center;gap:15px;padding-right:50px">
+								<a href="javascript:void(0);" class="btn btn-primary mb-1 info-btn cancel">Cancel</a>
+								<a href="javascript:void(0);" class="btn btn-primary mb-1 info-btn save">Save</a>
+
+							</div>
+
+							<script>
+								var cancel_btn = document.querySelector('.cancel');
+								var save_btn = document.querySelector('.save');
+
+
+								cancel_btn.addEventListener('click', function() {
+									window.location.href = '/gpay.com/users/';
+								});
+
+
+								save_btn.addEventListener('click', function() {
+									
+									const c_id = save_btn.parentElement.parentElement.querySelector('tbody #c_id').value;
+									const first_name = save_btn.parentElement.parentElement.querySelector('tbody #first_name').value;
+									const last_name = save_btn.parentElement.parentElement.querySelector('tbody #last_name').value;
+									const address = save_btn.parentElement.parentElement.querySelector('tbody #address').value;
+									const phone = save_btn.parentElement.parentElement.querySelector('tbody #phone').value;
+									const email = save_btn.parentElement.parentElement.querySelector('tbody #email').value;
+									const pass = save_btn.parentElement.parentElement.querySelector('tbody #pass').value;
+									const c_name = save_btn.parentElement.parentElement.querySelector('tbody #c_name').value;
+									const c_do = save_btn.parentElement.parentElement.querySelector('tbody #c_do').value;
+									const d_busi = save_btn.parentElement.parentElement.querySelector('tbody #d_busi').value;
+									const c_type = save_btn.parentElement.parentElement.querySelector('tbody #c_type').value;
+									const es_rev = save_btn.parentElement.parentElement.querySelector('tbody #es_rev').value;
+									const ser = save_btn.parentElement.parentElement.querySelector('tbody #ser').value;
+									const c_bill = save_btn.parentElement.parentElement.querySelector('tbody #c_bill').value;
+
+									createCookie("c_id", c_id, "1");
+									createCookie("first_name", first_name, "1");
+									createCookie("last_name", last_name, "1");
+									createCookie("address", address, "1");
+									createCookie("phone", phone, "1");
+									createCookie("email", email, "1");
+									createCookie("pass", pass, "1");
+									createCookie("c_name", c_name, "1");
+									createCookie("c_do", c_do, "1");
+									createCookie("d_busi", d_busi, "1");
+									createCookie("c_type", c_type, "1");
+									createCookie("es_rev", es_rev, "1");
+									createCookie("ser", ser, "1");
+									createCookie("c_bill", c_bill, "1");
+
+									window.location.href = '/gpay.com/register/user/update';
+								});
+
+
+								// Function to create the cookie
+								function createCookie(name, value, days) {
+									var expires;
+
+									if (days) {
+										var date = new Date();
+										date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+										expires = "; expires=" + date.toGMTString();
+									} else {
+										expires = "";
+									}
+									document.cookie = escape(name) + "=" +
+										escape(value) + expires + "; path=/";
+								}
+							</script>
+
+
+						</form>
 					</div>
 				</div>
 			</div>
@@ -1235,7 +1365,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 				</div>
 			</div>
 		</div>
-	
+
 
 
 		<script>

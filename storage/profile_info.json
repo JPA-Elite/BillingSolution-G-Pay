@@ -1,0 +1,49 @@
+[
+  {
+  "_id": {
+    "$oid": "6341f47e99340b7bca001e5a"
+  },
+  "first_name": "Jhon ",
+  "last_name": "Calesa",
+  "Address": "Bohol",
+  "phone": "09876785645",
+  "email": "calesa@gmail.com",
+  "password": "calesajunior",
+  "date": "October 21, 2022 - 1:43:50 PM"
+},{
+  "_id": {
+    "$oid": "6353a1d84c7013256fe4b2fc"
+  },
+  "first_name": "Lyca ",
+  "last_name": "Avenido",
+  "Address": "Poblacion, Vallehermoso",
+  "phone": "09345672345",
+  "email": "joshua.algadipe@student.passerellesnumeriques.org",
+  "password": "joshua12345",
+  "date": "October 21, 2022 - 1:43:50 PM"
+},
+{
+  "_id": {
+    "$oid": "6344af284c7011256fa4b2fc"
+  },
+  "first_name": "Myla ",
+  "last_name": "Sabanal",
+  "Address": "Poblacion, Vallehermoso",
+  "phone": "09456342564",
+  "email": "myla345@.gmail.com",
+  "password": "mylasabanal0000",
+  "date": "October 21, 2022 - 1:43:50 PM"
+},
+{
+  "_id": {
+    "$oid": "6353af284c7011w36fa4b2fc"
+  },
+  "first_name": "Janrae",
+  "last_name": "Fagaragan",
+  "Address": "Bohol",
+  "phone": "09345769342",
+  "email": "2341janrae@.gmail.com",
+  "password": "janrae",
+  "date": "October 21, 2022 - 1:43:50 PM"
+}
+]
