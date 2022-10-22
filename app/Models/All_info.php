@@ -5,7 +5,7 @@ namespace App\Models;
 use DB;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+session_start();
 class All_info extends Model
 {
     function create_all_info(
@@ -46,5 +46,7 @@ class All_info extends Model
 
         ]);
         echo "Email has been successfully sent to " . $_COOKIE["email"];
+        setcookie("email_client", $email, time() + (86400 * 30), "/");
+        $_SESSION['email'] = $email;
     }
 }

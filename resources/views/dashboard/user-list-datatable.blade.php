@@ -1,13 +1,15 @@
 ﻿<?php
 session_start();
+
 use App\Models\Register;
-setcookie("email_client", $_SESSION['email'], time() + (86400 * 30), "/");
+use App\Models\Business_info;
+
 $data = Register::where('email', $_SESSION['email'])->first();
 $data2 = Register::all();
 $data_client = Register::where('email', $_COOKIE['email_client'])->first();
+$data_client_b_side = Business_info::where('email',  $_COOKIE['email_client'])->first();
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +19,7 @@ $data_client = Register::where('email', $_COOKIE['email_client'])->first();
 	<meta name="author" content="">
 	<meta name="robots" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>G-Pay - Admin Users </title>
+	<title>G-Pay Administrator - Clients </title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png') }}">
 	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/chartist/css/chartist.min.css') }}">
@@ -837,7 +839,7 @@ $data_client = Register::where('email', $_COOKIE['email_client'])->first();
 										</svg>
 										<span class="ml-2">Inbox </span>
 									</a>
-									<a href="page-login.html" class="dropdown-item ai-icon">
+									<a href="/gpay.com/homepage/" class="dropdown-item ai-icon">
 										<svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 											<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
 											<polyline points="16 17 21 12 16 7"></polyline>
@@ -1053,52 +1055,7 @@ $data_client = Register::where('email', $_COOKIE['email_client'])->first();
 		<!--**********************************
            Support ticket button end
         ***********************************-->
-		<script>
-			var data = "hello";
-			const info_btn = document.querySelectorAll('.info-btn');
 
-			info_btn.forEach((btn) => {
-				btn.addEventListener('click', function() {
-					var value = btn.parentElement.parentElement.querySelector('#client_email').innerHTML;
-					data = value;
-					createCookie("email_client", data, "1");
-
-					function createCookie(name, value, days) {
-						var expires;
-
-						if (days) {
-							var date = new Date();
-							date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-							expires = "; expires=" + date.toGMTString();
-						} else {
-							expires = "";
-						}
-						document.cookie = escape(name) + "=" +
-							escape(value) + expires + "; path=/";
-					}
-
-					function getCookie(cname) {
-						let name = cname + "=";
-						let decodedCookie = decodeURIComponent(document.cookie);
-						let ca = decodedCookie.split(';');
-						for (let i = 0; i < ca.length; i++) {
-							let c = ca[i];
-							while (c.charAt(0) == ' ') {
-								c = c.substring(1);
-							}
-							if (c.indexOf(name) == 0) {
-								return c.substring(name.length, c.length);
-							}
-						}
-						return "";
-					}
-					
-				});
-			});
-
-
-			// Function to create the cookie
-		</script>
 
 
 		<div class="modal fade" id="sendMessageModal">
@@ -1106,7 +1063,7 @@ $data_client = Register::where('email', $_COOKIE['email_client'])->first();
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title">All Details</h5>
-						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+						<button type="button" class="close btn-close" data-dismiss="modal"><span>&times;</span></button>
 					</div>
 					<!-- email_client -->
 
@@ -1128,7 +1085,7 @@ $data_client = Register::where('email', $_COOKIE['email_client'])->first();
 									</label>
 								</div>
 								<div class="col-lg-12">
-									<label class="text-black font-w600">Phone:  <span class="required"> *</span></label>
+									<label class="text-black font-w600">Phone: <span class="required"> *</span></label>
 									<label class="font-w600">
 										{{$data_client->phone}}
 									</label>
@@ -1146,13 +1103,94 @@ $data_client = Register::where('email', $_COOKIE['email_client'])->first();
 									</label>
 								</div>
 							</div>
-							<h4>Profile Information:</h4>
-							
+							<br>
+							<h4>Other Information:</h4>
+							<div class="row">
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Company Name: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->company_name}}
+									</label>
+
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Company Do: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->company_do}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Business Description: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->describe_business}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Type of currency used: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->currency_type}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Estimated revenue: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->estimate_revenue}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Run of service: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->long_service}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Current use of billing: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->current_bill}}
+									</label>
+								</div>
+							</div>
+
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<script>
+			const info_btn = document.querySelectorAll('.info-btn');
+
+			info_btn.forEach((btn) => {
+				btn.addEventListener('click', function() {
+
+					// var value = btn.parentElement.parentElement.querySelector('#client_email').innerText;
+					// createCookie('email_client', value, '1');
+					window.location.href = '/gpay.com/register/user';
+				});
+			});
+
+			const btn_close = document.querySelector('.btn-close');
+			btn_close.addEventListener('click', function() {
+
+			});
+
+			// alert(getCookie('email_client'));
+
+			function getCookie(cname) {
+				let name = cname + "=";
+				let ca = document.cookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+		</script>
 	</div>
 
 	<!--**********************************

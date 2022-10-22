@@ -1,24 +1,17 @@
 <?php
 
 namespace App\Models;
-use DB;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Business_info extends Model
+class Business_info extends Eloquent
 {
-      function create_account($account){
-        // DB::table('profile_info')->insert([
-        //     'first_name' => $account->f_name,
-        //     'last_name' => $account->l_name,
-        //     'Address' => $account->location,
-        //     'last_name' => $account->l_name,
-        //     'phone' => $account->phone,
-        //     'email' => $account->email,
+  protected $connection = 'mongodb';
+  protected $collection = 'business_info';
 
-        // ]);
-
-
-        echo "<script>window.location.href = '/profile_info/create_account'</script>";
-    }
+  protected $fillable = [
+    'company_name', 'company_do', 'describe_business', 'currency_type', 'estimate_revenue', 
+    'long_service', 'current_bill'
+  ];
 }

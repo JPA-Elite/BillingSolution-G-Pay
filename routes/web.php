@@ -5,6 +5,7 @@ use App\Http\Controllers\Profile_info_Controller;
 use App\Http\Controllers\Business_info_Controller;
 use App\Http\Controllers\All_info_controller;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\user;
 
 // Registration
 Route::view('/gpay.com/register/', 'register/login');
@@ -46,6 +47,7 @@ Route::get('/gpay.com/sign_up-confirmation_email-address/send_mail/send_successf
 Route::post('/profile_info/create_account', [Profile_info_Controller::class, 'create_account']);
 Route::post('/business_info/create_account', [Business_info_Controller::class, 'create_account']);
 Route::post('/gpay.com/register/login', [RegisterController::class, 'register']);
+Route::get('/gpay.com/register/user', [user::class, 'control']);
 // Route::get('/', function () {
 //     return view('register');
 // });

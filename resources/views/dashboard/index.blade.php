@@ -2,7 +2,6 @@
 session_start();
 
 use App\Models\Register;
-
 $data = Register::where('email', $_SESSION['email'])->first();
 
 ?>
@@ -18,7 +17,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 	<meta name="author" content="">
 	<meta name="robots" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>G-Pay - Admin Dashboard </title>
+	<title>G-Pay Administrator - Dashboard </title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png') }}">
 	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/chartist/css/chartist.min.css') }}">
