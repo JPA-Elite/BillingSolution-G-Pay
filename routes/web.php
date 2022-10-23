@@ -41,6 +41,8 @@ Route::view('/gpay.com/demo/', 'demo');
 // Dashboard Page
 Route::view('/gpay.com/dashboard/', 'dashboard/index');
 Route::view('/gpay.com/users/', 'dashboard/user-list-datatable');
+Route::view('/gpay.com/projects/', 'dashboard/project-list');
+Route::view('/gpay.com/analysis/', 'dashboard/analysis');
 Route::view('/gpay.com/users/update_users', 'dashboard/user-update');
 
 

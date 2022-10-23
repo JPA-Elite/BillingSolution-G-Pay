@@ -876,8 +876,8 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 						<img src="/dash/images/Untitled-1.jpg" alt="">
 						<a href="javascript:void(0);"><i class="fa fa-cog" aria-hidden="true"></i></a>
 					</div>
-					<h5 class="name"><span class="font-w400">Hello, </span>
-						{{$data ->first_name}}
+					<h5 class="name"><span class="font-w400"></span>
+						{{$data ->first_name}} {{$data ->last_name}}
 					</h5>
 					<p class="email" style="margin:auto;text-overflow:ellipsis ; white-space: nowrap;width:90%; overflow: hidden; "><a href="#" class="__cf_email__" data-cfemail="95f8f4e7e4e0f0efefefefd5f8f4fcf9bbf6faf8">
 							{{$data ->email}}
@@ -900,12 +900,12 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 						</a>
 					</li>
 					<li>
-						<a class="ai-icon" href="/gpay.com/dashboard/" aria-expanded="false">
+						<a class="ai-icon" href="/gpay.com/projects/" aria-expanded="false">
 							<i><img src="/dash/images/project.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Project</span>
 						</a>
 					</li>
-					<li><a class="ai-icon" href="/gpay.com/dashboard/" aria-expanded="false">
+					<li><a class="ai-icon" href="/gpay.com/analysis/" aria-expanded="false">
 							<i><img src="/dash/images/analysis.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Analysis</span>
 						</a></li>
@@ -1235,7 +1235,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 				</div>
 			</div>
 		</div>
-	
+
 
 
 		<script>

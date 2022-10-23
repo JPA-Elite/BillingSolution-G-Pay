@@ -21,18 +21,21 @@ class RegisterController extends Controller
 
         // $posts = DB::table('profile_info')->select('*')->get();
 
-        $data = Register::where('email', ($accounts->email))->get();
+        $data = Register::where('email', ($accounts->email))->first();
 
         if ($data) {
-            foreach ($data as $i) {
-                if (($i->email) == ($accounts->email) && ($i->password) == ($accounts->password)) {
+
+            if (($data->email) == ($accounts->email) && ($data->password) == ($accounts->password)) {
+                if (str_contains($data->email, '@admin')) {
                     echo "<script>window.location.href ='/gpay.com/dashboard/' </script>";
                     setcookie("email_client", $accounts->email, time() + (86400 * 30), "/");
                     $_SESSION['email'] = $accounts->email;
                 } else {
-                    echo "<script>alert('No account occurred!')</script>";
-                    echo "<script>window.location.href ='/gpay.com/register/' </script>";
+                    echo "<script>alert('other page!')</script>";
                 }
+            } else {
+                echo "<script>alert('No account occurred!')</script>";
+                echo "<script>window.location.href ='/gpay.com/register/' </script>";
             }
         } else {
             echo "<script>alert('No account occurred!')</script>";

@@ -2,31 +2,32 @@
 session_start();
 
 use App\Models\Register;
-use App\Models\Business_info;
-use App\Http\Controllers\user;
 
 $data = Register::where('email', $_SESSION['email'])->first();
 
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
 	<meta name="robots" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>G-Pay Administrator - Clients </title>
+	<title>G-Pay Administrator - Analysis </title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png') }}">
 	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/chartist/css/chartist.min.css') }}">
 	<link href="{{ URL::asset('/dash/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
-	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/datatables/css/jquery.dataTables.min.css') }}">
+	<link href="{{ URL::asset('/dash/vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/a7413258b8.js" crossorigin="anonymous"></script>
 	<link href="{{ URL::asset('/dash/css/style.css') }}" rel="stylesheet">
-	<link href="{{ URL::asset('/dash/vendor/lightgallery/css/lightgallery.min.css') }}" rel="stylesheet">
-
 
 
 </head>
@@ -47,6 +48,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
         Preloader end
     ********************-->
 
+
 	<!--**********************************
         Main wrapper start
     ***********************************-->
@@ -65,7 +67,6 @@ $data = Register::where('email', $_SESSION['email'])->first();
 				</div>
 
 			</a>
-
 
 			<div class="nav-control">
 				<div class="hamburger">
@@ -628,6 +629,9 @@ $data = Register::where('email', $_SESSION['email'])->first();
             Chat box End
         ***********************************-->
 
+
+
+
 		<!--**********************************
             Header start
         ***********************************-->
@@ -820,7 +824,6 @@ $data = Register::where('email', $_SESSION['email'])->first();
 									<img src="/dash/images/profile/pic1.jpg" width="20" alt="">
 									<div class="header-info">
 										<span>Administrator</span>
-
 									</div>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -838,7 +841,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 										</svg>
 										<span class="ml-2">Inbox </span>
 									</a>
-									<a href="/gpay.com/homepage/" class="dropdown-item ai-icon">
+									<a href="page-login.html" class="dropdown-item ai-icon">
 										<svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 											<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
 											<polyline points="16 17 21 12 16 7"></polyline>
@@ -853,7 +856,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 				</nav>
 				<div class="sub-header">
 					<div class="d-flex align-items-center flex-wrap mr-auto">
-						<h5 class="dashboard_bar">Update User Information</h5>
+						<h5 class="dashboard_bar">Dashboard</h5>
 					</div>
 
 				</div>
@@ -866,8 +869,6 @@ $data = Register::where('email', $_SESSION['email'])->first();
 		<!--**********************************
             Sidebar start
         ***********************************-->
-
-
 		<div class="deznav">
 			<div class="deznav-scroll">
 				<div class="main-profile">
@@ -940,476 +941,436 @@ $data = Register::where('email', $_SESSION['email'])->first();
         ***********************************-->
 		<div class="content-body">
 			<div class="container-fluid">
-				<div class="card">
+				<!-- Add Project -->
+				<div class="modal fade" id="addProjectSidebar">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Create Project</h5>
+								<button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label class="text-black font-w500">Project Name</label>
+										<input type="text" class="form-control">
+									</div>
+									<div class="form-group">
+										<label class="text-black font-w500">Deadline</label>
+										<input type="date" class="form-control">
+									</div>
+									<div class="form-group">
+										<label class="text-black font-w500">Client Name</label>
+										<input type="text" class="form-control">
+									</div>
+									<div class="form-group">
+										<button type="button" class="btn btn-primary">CREATE</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row page-titles mx-0">
+					<div class="col-sm-6 p-md-0">
+						<div class="welcome-text">
+							<h3>Analytical Statistics</h3>
 
-					<div class="card-body">
-						<form class="table-responsive table_update">
-							<table class="table style-1" id="ListDatatableView">
-								<?php
-								$data2 = Register::find($_COOKIE['id_target']);
-								$data3 = Business_info::where('email', $data2->email)->first();
-								?>
+						</div>
+					</div>
 
-								<tbody>
-									@if($data2 != null && $data3 != null)
-									<tr>
+				</div>
+				<!-- row -->
+				<div class="row">
 
-										<td>First Name<div class="media style-1">
+					<div class="card active_users">
+						<div class="card-header bg-dark border-0 pb-0">
+							<h4 class="card-title text-white">Active Users</h4>
+							<span id="counter"></span>
+						</div>
+						<div class="bg-dark">
+							<canvas id="activeUser"></canvas>
+						</div>
+						<div class="card-body pt-0">
+							<div class="list-group-flush mt-4">
+								<div class="list-group-item bg-transparent d-flex justify-content-between px-0 py-1 font-weight-semi-bold border-top-0">
+									<p class="mb-0" style="font-weight: bold;">Top Countries</p>
+									<p class="mb-0" style="font-weight: bold;">Active Users</p>
+								</div>
+								<div class="list-group-item bg-transparent d-flex justify-content-between px-0 py-1">
+									<p class="mb-0">United States</p>
+									<p class="mb-0">1503</p>
+								</div>
+								<div class="list-group-item bg-transparent d-flex justify-content-between px-0 py-1">
+									<p class="mb-0">India</p>
+									<p class="mb-0">1423</p>
+								</div>
+								<div class="list-group-item bg-transparent d-xxl-flex justify-content-between px-0 py-1 d-none">
+									<p class="mb-0">/</p>
+									<p class="mb-0">2</p>
+								</div>
 
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data2 ->first_name}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input style="display: none;" id="c_id" type="text" placeholder="{{$data2 ->id}}">
-											<input id="first_name" type="text" placeholder="{{$data2 ->first_name}}" readonly>
-										</td>
+								<div class="list-group-item bg-transparent d-flex justify-content-between px-0 py-1">
+									<p class="mb-0">Philippines</p>
+									<p class="mb-0">980</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
-									</tr>
-									<tr>
-										<td>Last Name<div class="media style-1">
+				</div>
+				<div class="row">
+					<div class="col-xl-3 col-lg-6 col-sm-6">
+						<div class="widget-stat card">
+							<div class="card-body p-4">
+								<h4 class="card-title">Pending Clients</h4>
+								<h3>5</h3>
+								<div class="progress mb-2">
+									<div class="progress-bar progress-animated bg-red" style="width: 34%"></div>
+								</div>
+								<small>34% Increase in 20 Days</small>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6 col-sm-6">
+						<div class="widget-stat card">
+							<div class="card-body p-4">
+								<h4 class="card-title">New Clients</h4>
+								<h3>11</h3>
+								<div class="progress mb-2">
+									<div class="progress-bar progress-animated bg-warning" style="width: 26%"></div>
+								</div>
+								<small>26% Increase in 25 Days</small>
+							</div>
+						</div>
+					</div>
 
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data2 ->last_name}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="text" id="last_name" value="{{$data2 ->last_name}}" readonly>
-										</td>
-
-									</tr>
-									<tr>
-										<td>Location<div class="media style-1">
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data2 ->Address}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="text" id="address" value="{{$data2 ->Address}}" readonly>
-										</td>
+					<div class="col-xl-3 col-lg-6 col-sm-6">
+						<div class="widget-stat card">
+							<div class="card-body p-4">
+								<h4 class="card-title">Total Clients</h4>
+								<h3>34</h3>
+								<div class="progress mb-2">
+									<div class="progress-bar progress-animated bg-success" style="width: 30%"></div>
+								</div>
+								<small>30% Increase in 30 Days</small>
+							</div>
+						</div>
+					</div>
 
 
-									</tr>
-									<tr>
-										<td>Phone number<div class="media style-1">
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data2 ->phone}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="text" id="phone" value="{{$data2 ->phone}}" readonly>
-										</td>
-									</tr>
-									<tr>
-										<td>Email Address<div class="media style-1">
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data2 ->email}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="text" id="email" value="{{$data2 ->email}}" readonly>
-										</td>
-									</tr>
-									<tr>
-										<td>Password<div class="media style-1">
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data2 ->password}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="password" id="pass" value="{{$data2 ->password}}" readonly><br><br>
-											<input type="password" value="" placeholder="confirm password">
-										</td>
-									</tr>
-									<tr>
-										<td>Company Name<div class="media style-1">
 
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data3 ->company_name}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="text" id="c_name" value="{{$data3 ->company_name}}" readonly>
-										</td>
-									</tr>
-									<tr>
-										<td>Company Do<div class="media style-1">
 
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data3 ->company_do}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="text" id="c_do" value="{{$data3 ->company_do}}" readonly>
-										</td>
-									</tr>
-									<tr>
-										<td>Describe Business<div class="media style-1">
-
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data3 ->describe_business}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="text" id="d_busi" value="{{$data3 ->describe_business}}" readonly>
-										</td>
-									</tr>
-									<tr>
-										<td>Currency Type<div class="media style-1">
-
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data3 ->currency_type}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="text" id="c_type" value="{{$data3 ->currency_type}}" readonly>
-										</td>
-									</tr>
-									<tr>
-										<td>Estimate Revenue<div class="media style-1">
-
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data3 ->estimate_revenue}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="text" id="es_rev" value="{{$data3 ->estimate_revenue}}" readonly>
-										</td>
-									</tr>
-									<tr>
-										<td>Running status<div class="media style-1">
-
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data3 ->long_service}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="text" id="ser" value="{{$data3 ->long_service}}" readonly>
-										</td>
-									</tr>
-									<tr>
-										<td>Current Billing<div class="media style-1">
-
-												<div class="media-body">
-													<small>previous value</small>
-													<h6>{{$data3 ->current_bill}}</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<input type="text" id="c_bill" value="{{$data3 ->current_bill}}" readonly>
-										</td>
-									</tr>
-
-									@endif
-
-								</tbody>
-
-							</table>
-							<div style="display: flex;justify-content: right;align-items: center;gap:15px;padding-right:50px">
-								<a href="javascript:void(0);" class="btn btn-primary mb-1 info-btn cancel">Cancel</a>
-								<a href="javascript:void(0);" class="btn btn-primary mb-1 info-btn save">Save</a>
-
+					<div class="col-xl-12 col-xxl-12 col-lg-12 col-sm-12">
+						<div id="user-activity" class="card">
+							<div class="card-header border-0 pb-0 d-sm-flex d-block">
+								<h4 class="card-title">Client Activity</h4>
+								<div class="card-action mb-sm-0 my-2">
+									<ul class="nav nav-tabs" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active" data-toggle="tab" href="#user" role="tab">
+												Day
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" data-toggle="tab" href="#bounce" role="tab">
+												Month
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" data-toggle="tab" href="#session-duration" role="tab">
+												Year
+											</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 
-							<script>
-								var cancel_btn = document.querySelector('.cancel');
-								var save_btn = document.querySelector('.save');
-								var update_input = document.querySelectorAll('.table_update tbody input');
-								const p_email = save_btn.parentElement.parentElement.querySelector('tbody #email').value;
-
-								update_input.forEach((input) => {
-									input.addEventListener('click', function() {
-										input.readOnly = false;
-									});
-								});
-
-								cancel_btn.addEventListener('click', function() {
-									window.location.href = '/gpay.com/users/';
-								});
+							<div class="card-body">
+								<div class="tab-content" id="myTabContent">
+									<div class="tab-pane fade show active" id="user" role="tabpanel">
+										<canvas id="activity" class="chartjs"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
 
-								save_btn.addEventListener('click', function() {
-
-									const c_id = save_btn.parentElement.parentElement.querySelector('tbody #c_id').value;
-									const first_name = save_btn.parentElement.parentElement.querySelector('tbody #first_name').value;
-									const last_name = save_btn.parentElement.parentElement.querySelector('tbody #last_name').value;
-									const address = save_btn.parentElement.parentElement.querySelector('tbody #address').value;
-									const phone = save_btn.parentElement.parentElement.querySelector('tbody #phone').value;
-									const email = save_btn.parentElement.parentElement.querySelector('tbody #email').value;
-									const pass = save_btn.parentElement.parentElement.querySelector('tbody #pass').value;
-									const c_name = save_btn.parentElement.parentElement.querySelector('tbody #c_name').value;
-									const c_do = save_btn.parentElement.parentElement.querySelector('tbody #c_do').value;
-									const d_busi = save_btn.parentElement.parentElement.querySelector('tbody #d_busi').value;
-									const c_type = save_btn.parentElement.parentElement.querySelector('tbody #c_type').value;
-									const es_rev = save_btn.parentElement.parentElement.querySelector('tbody #es_rev').value;
-									const ser = save_btn.parentElement.parentElement.querySelector('tbody #ser').value;
-									const c_bill = save_btn.parentElement.parentElement.querySelector('tbody #c_bill').value;
 
 
-									createCookie("c_id", c_id, "1");
-									createCookie("first_name", first_name, "1");
-									createCookie("last_name", last_name, "1");
-									createCookie("address", address, "1");
-									createCookie("phone", phone, "1");
-									createCookie("email", email, "1");
-									createCookie("p_email", p_email, "1");
-									createCookie("pass", pass, "1");
-									createCookie("c_name", c_name, "1");
-									createCookie("c_do", c_do, "1");
-									createCookie("d_busi", d_busi, "1");
-									createCookie("c_type", c_type, "1");
-									createCookie("es_rev", es_rev, "1");
-									createCookie("ser", ser, "1");
-									createCookie("c_bill", c_bill, "1");
+					<div class="col-xl-12 col-lg-12 col-xxl-12 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title">Client Information</h4>
 
-									window.location.href = '/gpay.com/register/user/update';
-								});
+							</div>
+							<div class="card-body">
+								<p>Below shows the most information based from the data gathered from clients</p>
+								<div class="table-responsive recentOrderTable">
+									<table class="table verticle-middle table-responsive-md">
+										<thead>
+											<tr>
+												<th scope="col">Info</th>
+												<!-- <th scope="col">Patient</th>
+												<th scope="col">Dr Name</th>
+												<th scope="col">Date</th>
+												<th scope="col">Status</th>
+												<th scope="col">Bills</th>
+												<th scope="col"></th> -->
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>Gender</th>
+												<td>Male</td>
+												<td>45%</td>
+												<td>Female</td>
 
+												<td>30%</td>
 
-								// Function to create the cookie
-								function createCookie(name, value, days) {
-									var expires;
+											</tr>
+											<tr>
+												<th>User-Status</th>
+												<td>Self-Employed Professionals</td>
+												<td>45%</td>
+												<td>Accountants</td>
+												<td>20%</td>
+												<td>Employess</td>
+												<td>21%</td>
+												<td>Unemployed Individuals</td>
+												<td>32%</td>
 
-									if (days) {
-										var date = new Date();
-										date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-										expires = "; expires=" + date.toGMTString();
-									} else {
-										expires = "";
-									}
-									document.cookie = escape(name) + "=" +
-										escape(value) + expires + "; path=/";
-								}
-							</script>
+											</tr>
+											<tr>
+												<th>Business Details</th>
+												<td>Its launching soon</td>
+												<td>23%</td>
+												<td>More than a month</td>
+												<td>35%</td>
+												
 
+											</tr>
+											<tr>
+												<th>Business Details</th>
+												<td>Its launching soon</td>
+												<td>23%</td>
+												<td>More than a month</td>
+												<td>35%</td>
+												
 
-						</form>
+											</tr>
+											<tr>
+												<th>Business Details</th>
+												<td>Its launching soon</td>
+												<td>23%</td>
+												<td>More than a month</td>
+												<td>35%</td>
+												
+
+											</tr>
+									
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+
+					<div class="col-xl-6 col-lg-6">
+						<div class="card">
+							<div class="card-body pb-0">
+								<h4 class="card-title text-uppercase font-weight-normal">Market Now</h4>
+								<h2 class="font-weight-normal text-danger">
+									<span><i class="fa fa-caret-up"></i></span>
+									<span>3454664</span>
+								</h2>
+								<div class="row mt-5">
+									<div class="col text-center">
+										<h5 class="font-weight-normal">APPL</h5>
+										<span class="text-success">+ 82.24 %</span>
+									</div>
+									<div class="col text-center">
+										<h5 class="font-weight-normal">FB</h5>
+										<span class="text-danger">- 12.24 %</span>
+									</div>
+									<div class="col text-center">
+										<h5 class="font-weight-normal">GOOG</h5>
+										<span class="text-success">+ 42.24 %</span>
+									</div>
+								</div>
+							</div>
+							<div class="chart-wrapper">
+								<canvas id="chart_widget_4"></canvas>
+							</div>
+						</div>
+					</div>
+				
+		
+					<div class="col-xl-6 col-xxl-4 col-lg-12">
+						<div class="card">
+							<div class="chart-wrapper">
+								<canvas id="chart_widget_16"></canvas>
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">Sales Status</h4>
+								<div class="row">
+									<div class="col-12">
+										<div class="d-flex justify-content-between">
+											<h6>67%</h6>
+											<span>Grow</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-primary" style="width: 80%"></div>
+										</div>
+									</div>
+									<div class="col-12 mt-4">
+										<div class="d-flex justify-content-between">
+											<h6>67%</h6>
+											<span>Grow</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-success" style="width: 70%"></div>
+										</div>
+									</div>
+									<div class="col-12 mt-4">
+										<div class="d-flex justify-content-between">
+											<h6>67%</h6>
+											<span>Grow</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-info" style="width: 40%"></div>
+										</div>
+									</div>
+									<div class="col-12 mt-4">
+										<div class="d-flex justify-content-between">
+											<h6>67%</h6>
+											<span>Grow</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-warning" style="width: 80%"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-3 col-sm-6">
+						<div class="card">
+							<div class="social-graph-wrapper widget-facebook">
+								<span class="s-icon"><i class="fa fa-facebook"></i></span>
+							</div>
+							<div class="row">
+								<div class="col-6 border-right">
+									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
+										<h4 class="m-1"><span class="counter">89</span> k</h4>
+										<p class="m-0">Friends</p>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
+										<h4 class="m-1"><span class="counter">119</span> k</h4>
+										<p class="m-0">Followers</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-3 col-sm-6">
+						<div class="card">
+							<div class="social-graph-wrapper widget-linkedin">
+								<span class="s-icon"><i class="fa fa-linkedin"></i></span>
+							</div>
+							<div class="row">
+								<div class="col-6 border-right">
+									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
+										<h4 class="m-1"><span class="counter">89</span> k</h4>
+										<p class="m-0">Friends</p>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
+										<h4 class="m-1"><span class="counter">119</span> k</h4>
+										<p class="m-0">Followers</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-3 col-sm-6">
+						<div class="card">
+							<div class="social-graph-wrapper widget-googleplus">
+								<span class="s-icon"><i class="fa fa-google-plus"></i></span>
+							</div>
+							<div class="row">
+								<div class="col-6 border-right">
+									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
+										<h4 class="m-1"><span class="counter">89</span> k</h4>
+										<p class="m-0">Friends</p>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
+										<h4 class="m-1"><span class="counter">119</span> k</h4>
+										<p class="m-0">Followers</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-3 col-sm-6">
+						<div class="card">
+							<div class="social-graph-wrapper widget-twitter">
+								<span class="s-icon"><i class="fa fa-twitter"></i></span>
+							</div>
+							<div class="row">
+								<div class="col-6 border-right">
+									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
+										<h4 class="m-1"><span class="counter">89</span> k</h4>
+										<p class="m-0">Friends</p>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
+										<h4 class="m-1"><span class="counter">119</span> k</h4>
+										<p class="m-0">Followers</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!--**********************************
+            Content body end
+        ***********************************-->
 
+		<!--**********************************
+            Footer start
+        ***********************************-->
 		<div class="footer">
 			<div class="copyright">
 				<p style="color: black !important;font-weight:600">Copyright © Designed &amp; Developed by <a href="#" target="_blank">G-Pay</a> 2022
 				</p>
 			</div>
 		</div>
+		<!--**********************************
+            Footer end
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button end
+        ***********************************-->
 
 
-		<?php
-		$data_client = Register::where('email', $_COOKIE['email_client'])->first();
-		$data_client_b_side = Business_info::where('email',  $_COOKIE['email_client'])->first();
-		?>
-		<div class="modal fade" id="sendMessageModal">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">All Details</h5>
-						<button type="button" class="close btn-close" data-dismiss="modal"><span>&times;</span></button>
-					</div>
-					<!-- email_client -->
-
-					<div class="modal-body">
-						<form class="comment-form">
-							<h4>Profile Information:</h4>
-							<div class="row">
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Name: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->first_name}} {{$data_client->last_name}}
-									</label>
-
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Address: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->Address}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Phone: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->phone}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Email: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->email}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Date Joined: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->date}}
-									</label>
-								</div>
-							</div>
-							<br>
-							<h4>Other Information:</h4>
-							<div class="row">
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Company Name: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->company_name}}
-									</label>
-
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Company Do: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->company_do}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Business Description: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->describe_business}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Type of currency used: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->currency_type}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Estimated revenue: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->estimate_revenue}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Run of service: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->long_service}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Current use of billing: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->current_bill}}
-									</label>
-								</div>
-							</div>
-
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-
-		<div class="modal-dialog modal-delete" role="document">
-			<div class="modal-content">
-
-				<div class="modal-body">
-
-					<h6>Are you sure you want to delete?</h6>
-					<div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-						<button type="submit" id="exit" class="badge  btn-danger" data-dismiss="modal">Cancel</button>
-						<button type="submit" id="deleted" class="badge badge-warning">Delete</button>
-					</div>
-
-
-					<script>
-						document.querySelector('#exit').addEventListener('click', function() {
-							document.querySelector('.modal-delete').style.display = "none";
-						});
-						document.querySelector('#deleted').addEventListener('click', function() {
-							document.querySelector('.modal-delete').style.display = "none";
-							window.location.href = '/gpay.com/register/user/delete';
-						});
-					</script>
-
-				</div>
-			</div>
-		</div>
-
-
-
-		<script>
-			const info_btn = document.querySelectorAll('.info-btn');
-
-			info_btn.forEach((btn) => {
-				btn.addEventListener('click', function() {
-
-					var value = btn.parentElement.parentElement.querySelector('#client_email').innerText;
-					// createCookie('email_client', value, '1');
-					// alert(getCookie('email_client'));
-					// window.location.href = '/gpay.com/register/user';
-				});
-			});
-
-			const btn_close = document.querySelector('.btn-close');
-			btn_close.addEventListener('click', function() {
-				// document.cookie = "email_client=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-				// alert(getCookie('email_client'));
-				// window.location.href = '/gpay.com/register/user';
-			});
-
-
-
-			// function getCookie(cname) {
-			// 	let name = cname + "=";
-			// 	let ca = document.cookie.split(';');
-			// 	for (let i = 0; i < ca.length; i++) {
-			// 		let c = ca[i];
-			// 		while (c.charAt(0) == ' ') {
-			// 			c = c.substring(1);
-			// 		}
-			// 		if (c.indexOf(name) == 0) {
-			// 			return c.substring(name.length, c.length);
-			// 		}
-			// 	}
-			// 	return "";
-			// }
-
-			// // Function to create the cookie
-			// function createCookie(name, value, days) {
-			// 	var expires;
-
-			// 	if (days) {
-			// 		var date = new Date();
-			// 		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-			// 		expires = "; expires=" + date.toGMTString();
-			// 	} else {
-			// 		expires = "";
-			// 	}
-			// 	document.cookie = escape(name) + "=" +
-			// 		escape(value) + expires + "; path=/";
-			// }
-		</script>
 	</div>
-
 	<!--**********************************
         Main wrapper end
     ***********************************-->
@@ -1419,65 +1380,37 @@ $data = Register::where('email', $_SESSION['email'])->first();
     ***********************************-->
 	<!-- Required vendors -->
 	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
+	<script src="/dash/vendor/global/global.min.js"></script>
+	<script src="/dash/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="/dash/vendor/chart.js/Chart.bundle.min.js"></script>
+	<!-- Apex Chart -->
+	<script src="/dash/vendor/apexchart/apexchart.js"></script>
 
-	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/vendor/chart.js/Chart.bundle.min.js') }}"></script>
+	<!-- Chartist -->
+	<script src="/dash/vendor/chartist/js/chartist.min.js"></script>
+	<script src="/dash/vendor/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
-	<!-- Datatable -->
-	<script src="{{ URL::asset('/dash/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/plugins-init/datatables.init.js') }}"></script>
+	<!-- Flot -->
+	<script src="/dash/vendor/flot/jquery.flot.js"></script>
+	<script src="/dash/vendor/flot/jquery.flot.pie.js"></script>
+	<script src="/dash/vendor/flot/jquery.flot.resize.js"></script>
+	<script src="/dash/vendor/flot-spline/jquery.flot.spline.min.js"></script>
 
-	<script src="{{ URL::asset('/dash/js/custom.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/deznav-init.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/demo.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/styleSwitcher.js') }}"></script>
-
-
-
-
-
-
-	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-
-	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
-
-	<script src="{{ URL::asset('/dash/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/vendor/chart.js/Chart.bundle.min.js') }}"></script>
-
+	<!-- Chart sparkline plugin files -->
+	<script src="/dash/vendor/jquery-sparkline/jquery.sparkline.min.js"></script>
+	<script src="/dash/js/plugins-init/sparkline-init.js"></script>
 
 	<!-- Chart piety plugin files -->
-	<script src="{{ URL::asset('/dash/vendor/peity/jquery.peity.min.js') }}"></script>
-	<!-- Flot -->
-	<script src="{{ URL::asset('/dash/vendor/flot/jquery.flot.js') }}"></script>
+	<script src="/dash/vendor/peity/jquery.peity.min.js"></script>
+	<script src="/dash/js/plugins-init/piety-init.js"></script>
 
-
-	<script src="{{ URL::asset('/dash/vendor/flot/jquery.flot.pie.js') }}"></script>
-
-	<script src="{{ URL::asset('/dash/vendor/flot/jquery.flot.resize.js') }}"></script>
-	<script src="{{ URL::asset('/dash/vendor/flot-spline/jquery.flot.spline.min.js') }}"></script>
-
-	<!-- Apex Chart -->
-	<script src="{{ URL::asset('/dash/vendor/apexchart/apexchart.js') }}"></script>
-	<!-- Chartist -->
-	<script src="{{ URL::asset('/dash/vendor/chartist/js/chartist.min.js') }}"></script>
-
-	<script src="{{ URL::asset('/dash/vendor/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js') }}"></script>
-
-	<!-- Dashboard 1 -->
-
-	<script src="{{ URL::asset('/dash/js/dashboard/dashboard-1.js') }}"></script>
 	<!-- Init file -->
-	<script src="{{ URL::asset('/dash/js/plugins-init/widgets-script-init.js') }}"></script>
+	<script src="/dash/js/plugins-init/widgets-script-init.js"></script>
 
-	<script src="{{ URL::asset('/dash/vendor/owl-carousel/owl.carousel.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/custom.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/deznav-init.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/demo.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/styleSwitcher.js') }}"></script>
-
-
+	<script src="/dash/js/custom.min.js"></script>
+	<script src="/dash/js/deznav-init.js"></script>
+	<script src="/dash/js/demo.js"></script>
+	<script src="/dash/js/styleSwitcher.js"></script>
 </body>
 
 </html>

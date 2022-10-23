@@ -9,9 +9,8 @@ class Register extends Eloquent
 {
     protected $connection = 'mongodb';
     protected $collection = 'profile_info';
-    
-    protected $fillable = [
-        '_id', 'first_name', 'last_name','Address', 'phone', 'email', 'password'
-    ];
 
+    protected $fillable = [
+        '_id', 'first_name', 'last_name', 'Address', 'phone', 'email', 'password'
+    ];
 }
