@@ -2,35 +2,35 @@
 session_start();
 
 use App\Models\Register;
-use App\Models\Business_info;
-use App\Http\Controllers\user;
 
 $data = Register::where('email', $_SESSION['email'])->first();
-$data2 = Register::where('email', '!=', $_SESSION['email'])->get();
-
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
 	<meta name="robots" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>G-Pay Administrator - Clients </title>
+	<title>G-Pay Administrator - Inbox </title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png') }}">
 	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/chartist/css/chartist.min.css') }}">
 	<link href="{{ URL::asset('/dash/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
-	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/datatables/css/jquery.dataTables.min.css') }}">
+	<link href="{{ URL::asset('/dash/vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/a7413258b8.js" crossorigin="anonymous"></script>
 	<link href="{{ URL::asset('/dash/css/style.css') }}" rel="stylesheet">
-	<link href="{{ URL::asset('/dash/vendor/lightgallery/css/lightgallery.min.css') }}" rel="stylesheet">
-
 
 
 </head>
+
 
 <body>
 
@@ -47,6 +47,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 	<!--*******************
         Preloader end
     ********************-->
+
 
 	<!--**********************************
         Main wrapper start
@@ -124,7 +125,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="active dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/1.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/1.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon"></span>
 											</div>
 											<div class="user_info">
@@ -136,7 +137,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/2.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/2.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon offline"></span>
 											</div>
 											<div class="user_info">
@@ -148,7 +149,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/3.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/3.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon"></span>
 											</div>
 											<div class="user_info">
@@ -160,7 +161,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/4.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/4.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon offline"></span>
 											</div>
 											<div class="user_info">
@@ -173,7 +174,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/5.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/5.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon offline"></span>
 											</div>
 											<div class="user_info">
@@ -185,7 +186,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/1.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/1.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon"></span>
 											</div>
 											<div class="user_info">
@@ -197,7 +198,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/2.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/2.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon offline"></span>
 											</div>
 											<div class="user_info">
@@ -210,7 +211,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/3.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/3.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon"></span>
 											</div>
 											<div class="user_info">
@@ -222,7 +223,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/4.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/4.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon offline"></span>
 											</div>
 											<div class="user_info">
@@ -235,7 +236,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/5.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/5.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon offline"></span>
 											</div>
 											<div class="user_info">
@@ -247,7 +248,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/1.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/1.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon"></span>
 											</div>
 											<div class="user_info">
@@ -259,7 +260,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/2.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/2.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon offline"></span>
 											</div>
 											<div class="user_info">
@@ -271,7 +272,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/3.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/3.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon"></span>
 											</div>
 											<div class="user_info">
@@ -284,7 +285,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/4.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/4.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon offline"></span>
 											</div>
 											<div class="user_info">
@@ -296,7 +297,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<li class="dz-chat-user">
 										<div class="d-flex bd-highlight">
 											<div class="img_cont">
-												<img src="/dash/images/avatar/5.jpg" class="rounded-circle user_img" alt="">
+												<img src="images/avatar/5.jpg" class="rounded-circle user_img" alt="">
 												<span class="online_icon offline"></span>
 											</div>
 											<div class="user_info">
@@ -343,7 +344,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 							<div class="card-body msg_card_body dz-scroll" id="DZ_W_Contacts_Body3">
 								<div class="d-flex justify-content-start mb-4">
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 									<div class="msg_cotainer">
 										Hi, how are you samim?
@@ -356,12 +357,12 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 										<span class="msg_time_send">8:55 AM, Today</span>
 									</div>
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 								</div>
 								<div class="d-flex justify-content-start mb-4">
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 									<div class="msg_cotainer">
 										I am good too, thank you for your chat template
@@ -374,12 +375,12 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 										<span class="msg_time_send">9:05 AM, Today</span>
 									</div>
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 								</div>
 								<div class="d-flex justify-content-start mb-4">
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 									<div class="msg_cotainer">
 										I am looking for your next templates
@@ -392,12 +393,12 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 										<span class="msg_time_send">9:10 AM, Today</span>
 									</div>
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 								</div>
 								<div class="d-flex justify-content-start mb-4">
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 									<div class="msg_cotainer">
 										Bye, see you
@@ -406,7 +407,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 								</div>
 								<div class="d-flex justify-content-start mb-4">
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 									<div class="msg_cotainer">
 										Hi, how are you samim?
@@ -419,12 +420,12 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 										<span class="msg_time_send">8:55 AM, Today</span>
 									</div>
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 								</div>
 								<div class="d-flex justify-content-start mb-4">
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 									<div class="msg_cotainer">
 										I am good too, thank you for your chat template
@@ -437,12 +438,12 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 										<span class="msg_time_send">9:05 AM, Today</span>
 									</div>
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 								</div>
 								<div class="d-flex justify-content-start mb-4">
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 									<div class="msg_cotainer">
 										I am looking for your next templates
@@ -455,12 +456,12 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 										<span class="msg_time_send">9:10 AM, Today</span>
 									</div>
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 								</div>
 								<div class="d-flex justify-content-start mb-4">
 									<div class="img_cont_msg">
-										<img src="/dash/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
 									</div>
 									<div class="msg_cotainer">
 										Bye, see you
@@ -629,6 +630,9 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
             Chat box End
         ***********************************-->
 
+
+
+
 		<!--**********************************
             Header start
         ***********************************-->
@@ -678,7 +682,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 											<li>
 												<div class="timeline-panel">
 													<div class="media mr-2">
-														<img alt="image" width="50" src="/dash/images/avatar/1.jpg">
+														<img alt="image" width="50" src="images/avatar/1.jpg">
 													</div>
 													<div class="media-body">
 														<h6 class="mb-1">Dr sultads Send you Photo</h6>
@@ -711,7 +715,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 											<li>
 												<div class="timeline-panel">
 													<div class="media mr-2">
-														<img alt="image" width="50" src="/dash/images/avatar/1.jpg">
+														<img alt="image" width="50" src="images/avatar/1.jpg">
 													</div>
 													<div class="media-body">
 														<h6 class="mb-1">Dr sultads Send you Photo</h6>
@@ -817,7 +821,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 								</div>
 							</li>
 							<li class="nav-item dropdown header-profile">
-								<a class="nav-link" href="#" role="button" data-toggle="dropdown">
+							<a class="nav-link" href="#" role="button" data-toggle="dropdown">
 									<img src="/dash/images/profile/pic1.jpg" width="20" alt="">
 									<div class="header-info">
 										<span>Administrator</span>
@@ -832,14 +836,14 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 										</svg>
 										<span class="ml-2">Profile </span>
 									</a>
-									<a href="email-inbox.html" class="dropdown-item ai-icon">
+									<a href="/gpay.com/email-inbox" class="dropdown-item ai-icon">
 										<svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 											<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
 											<polyline points="22,6 12,13 2,6"></polyline>
 										</svg>
 										<span class="ml-2">Inbox </span>
 									</a>
-									<a href="/gpay.com/homepage/" class="dropdown-item ai-icon">
+									<a href="page-login.html" class="dropdown-item ai-icon">
 										<svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 											<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
 											<polyline points="16 17 21 12 16 7"></polyline>
@@ -856,7 +860,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 					<div class="d-flex align-items-center flex-wrap mr-auto">
 						<h5 class="dashboard_bar">Dashboard</h5>
 					</div>
-
+				
 				</div>
 			</div>
 		</div>
@@ -867,8 +871,6 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 		<!--**********************************
             Sidebar start
         ***********************************-->
-
-
 		<div class="deznav">
 			<div class="deznav-scroll">
 				<div class="main-profile">
@@ -941,142 +943,510 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
         ***********************************-->
 		<div class="content-body">
 			<div class="container-fluid">
-				<div class="card">
-					<div class="card-header d-sm-flex d-block">
-						<div class="mr-auto mb-sm-0 mb-3">
-							<h4 class="card-title mb-2">Client Listing</h4>
-							<span>Below shows the list of clients</span>
-						</div>
-						<a href="javascript:void(0);" class="btn btn-info light mr-3"><i class="las la-download scale3 mr-2"></i>Import Csv</a>
-						<a href="javascript:void(0);" class="btn btn-info">+ Add Client</a>
-					</div>
-					<div class="card-body">
-						<div class="table-responsive">
-							<table class="table style-1" id="ListDatatableView">
-								<thead>
-									<tr>
-										<th>#</th>
-										<th>NAME OF CLIENTS</th>
-										<th>ADDRESS</th>
-										<th>DATE JOINED</th>
-										<th>FULL DETAILS</th>
-										<th>STATUS</th>
-										<th>ACTION</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php
-									$count = 1;
-									?>
-									@foreach($data2 as $i)
-									<tr>
-										<td>
-											<h6>{{$count}}</h6>
-										</td>
-										<td>
-											<div class="media style-1">
-												<img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="img-fluid mr-2" alt="">
-												<div class="media-body">
-													<h6>{{$i->last_name}}, {{$i->first_name}}</h6>
-													<span><a id="client_email" href="#" class="__cf_email__" data-cfemail="6c060304020803092c0b010d0500420f0301">{{$i->email}}</a></span><br>
-													<span><a id="client_id" href="#" class="__cf_email__" data-cfemail="6c060304020803092c0b010d0500420f0301">{{$i->_id}}</a></span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<div>
-												<h6>{{$i->Address}}</h6>
-												<span>COde:Ph</span>
-											</div>
-										</td>
-										<td>
-											<div>
-												<h6 class="text-primary" style="color:#51A6F5 !important">{{$i->date}}</h6>
-
-											</div>
-										</td>
-										<td>
-											<a href="javascript:void(0);" class="btn btn-primary mb-1 info-btn" data-toggle="modal" data-target="#sendMessageModal">Show info</a>
-
-										</td>
-
-										<td><span class="badge badge-warning">Active</span></td>
-										<td>
-											<div class="d-flex action-button">
-												<a href="javascript:void(0);" class="btn btn-info btn-xs light px-2 update">
-													<svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M17 3C17.2626 2.73735 17.5744 2.52901 17.9176 2.38687C18.2608 2.24473 18.6286 2.17157 19 2.17157C19.3714 2.17157 19.7392 2.24473 20.0824 2.38687C20.4256 2.52901 20.7374 2.73735 21 3C21.2626 3.26264 21.471 3.57444 21.6131 3.9176C21.7553 4.26077 21.8284 4.62856 21.8284 5C21.8284 5.37143 21.7553 5.73923 21.6131 6.08239C21.471 6.42555 21.2626 6.73735 21 7L7.5 20.5L2 22L3.5 16.5L17 3Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg>
-												</a>
-												<a href="javascript:void(0);" class="ml-2 btn btn-xs px-2 light btn-danger delete">
-													<svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M3 6H5H21" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-														<path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg>
-
-												</a>
-											</div>
-										</td>
-									</tr>
-									<script>
-										var delete_btn = document.querySelectorAll('.delete');
-										var update_btn = document.querySelectorAll('.update');
-										delete_btn.forEach((btn) => {
-											btn.addEventListener('click', function() {
-												var value = btn.parentElement.parentElement.parentElement.querySelector('#client_id').innerText;
-												createCookie("id_target", value, "1");
-
-												document.querySelector('.modal-delete').style.display = "block";
-
-
-
-
-											});
-										});
-
-										update_btn.forEach((btn) => {
-											btn.addEventListener('click', function() {
-												var value = btn.parentElement.parentElement.parentElement.querySelector('#client_id').innerText;
-												createCookie("id_target", value, "1");
-
-												// document.querySelector('.modal-delete').style.display = "block";
-												window.location.href = '/gpay.com/users/update_users';
-
-
-
-											});
-										});
-
-										// Function to create the cookie
-										function createCookie(name, value, days) {
-											var expires;
-
-											if (days) {
-												var date = new Date();
-												date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-												expires = "; expires=" + date.toGMTString();
-											} else {
-												expires = "";
-											}
-											document.cookie = escape(name) + "=" +
-												escape(value) + expires + "; path=/";
-										}
-									</script>
-									<?php
-									$count++;
-									?>
-									@endforeach
-
-								</tbody>
-							</table>
+				<!-- Add Project -->
+				<div class="modal fade" id="addProjectSidebar">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Create Project</h5>
+								<button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label class="text-black font-w500">Project Name</label>
+										<input type="text" class="form-control">
+									</div>
+									<div class="form-group">
+										<label class="text-black font-w500">Deadline</label>
+										<input type="date" class="form-control">
+									</div>
+									<div class="form-group">
+										<label class="text-black font-w500">Client Name</label>
+										<input type="text" class="form-control">
+									</div>
+									<div class="form-group">
+										<button type="button" class="btn btn-primary">CREATE</button>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
+				<div class="row page-titles mx-0">
+					<div class="col-sm-6 p-md-0">
+						<div class="welcome-text">
+							<h4>Hi, welcome back!</h4>
+							<span>Email</span>
+						</div>
+					</div>
+					<div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="javascript:void(0)">Email</a></li>
+							<li class="breadcrumb-item active"><a href="javascript:void(0)">Inbox</a></li>
+						</ol>
+					</div>
+				</div>
+				<!-- row -->
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="card">
+							<div class="card-body">
+								<div class="email-left-box px-0 mb-3">
+									<div class="p-0">
+										<a href="#" class="btn btn-primary btn-block">Compose</a>
+									</div>
+									<div class="mail-list mt-4">
+										<a href="/gpay.com/email-inbox" class="list-group-item active"><i class="fa fa-inbox font-18 align-middle mr-2"></i> Inbox <span class="badge badge-primary badge-sm float-right">198</span> </a>
+										<a href="javascript:void()" class="list-group-item"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Sent</a> <a href="javascript:void()" class="list-group-item"><i class="fa fa-star font-18 align-middle mr-2"></i>Important <span class="badge badge-danger text-white badge-sm float-right">47</span>
+										</a>
+										<a href="javascript:void()" class="list-group-item"><i class="mdi mdi-file-document-box font-18 align-middle mr-2"></i>Draft</a><a href="javascript:void()" class="list-group-item"><i class="fa fa-trash font-18 align-middle mr-2"></i>Trash</a>
+									</div>
+									<div class="intro-title d-flex justify-content-between">
+										<h5>Categories</h5>
+										<i class="icon-arrow-down" aria-hidden="true"></i>
+									</div>
+									<div class="mail-list mt-4">
+										<a href="email-inbox.html" class="list-group-item"><span class="icon-warning"><i class="fa fa-circle" aria-hidden="true"></i></span>
+											Work </a>
+										<a href="email-inbox.html" class="list-group-item"><span class="icon-primary"><i class="fa fa-circle" aria-hidden="true"></i></span>
+											Private </a>
+										<a href="email-inbox.html" class="list-group-item"><span class="icon-success"><i class="fa fa-circle" aria-hidden="true"></i></span>
+											Support </a>
+										<a href="email-inbox.html" class="list-group-item"><span class="icon-dpink"><i class="fa fa-circle" aria-hidden="true"></i></span>
+											Social </a>
+									</div>
+								</div>
+								<div class="email-right-box ml-0 ml-sm-4 ml-sm-0">
+									<div role="toolbar" class="toolbar ml-1 ml-sm-0">
+										<div class="btn-group mb-1">
+											<div class="custom-control custom-checkbox pl-2">
+												<input type="checkbox" class="custom-control-input" id="checkAll">
+												<label class="custom-control-label" for="checkAll"></label>
+											</div>
+										</div>
+										<div class="btn-group mb-1">
+											<button class="btn btn-primary light px-3" type="button"><i class="ti-reload"></i>
+											</button>
+										</div>
+										<div class="btn-group mb-1">
+											<button aria-expanded="false" data-toggle="dropdown" class="btn btn-primary px-3 light dropdown-toggle" type="button">More <span class="caret"></span>
+											</button>
+											<div class="dropdown-menu"> <a href="javascript: void(0);" class="dropdown-item">Mark as Unread</a> <a href="javascript: void(0);" class="dropdown-item">Add to Tasks</a>
+												<a href="javascript: void(0);" class="dropdown-item">Add Star</a> <a href="javascript: void(0);" class="dropdown-item">Mute</a>
+											</div>
+										</div>
+									</div>
+									<div class="email-list mt-3">
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox2">
+															<label class="custom-control-label" for="checkbox2"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox3">
+															<label class="custom-control-label" for="checkbox3"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox4">
+															<label class="custom-control-label" for="checkbox4"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox5">
+															<label class="custom-control-label" for="checkbox5"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox6">
+															<label class="custom-control-label" for="checkbox6"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox7">
+															<label class="custom-control-label" for="checkbox7"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox8">
+															<label class="custom-control-label" for="checkbox8"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message unread">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox9">
+															<label class="custom-control-label" for="checkbox9"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message unread">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox10">
+															<label class="custom-control-label" for="checkbox10"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox11">
+															<label class="custom-control-label" for="checkbox11"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox12">
+															<label class="custom-control-label" for="checkbox12"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox13">
+															<label class="custom-control-label" for="checkbox13"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox14">
+															<label class="custom-control-label" for="checkbox14"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message unread">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox15">
+															<label class="custom-control-label" for="checkbox15"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox16">
+															<label class="custom-control-label" for="checkbox16"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox17">
+															<label class="custom-control-label" for="checkbox17"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox18">
+															<label class="custom-control-label" for="checkbox18"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox19">
+															<label class="custom-control-label" for="checkbox19"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message unread">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox20">
+															<label class="custom-control-label" for="checkbox20"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+										<div class="message">
+											<div>
+												<div class="d-flex message-single">
+													<div class="pl-1 align-self-center">
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="checkbox21">
+															<label class="custom-control-label" for="checkbox21"></label>
+														</div>
+													</div>
+													<div class="ml-2">
+														<button class="border-0 bg-transparent align-middle p-0"><i class="fa fa-star" aria-hidden="true"></i></button>
+													</div>
+												</div>
+												<a href="/gpay.com/email-read" class="col-mail col-mail-2">
+													<div class="subject">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of</div>
+													<div class="date">11:49 am</div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<!-- panel -->
+									<div class="row mt-4">
+										<div class="col-12 pl-3">
+											<nav>
+												<ul class="pagination pagination-gutter pagination-primary pagination-sm no-bg">
+													<li class="page-item page-indicator"><a class="page-link" href="javascript:void()"><i class="la la-angle-left"></i></a></li>
+													<li class="page-item "><a class="page-link" href="javascript:void()">1</a></li>
+													<li class="page-item active"><a class="page-link" href="javascript:void()">2</a></li>
+													<li class="page-item"><a class="page-link" href="javascript:void()">3</a></li>
+													<li class="page-item"><a class="page-link" href="javascript:void()">4</a></li>
+													<li class="page-item page-indicator"><a class="page-link" href="javascript:void()"><i class="la la-angle-right"></i></a></li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 		<!--**********************************
             Content body end
         ***********************************-->
+
 
 		<!--**********************************
             Footer start
@@ -1091,10 +1461,6 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
             Footer end
         ***********************************-->
 
-
-
-
-
 		<!--**********************************
            Support ticket button start
         ***********************************-->
@@ -1104,194 +1470,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
         ***********************************-->
 
 
-		<?php
-		$data_client = Register::where('email', $_COOKIE['email_client'])->first();
-		$data_client_b_side = Business_info::where('email',  $_COOKIE['email_client'])->first();
-		?>
-		<div class="modal fade" id="sendMessageModal">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">All Details</h5>
-						<button type="button" class="close btn-close" data-dismiss="modal"><span>&times;</span></button>
-					</div>
-					<!-- email_client -->
-
-					<div class="modal-body">
-						<form class="comment-form">
-							<h4>Profile Information:</h4>
-							<div class="row">
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Name: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->first_name}} {{$data_client->last_name}}
-									</label>
-
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Address: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->Address}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Phone: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->phone}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Email: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->email}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Date Joined: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->date}}
-									</label>
-								</div>
-							</div>
-							<br>
-							<h4>Other Information:</h4>
-							<div class="row">
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Company Name: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->company_name}}
-									</label>
-
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Company Do: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->company_do}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Business Description: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->describe_business}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Type of currency used: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->currency_type}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Estimated revenue: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->estimate_revenue}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Run of service: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->long_service}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Current use of billing: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->current_bill}}
-									</label>
-								</div>
-							</div>
-
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-
-		<div class="modal-dialog modal-delete" role="document">
-			<div class="modal-content">
-
-				<div class="modal-body">
-
-					<h6>Are you sure you want to delete?</h6>
-					<div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-						<button type="submit" id="exit" class="badge  btn-danger" data-dismiss="modal">Cancel</button>
-						<button type="submit" id="deleted" class="badge badge-warning">Delete</button>
-					</div>
-
-
-					<script>
-						document.querySelector('#exit').addEventListener('click', function() {
-							document.querySelector('.modal-delete').style.display = "none";
-						});
-						document.querySelector('#deleted').addEventListener('click', function() {
-							document.querySelector('.modal-delete').style.display = "none";
-							window.location.href = '/gpay.com/register/user/delete';
-						});
-					</script>
-
-				</div>
-			</div>
-		</div>
-
-
-
-		<script>
-			const info_btn = document.querySelectorAll('.info-btn');
-
-			info_btn.forEach((btn) => {
-				btn.addEventListener('click', function() {
-
-					var value = btn.parentElement.parentElement.querySelector('#client_email').innerText;
-					// createCookie('email_client', value, '1');
-					// alert(getCookie('email_client'));
-					// window.location.href = '/gpay.com/register/user';
-				});
-			});
-
-			const btn_close = document.querySelector('.btn-close');
-			btn_close.addEventListener('click', function() {
-				// document.cookie = "email_client=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-				// alert(getCookie('email_client'));
-				// window.location.href = '/gpay.com/register/user';
-			});
-
-
-
-			// function getCookie(cname) {
-			// 	let name = cname + "=";
-			// 	let ca = document.cookie.split(';');
-			// 	for (let i = 0; i < ca.length; i++) {
-			// 		let c = ca[i];
-			// 		while (c.charAt(0) == ' ') {
-			// 			c = c.substring(1);
-			// 		}
-			// 		if (c.indexOf(name) == 0) {
-			// 			return c.substring(name.length, c.length);
-			// 		}
-			// 	}
-			// 	return "";
-			// }
-
-			// // Function to create the cookie
-			// function createCookie(name, value, days) {
-			// 	var expires;
-
-			// 	if (days) {
-			// 		var date = new Date();
-			// 		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-			// 		expires = "; expires=" + date.toGMTString();
-			// 	} else {
-			// 		expires = "";
-			// 	}
-			// 	document.cookie = escape(name) + "=" +
-			// 		escape(value) + expires + "; path=/";
-			// }
-		</script>
 	</div>
-
 	<!--**********************************
         Main wrapper end
     ***********************************-->
@@ -1300,27 +1479,6 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
         Scripts
     ***********************************-->
 	<!-- Required vendors -->
-	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
-
-	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/vendor/chart.js/Chart.bundle.min.js') }}"></script>
-
-	<!-- Datatable -->
-	<script src="{{ URL::asset('/dash/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/plugins-init/datatables.init.js') }}"></script>
-
-	<script src="{{ URL::asset('/dash/js/custom.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/deznav-init.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/demo.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/styleSwitcher.js') }}"></script>
-
-
-
-
-
-
 	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
 	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
@@ -1358,7 +1516,6 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 	<script src="{{ URL::asset('/dash/js/deznav-init.js') }}"></script>
 	<script src="{{ URL::asset('/dash/js/demo.js') }}"></script>
 	<script src="{{ URL::asset('/dash/js/styleSwitcher.js') }}"></script>
-
 
 </body>
 

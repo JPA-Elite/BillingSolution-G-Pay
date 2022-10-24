@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "634e3be096cf31e31200c163"
+  },
+  "company_name": "wdw",
+  "company_do": "Other",
+  "describe_business": "Its part-time or supplements my main income",
+  "currency_type": "AED - United Arab Emirates dirham",
+  "estimate_revenue": "22",
+  "long_service": "Real-time or within a few hours",
+  "current_bill": "Spreadsheets and Word documents",
+  "email": "joshua@admin.com"
+},{
+  "_id": {
+    "$oid": "6355d8c6aa71a35cfdc6e5cc"
+  },
+  "company_name": "wdw",
+  "company_do": "Management Consulting",
+  "describe_business": "Its part-time or supplements my main income",
+  "currency_type": "PHP - Philippine Peso",
+  "estimate_revenue": "5000",
+  "long_service": "Real-time or within a few hours",
+  "current_bill": "Spreadsheets and Word documents",
+  "email": "calesa@gmail.com",
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1666570873538"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6355d8f5aa71a35cfdc6e5d5"
+  },
+  "company_name": "wdw",
+  "company_do": "Management Consulting",
+  "describe_business": "Its part-time or supplements my main income",
+  "currency_type": "AED - United Arab Emirates dirham",
+  "estimate_revenue": "22",
+  "long_service": "Real-time or within a few hours",
+  "current_bill": "Spreadsheets and Word documents",
+  "email": "joshua.algadipe@student.passerellesnumeriques.org"
+},{
+  "_id": {
+    "$oid": "6355d912aa71a35cfdc6e5da"
+  },
+  "company_name": "wdw",
+  "company_do": "Management Consulting",
+  "describe_business": "Its part-time or supplements my main income",
+  "currency_type": "AED - United Arab Emirates dirham",
+  "estimate_revenue": "22",
+  "long_service": "Real-time or within a few hours",
+  "current_bill": "Spreadsheets and Word documents",
+  "email": "myla345@.gmail.com"
+}]

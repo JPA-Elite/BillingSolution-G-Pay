@@ -38,13 +38,18 @@ Route::view('/gpay.com/pricing/', 'pricing');
 Route::view('/gpay.com/demo/', 'demo');
 
 
-// Dashboard Page
+// Dashboard Admin Page
 Route::view('/gpay.com/dashboard/', 'dashboard/index');
 Route::view('/gpay.com/users/', 'dashboard/user-list-datatable');
 Route::view('/gpay.com/projects/', 'dashboard/project-list');
 Route::view('/gpay.com/analysis/', 'dashboard/analysis');
-Route::view('/gpay.com/users/update_users', 'dashboard/user-update');
-
+Route::view('/gpay.com/transactions/', 'dashboard/transactions');
+Route::view('/gpay.com/transactions/invoice', 'dashboard/ecom-invoice');
+Route::view('/gpay.com/suggest&concern/', 'dashboard/concerns');
+Route::view('/gpay.com/suggest&concern/', 'dashboard/concerns');
+Route::view('/gpay.com/email-compose', 'dashboard/email-compose');
+Route::view('/gpay.com/email-inbox', 'dashboard/email-inbox');
+Route::view('/gpay.com/email-read', 'dashboard/email-read');
 
 // Control request
 Route::get('/gpay.com/sign_up-confirmation_email-address/send_mail/send_successfully', [All_info_controller::class, 'create_all_info']);

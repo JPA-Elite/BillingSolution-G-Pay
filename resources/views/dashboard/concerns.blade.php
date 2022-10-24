@@ -2,32 +2,31 @@
 session_start();
 
 use App\Models\Register;
-use App\Models\Business_info;
-use App\Http\Controllers\user;
 
 $data = Register::where('email', $_SESSION['email'])->first();
-$data2 = Register::where('email', '!=', $_SESSION['email'])->get();
-
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
 	<meta name="robots" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>G-Pay Administrator - Clients </title>
+	<title>G-Pay Administrator - Dashboard </title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png') }}">
 	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/chartist/css/chartist.min.css') }}">
 	<link href="{{ URL::asset('/dash/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
-	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/datatables/css/jquery.dataTables.min.css') }}">
+	<link href="{{ URL::asset('/dash/vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/a7413258b8.js" crossorigin="anonymous"></script>
 	<link href="{{ URL::asset('/dash/css/style.css') }}" rel="stylesheet">
-	<link href="{{ URL::asset('/dash/vendor/lightgallery/css/lightgallery.min.css') }}" rel="stylesheet">
-
 
 
 </head>
@@ -57,7 +56,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
             Nav header start
         ***********************************-->
 		<div class="nav-header">
-			<a href="/gpay.com/dashboard/" class="brand-logo">
+		<a href="/gpay.com/dashboard/" class="brand-logo">
 				<img style="left: -10px;position:relative" src="/src/img/logo.png" alt="">
 				<div style="text-align: center;">
 
@@ -66,7 +65,6 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 				</div>
 
 			</a>
-
 
 			<div class="nav-control">
 				<div class="hamburger">
@@ -820,7 +818,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 								<a class="nav-link" href="#" role="button" data-toggle="dropdown">
 									<img src="/dash/images/profile/pic1.jpg" width="20" alt="">
 									<div class="header-info">
-										<span>Administrator</span>
+										<span>Adminstrator</span>
 
 									</div>
 								</a>
@@ -839,7 +837,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 										</svg>
 										<span class="ml-2">Inbox </span>
 									</a>
-									<a href="/gpay.com/homepage/" class="dropdown-item ai-icon">
+									<a href="page-login.html" class="dropdown-item ai-icon">
 										<svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 											<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
 											<polyline points="16 17 21 12 16 7"></polyline>
@@ -867,8 +865,6 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 		<!--**********************************
             Sidebar start
         ***********************************-->
-
-
 		<div class="deznav">
 			<div class="deznav-scroll">
 				<div class="main-profile">
@@ -941,137 +937,430 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
         ***********************************-->
 		<div class="content-body">
 			<div class="container-fluid">
-				<div class="card">
-					<div class="card-header d-sm-flex d-block">
-						<div class="mr-auto mb-sm-0 mb-3">
-							<h4 class="card-title mb-2">Client Listing</h4>
-							<span>Below shows the list of clients</span>
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-body d-flex justify-content-between align-items-center">
+								<div>
+									<h4>Suggestions and Concerns</h4>
+									<span>below shows the information for the user's sugesstions and concerns</span>
+								</div>
+							</div>
 						</div>
-						<a href="javascript:void(0);" class="btn btn-info light mr-3"><i class="las la-download scale3 mr-2"></i>Import Csv</a>
-						<a href="javascript:void(0);" class="btn btn-info">+ Add Client</a>
 					</div>
-					<div class="card-body">
-						<div class="table-responsive">
-							<table class="table style-1" id="ListDatatableView">
-								<thead>
-									<tr>
-										<th>#</th>
-										<th>NAME OF CLIENTS</th>
-										<th>ADDRESS</th>
-										<th>DATE JOINED</th>
-										<th>FULL DETAILS</th>
-										<th>STATUS</th>
-										<th>ACTION</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php
-									$count = 1;
-									?>
-									@foreach($data2 as $i)
-									<tr>
-										<td>
-											<h6>{{$count}}</h6>
-										</td>
-										<td>
-											<div class="media style-1">
-												<img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="img-fluid mr-2" alt="">
-												<div class="media-body">
-													<h6>{{$i->last_name}}, {{$i->first_name}}</h6>
-													<span><a id="client_email" href="#" class="__cf_email__" data-cfemail="6c060304020803092c0b010d0500420f0301">{{$i->email}}</a></span><br>
-													<span><a id="client_id" href="#" class="__cf_email__" data-cfemail="6c060304020803092c0b010d0500420f0301">{{$i->_id}}</a></span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<div>
-												<h6>{{$i->Address}}</h6>
-												<span>COde:Ph</span>
-											</div>
-										</td>
-										<td>
-											<div>
-												<h6 class="text-primary" style="color:#51A6F5 !important">{{$i->date}}</h6>
-
-											</div>
-										</td>
-										<td>
-											<a href="javascript:void(0);" class="btn btn-primary mb-1 info-btn" data-toggle="modal" data-target="#sendMessageModal">Show info</a>
-
-										</td>
-
-										<td><span class="badge badge-warning">Active</span></td>
-										<td>
-											<div class="d-flex action-button">
-												<a href="javascript:void(0);" class="btn btn-info btn-xs light px-2 update">
-													<svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M17 3C17.2626 2.73735 17.5744 2.52901 17.9176 2.38687C18.2608 2.24473 18.6286 2.17157 19 2.17157C19.3714 2.17157 19.7392 2.24473 20.0824 2.38687C20.4256 2.52901 20.7374 2.73735 21 3C21.2626 3.26264 21.471 3.57444 21.6131 3.9176C21.7553 4.26077 21.8284 4.62856 21.8284 5C21.8284 5.37143 21.7553 5.73923 21.6131 6.08239C21.471 6.42555 21.2626 6.73735 21 7L7.5 20.5L2 22L3.5 16.5L17 3Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg>
-												</a>
-												<a href="javascript:void(0);" class="ml-2 btn btn-xs px-2 light btn-danger delete">
-													<svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M3 6H5H21" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-														<path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg>
-
-												</a>
-											</div>
-										</td>
-									</tr>
-									<script>
-										var delete_btn = document.querySelectorAll('.delete');
-										var update_btn = document.querySelectorAll('.update');
-										delete_btn.forEach((btn) => {
-											btn.addEventListener('click', function() {
-												var value = btn.parentElement.parentElement.parentElement.querySelector('#client_id').innerText;
-												createCookie("id_target", value, "1");
-
-												document.querySelector('.modal-delete').style.display = "block";
-
-
-
-
-											});
-										});
-
-										update_btn.forEach((btn) => {
-											btn.addEventListener('click', function() {
-												var value = btn.parentElement.parentElement.parentElement.querySelector('#client_id').innerText;
-												createCookie("id_target", value, "1");
-
-												// document.querySelector('.modal-delete').style.display = "block";
-												window.location.href = '/gpay.com/users/update_users';
-
-
-
-											});
-										});
-
-										// Function to create the cookie
-										function createCookie(name, value, days) {
-											var expires;
-
-											if (days) {
-												var date = new Date();
-												date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-												expires = "; expires=" + date.toGMTString();
-											} else {
-												expires = "";
-											}
-											document.cookie = escape(name) + "=" +
-												escape(value) + expires + "; path=/";
-										}
-									</script>
-									<?php
-									$count++;
-									?>
-									@endforeach
-
-								</tbody>
-							</table>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media mr-3">
+										<img src="/dash/images/users/pic1.jpg" alt="">
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">Thomas Djons</a></h5>
+										<span class="text-primary"></span>
+									</div>
+								</div>
+								<p class="fs-12">I cannot answer guest inquiries, directing phone calls and coordinating travel plans.</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2">thomas123@gmail.com<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cea3bea2ab8ea9a3afa7a2e0ada1a3">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">09564356753</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">USA</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-success btn-xs">Write Message</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media mr-3 rounded-circle">
+										<img src="/dash/images/users/pic2.jpg" alt="">
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">Oliver Jean</a></h5>
+									</div>
+								</div>
+								<p class="fs-12">Please maintain inventory of supplies and order new stock</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2">oliverjean@gmail.com<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8aeff2ebe7fae6efcaede7ebe3e6a4e9e5e7">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">1238545644</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">Indonesia</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-primary btn-xs">Write Message</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media mr-3">
+										<span class="icon-placeholder bg-primary text-white">pm</span>
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">Post Melone</a></h5>
+										<span class="text-success">Senior Designer</span>
+									</div>
+								</div>
+								<p class="fs-12">Anticipate guests needs in order to accommodate them and provide an exceptional guest experience</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b7e637a766b777e5b7c767a727735787476">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">1238545644</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">Indonasia</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-secondary btn-xs">Write Message</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media rounded-circle mr-3">
+										<span class="icon-placeholder bgl-success text-success">km</span>
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">Kevin Mandala</a></h5>
+										<span class="text-danger">Junior Developer</span>
+									</div>
+								</div>
+								<p class="fs-12">Answering guest inquiries, directing phone calls, coordinating travel plans, and more.</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d78657c706d71785d7a707c7471337e7270">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">1238545644</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">Indonasia</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-info btn-xs">Write Message</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media mr-3">
+										<img src="/dash/images/users/pic3.jpg" alt="">
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">Mc. Kowalski</a></h5>
+										<span class="text-info">Php Developer</span>
+									</div>
+								</div>
+								<p class="fs-12">Answering guest inquiries, directing phone calls, coordinating travel plans, and more.</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adc8d5ccc0ddc1c8edcac0ccc4c183cec2c0">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">1238545644</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">Indonasia</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-info light btn-xs">Write Message</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media mr-3">
+										<img src="/dash/images/users/pic4.jpg" alt="">
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">Rio Fernandez</a></h5>
+										<span class="text-danger">Python Developer</span>
+									</div>
+								</div>
+								<p class="fs-12">Answering guest inquiries, directing phone calls, coordinating travel plans, and more.</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d8bda0b9b5a8b4bd98bfb5b9b1b4f6bbb7b5">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">1238545644</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">Indonasia</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-success btn-xs">Write Message</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media mr-3">
+										<img src="/dash/images/users/pic5.jpg" alt="">
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">Chintya Laudia</a></h5>
+										<span class="text-warning">NodeJs Developer</span>
+									</div>
+								</div>
+								<p class="fs-12">Answering guest inquiries, directing phone calls, coordinating travel plans, and more.</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="04617c6569746861446369656d682a676b69">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">1238545644</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">Indonasia</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-warning light btn-xs">Write Message</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media mr-3">
+										<img src="/dash/images/users/pic6.jpg" alt="">
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">James Junaidi</a></h5>
+										<span class="text-primary">Senior Developer</span>
+									</div>
+								</div>
+								<p class="fs-12">Answering guest inquiries, directing phone calls, coordinating travel plans, and more.</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5b3e233a362b373e1b3c363a323775383436">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">1238545644</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">Indonasia</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-primary light btn-xs">Write Message</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media mr-3">
+										<img src="/dash/images/users/pic7.jpg" alt="">
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">Keanu Repes</a></h5>
+										<span class="text-primary">Senior Designer</span>
+									</div>
+								</div>
+								<p class="fs-12">Answering guest inquiries, directing phone calls, coordinating travel plans, and more.</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d5b0adb4b8a5b9b095b2b8b4bcb9fbb6bab8">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">1238545644</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">Indonasia</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-outline-danger btn-xs">Write Message</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media mr-3">
+										<img src="/dash/images/users/pic8.jpg" alt="">
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">Tonni Sblak</a></h5>
+										<span class="text-primary">Senior Developer</span>
+									</div>
+								</div>
+								<p class="fs-12">Answering guest inquiries, directing phone calls, coordinating travel plans, and more.</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d2b7aab3bfa2beb792b5bfb3bbbefcb1bdbf">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">1238545644</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">Indonasia</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-outline-success btn-xs">Write Message</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media mr-3">
+										<span class="icon-placeholder bg-primary text-white">jk</span>
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">John Kipli</a></h5>
+										<span class="text-primary">Senior Developer</span>
+									</div>
+								</div>
+								<p class="fs-12">Answering guest inquiries, directing phone calls, coordinating travel plans, and more.</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80e5f8e1edf0ece5c0e7ede1e9ecaee3efed">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">1238545644</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">Indonasia</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-outline-warning btn-xs">Write Message</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4 col-sm-6">
+						<div class="card user-card">
+							<div class="card-body pb-0">
+								<div class="d-flex mb-3 align-items-center">
+									<div class="dz-media mr-3">
+										<span class="icon-placeholder bg-primary text-white">mo</span>
+									</div>
+									<div>
+										<h5 class="title"><a href="javascript:void(0);">Monalisa</a></h5>
+										<span class="text-primary">Senior Head</span>
+									</div>
+								</div>
+								<p class="fs-12">Answering guest inquiries, directing phone calls, coordinating travel plans, and more.</p>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">
+										<span class="mb-0 title">Email</span> :
+										<span class="text-black ml-2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="75100d1418051910351218141c195b161a18">[email&#160;protected]</a></span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Phone</span> :
+										<span class="text-black ml-2">1238545644</span>
+									</li>
+									<li class="list-group-item">
+										<span class="mb-0 title">Location</span> :
+										<span class="text-black desc-text ml-2">Indonasia</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<a href="/gpay.com/email-compose" class="btn btn-outline-info btn-xs">Write Message</a>
+							</div>
 						</div>
 					</div>
 				</div>
+				<nav>
+					<ul class="pagination pagination-gutter pagination-primary no-bg">
+						<li class="page-item page-indicator">
+							<a class="page-link" href="javascript:void(0)">
+								<i class="la la-angle-left"></i></a>
+						</li>
+						<li class="page-item "><a class="page-link" href="javascript:void(0)">1</a>
+						</li>
+						<li class="page-item active"><a class="page-link" href="javascript:void(0)">2</a></li>
+						<li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+						<li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+						<li class="page-item page-indicator">
+							<a class="page-link" href="javascript:void(0)">
+								<i class="la la-angle-right"></i></a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 		<!--**********************************
@@ -1104,194 +1393,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
         ***********************************-->
 
 
-		<?php
-		$data_client = Register::where('email', $_COOKIE['email_client'])->first();
-		$data_client_b_side = Business_info::where('email',  $_COOKIE['email_client'])->first();
-		?>
-		<div class="modal fade" id="sendMessageModal">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">All Details</h5>
-						<button type="button" class="close btn-close" data-dismiss="modal"><span>&times;</span></button>
-					</div>
-					<!-- email_client -->
-
-					<div class="modal-body">
-						<form class="comment-form">
-							<h4>Profile Information:</h4>
-							<div class="row">
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Name: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->first_name}} {{$data_client->last_name}}
-									</label>
-
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Address: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->Address}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Phone: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->phone}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Email: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->email}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Date Joined: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client->date}}
-									</label>
-								</div>
-							</div>
-							<br>
-							<h4>Other Information:</h4>
-							<div class="row">
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Company Name: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->company_name}}
-									</label>
-
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Company Do: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->company_do}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Business Description: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->describe_business}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Type of currency used: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->currency_type}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Estimated revenue: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->estimate_revenue}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Run of service: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->long_service}}
-									</label>
-								</div>
-								<div class="col-lg-12">
-									<label class="text-black font-w600">Current use of billing: <span class="required"> *</span></label>
-									<label class="font-w600">
-										{{$data_client_b_side->current_bill}}
-									</label>
-								</div>
-							</div>
-
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-
-		<div class="modal-dialog modal-delete" role="document">
-			<div class="modal-content">
-
-				<div class="modal-body">
-
-					<h6>Are you sure you want to delete?</h6>
-					<div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-						<button type="submit" id="exit" class="badge  btn-danger" data-dismiss="modal">Cancel</button>
-						<button type="submit" id="deleted" class="badge badge-warning">Delete</button>
-					</div>
-
-
-					<script>
-						document.querySelector('#exit').addEventListener('click', function() {
-							document.querySelector('.modal-delete').style.display = "none";
-						});
-						document.querySelector('#deleted').addEventListener('click', function() {
-							document.querySelector('.modal-delete').style.display = "none";
-							window.location.href = '/gpay.com/register/user/delete';
-						});
-					</script>
-
-				</div>
-			</div>
-		</div>
-
-
-
-		<script>
-			const info_btn = document.querySelectorAll('.info-btn');
-
-			info_btn.forEach((btn) => {
-				btn.addEventListener('click', function() {
-
-					var value = btn.parentElement.parentElement.querySelector('#client_email').innerText;
-					// createCookie('email_client', value, '1');
-					// alert(getCookie('email_client'));
-					// window.location.href = '/gpay.com/register/user';
-				});
-			});
-
-			const btn_close = document.querySelector('.btn-close');
-			btn_close.addEventListener('click', function() {
-				// document.cookie = "email_client=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-				// alert(getCookie('email_client'));
-				// window.location.href = '/gpay.com/register/user';
-			});
-
-
-
-			// function getCookie(cname) {
-			// 	let name = cname + "=";
-			// 	let ca = document.cookie.split(';');
-			// 	for (let i = 0; i < ca.length; i++) {
-			// 		let c = ca[i];
-			// 		while (c.charAt(0) == ' ') {
-			// 			c = c.substring(1);
-			// 		}
-			// 		if (c.indexOf(name) == 0) {
-			// 			return c.substring(name.length, c.length);
-			// 		}
-			// 	}
-			// 	return "";
-			// }
-
-			// // Function to create the cookie
-			// function createCookie(name, value, days) {
-			// 	var expires;
-
-			// 	if (days) {
-			// 		var date = new Date();
-			// 		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-			// 		expires = "; expires=" + date.toGMTString();
-			// 	} else {
-			// 		expires = "";
-			// 	}
-			// 	document.cookie = escape(name) + "=" +
-			// 		escape(value) + expires + "; path=/";
-			// }
-		</script>
 	</div>
-
 	<!--**********************************
         Main wrapper end
     ***********************************-->
@@ -1300,27 +1402,6 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
         Scripts
     ***********************************-->
 	<!-- Required vendors -->
-	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
-
-	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/vendor/chart.js/Chart.bundle.min.js') }}"></script>
-
-	<!-- Datatable -->
-	<script src="{{ URL::asset('/dash/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/plugins-init/datatables.init.js') }}"></script>
-
-	<script src="{{ URL::asset('/dash/js/custom.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/deznav-init.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/demo.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/styleSwitcher.js') }}"></script>
-
-
-
-
-
-
 	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
 	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
@@ -1358,8 +1439,6 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 	<script src="{{ URL::asset('/dash/js/deznav-init.js') }}"></script>
 	<script src="{{ URL::asset('/dash/js/demo.js') }}"></script>
 	<script src="{{ URL::asset('/dash/js/styleSwitcher.js') }}"></script>
-
-
 </body>
 
 </html>

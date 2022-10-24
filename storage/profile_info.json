@@ -1,15 +1,29 @@
-[
-  {
+[{
+  "_id": {
+    "$oid": "634e3be096cf31e31200c162"
+  },
+  "first_name": "Joshua",
+  "last_name": "Algadipe",
+  "Address": "wdw",
+  "phone": "099",
+  "email": "joshua@admin.com",
+  "password": "joshuaadmin120629"
+},{
   "_id": {
     "$oid": "6341f47e99340b7bca001e5a"
   },
-  "first_name": "Jhon ",
+  "first_name": "Jhon Rey",
   "last_name": "Calesa",
   "Address": "Bohol",
   "phone": "09876785645",
   "email": "calesa@gmail.com",
   "password": "calesajunior",
-  "date": "October 21, 2022 - 1:43:50 PM"
+  "date": "October 21, 2022 - 1:43:50 PM",
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1666570873535"
+    }
+  }
 },{
   "_id": {
     "$oid": "6353a1d84c7013256fe4b2fc"
@@ -21,8 +35,7 @@
   "email": "joshua.algadipe@student.passerellesnumeriques.org",
   "password": "joshua12345",
   "date": "October 21, 2022 - 1:43:50 PM"
-},
-{
+},{
   "_id": {
     "$oid": "6344af284c7011256fa4b2fc"
   },
@@ -33,17 +46,4 @@
   "email": "myla345@.gmail.com",
   "password": "mylasabanal0000",
   "date": "October 21, 2022 - 1:43:50 PM"
-},
-{
-  "_id": {
-    "$oid": "6353af284c7011w36fa4b2fc"
-  },
-  "first_name": "Janrae",
-  "last_name": "Fagaragan",
-  "Address": "Bohol",
-  "phone": "09345769342",
-  "email": "2341janrae@.gmail.com",
-  "password": "janrae",
-  "date": "October 21, 2022 - 1:43:50 PM"
-}
-]
+}]

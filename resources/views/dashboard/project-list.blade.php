@@ -902,7 +902,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 							<i><img src="/dash/images/analysis.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Analysis</span>
 						</a></li>
-					<li> <a class="ai-icon" href="/gpay.com/dashboard/" aria-expanded="false">
+					<li> <a class="ai-icon" href="/gpay.com/transactions/" aria-expanded="false">
 							<i><img src="/dash/images/trans.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Transactions</span>
 						</a></li>
@@ -911,7 +911,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 
 
 					<li>
-						<a class="ai-icon" href="/gpay.com/dashboard/" aria-expanded="false">
+						<a class="ai-icon" href="/gpay.com/suggest&concern/" aria-expanded="false">
 							<i><img src="/dash/images/sug.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Suggestions & Concerns</span>
 						</a>

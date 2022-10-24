@@ -901,14 +901,14 @@ $data = Register::where('email', $_SESSION['email'])->first();
 					<li>
 						<a class="ai-icon" href="/gpay.com/projects/" aria-expanded="false">
 							<i><img src="/dash/images/project.png" alt="" style="width:30px;position: relative;left:-8px"></i>
-							<span class="nav-text" style="position: relative;left:-10px">Project</span>
+							<span class="nav-text" style="position: relative;left:-10px">Projects</span>
 						</a>
 					</li>
 					<li><a class="ai-icon" href="/gpay.com/analysis/" aria-expanded="false">
 							<i><img src="/dash/images/analysis.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Analysis</span>
 						</a></li>
-					<li> <a class="ai-icon" href="/gpay.com/dashboard/" aria-expanded="false">
+					<li> <a class="ai-icon" href="/gpay.com/transactions/" aria-expanded="false">
 							<i><img src="/dash/images/trans.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Transactions</span>
 						</a></li>
@@ -917,7 +917,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 
 
 					<li>
-						<a class="ai-icon" href="/gpay.com/dashboard/" aria-expanded="false">
+						<a class="ai-icon" href="/gpay.com/suggest&concern/" aria-expanded="false">
 							<i><img src="/dash/images/sug.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Suggestions & Concerns</span>
 						</a>

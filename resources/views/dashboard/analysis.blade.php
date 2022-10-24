@@ -902,7 +902,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 					<li>
 						<a class="ai-icon" href="/gpay.com/projects/" aria-expanded="false">
 							<i><img src="/dash/images/project.png" alt="" style="width:30px;position: relative;left:-8px"></i>
-							<span class="nav-text" style="position: relative;left:-10px">Project</span>
+							<span class="nav-text" style="position: relative;left:-10px">Projects</span>
 						</a>
 					</li>
 					<li><a class="ai-icon" href="/gpay.com/analysis/" aria-expanded="false">
@@ -918,7 +918,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 
 
 					<li>
-						<a class="ai-icon" href="/gpay.com/dashboard/" aria-expanded="false">
+						<a class="ai-icon" href="/gpay.com/suggest&concern/" aria-expanded="false">
 							<i><img src="/dash/images/sug.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Suggestions & Concerns</span>
 						</a>
@@ -1144,72 +1144,81 @@ $data = Register::where('email', $_SESSION['email'])->first();
 
 											</tr>
 											<tr>
-												<th>Business Details</th>
-												<td>Its launching soon</td>
-												<td>23%</td>
-												<td>More than a month</td>
-												<td>35%</td>
-												
+												<th>Most Currency Used</th>
+												<td>PHP Philippine Peso</td>
+												<td>42%</td>
+												<td>USD US Dollar</td>
+												<td>22%</td>
+												<td>AED - United Arab Emirates dirham</td>
+												<td>9%</td>
+												<td>EUR - Euro</td>
+												<td>1%</td>
+
 
 											</tr>
 											<tr>
 												<th>Business Details</th>
-												<td>Its launching soon</td>
+												<td>Accounting & Finance</td>
 												<td>23%</td>
-												<td>More than a month</td>
-												<td>35%</td>
-												
+												<td>Development & Programming</td>
+												<td>31%</td>
+												<td>Information Technology & Support</td>
+												<td>16%</td>
+												<td>Management Consulting</td>
+												<td>11%</td>
+
 
 											</tr>
 											<tr>
-												<th>Business Details</th>
+												<th>Business Run</th>
 												<td>Its launching soon</td>
 												<td>23%</td>
-												<td>More than a month</td>
+												<td>It’s a new business but it’s full-time focus</td>
 												<td>35%</td>
-												
+												<td>It’s part-time or supplements main income</td>
+												<td>21%</td>
+												<td>It’s been full-time focus for over a year</td>
+												<td>5%</td>
+
 
 											</tr>
-									
+											<tr>
+												<th>Range to Complete Services</th>
+												<td>More than a month</td>
+												<td>21%</td>
+												<td>More than a week but less than a month</td>
+												<td>33%</td>
+												<td>More than a week but less than a month</td>
+												<td>33%</td>
+												<td>Less than a week</td>
+												<td>24%</td>
+
+
+											</tr>
+
+											<tr>
+												<th>Most billing tools</th>
+												<td>Another accounting software</td>
+												<td>42%</td>
+												<td>Spreadsheets and Word documents</td>
+												<td>28%</td>
+												<td>Pen and paper</td>
+												<td>8%</td>
+												<td>Don't use anything</td>
+												<td>1%</td>
+												
+
+
+											</tr>
+
 										</tbody>
 									</table>
 								</div>
 							</div>
 						</div>
 					</div>
-				
 
-					<div class="col-xl-6 col-lg-6">
-						<div class="card">
-							<div class="card-body pb-0">
-								<h4 class="card-title text-uppercase font-weight-normal">Market Now</h4>
-								<h2 class="font-weight-normal text-danger">
-									<span><i class="fa fa-caret-up"></i></span>
-									<span>3454664</span>
-								</h2>
-								<div class="row mt-5">
-									<div class="col text-center">
-										<h5 class="font-weight-normal">APPL</h5>
-										<span class="text-success">+ 82.24 %</span>
-									</div>
-									<div class="col text-center">
-										<h5 class="font-weight-normal">FB</h5>
-										<span class="text-danger">- 12.24 %</span>
-									</div>
-									<div class="col text-center">
-										<h5 class="font-weight-normal">GOOG</h5>
-										<span class="text-success">+ 42.24 %</span>
-									</div>
-								</div>
-							</div>
-							<div class="chart-wrapper">
-								<canvas id="chart_widget_4"></canvas>
-							</div>
-						</div>
-					</div>
-				
-		
-					<div class="col-xl-6 col-xxl-4 col-lg-12">
+					<!-- <div class="col-xl-6 col-xxl-12 col-lg-12">
 						<div class="card">
 							<div class="chart-wrapper">
 								<canvas id="chart_widget_16"></canvas>
@@ -1256,7 +1265,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="col-xl-3 col-xxl-3 col-sm-6">
 						<div class="card">
 							<div class="social-graph-wrapper widget-facebook">
@@ -1266,7 +1275,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 								<div class="col-6 border-right">
 									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
 										<h4 class="m-1"><span class="counter">89</span> k</h4>
-										<p class="m-0">Friends</p>
+										<p class="m-0">Following</p>
 									</div>
 								</div>
 								<div class="col-6">
@@ -1287,7 +1296,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 								<div class="col-6 border-right">
 									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
 										<h4 class="m-1"><span class="counter">89</span> k</h4>
-										<p class="m-0">Friends</p>
+										<p class="m-0">Following</p>
 									</div>
 								</div>
 								<div class="col-6">
@@ -1308,7 +1317,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 								<div class="col-6 border-right">
 									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
 										<h4 class="m-1"><span class="counter">89</span> k</h4>
-										<p class="m-0">Friends</p>
+										<p class="m-0">Following</p>
 									</div>
 								</div>
 								<div class="col-6">
@@ -1329,7 +1338,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 								<div class="col-6 border-right">
 									<div class="pt-3 pb-3 pl-0 pr-0 text-center">
 										<h4 class="m-1"><span class="counter">89</span> k</h4>
-										<p class="m-0">Friends</p>
+										<p class="m-0">Following</p>
 									</div>
 								</div>
 								<div class="col-6">

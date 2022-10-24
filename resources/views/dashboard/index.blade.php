@@ -907,14 +907,14 @@ $data = Register::where('email', $_SESSION['email'])->first();
 					<li>
 						<a class="ai-icon" href="/gpay.com/projects/" aria-expanded="false">
 							<i><img src="/dash/images/project.png" alt="" style="width:30px;position: relative;left:-8px"></i>
-							<span class="nav-text" style="position: relative;left:-10px">Project</span>
+							<span class="nav-text" style="position: relative;left:-10px">Projects</span>
 						</a>
 					</li>
 					<li><a class="ai-icon" href="/gpay.com/analysis/" aria-expanded="false">
 							<i><img src="/dash/images/analysis.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Analysis</span>
 						</a></li>
-					<li> <a class="ai-icon" href="/gpay.com/dashboard/" aria-expanded="false">
+					<li> <a class="ai-icon" href="/gpay.com/transactions/" aria-expanded="false">
 							<i><img src="/dash/images/trans.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Transactions</span>
 						</a></li>
@@ -923,7 +923,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 
 
 					<li>
-						<a class="ai-icon" href="/gpay.com/dashboard/" aria-expanded="false">
+						<a class="ai-icon" href="/gpay.com/suggest&concern/" aria-expanded="false">
 							<i><img src="/dash/images/sug.png" alt="" style="width:30px;position: relative;left:-8px"></i>
 							<span class="nav-text" style="position: relative;left:-10px">Suggestions & Concerns</span>
 						</a>
@@ -1234,17 +1234,17 @@ $data = Register::where('email', $_SESSION['email'])->first();
 										<div class="card-action card-tabs mb-3 style-1">
 											<ul class="nav nav-tabs" role="tablist">
 												<li class="nav-item">
-													<a class="nav-link active" data-toggle="tab" href="#monthly">
+													<a class="nav-link active" data-toggle="tab" href="">
 														Monthly
 													</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" href="#Weekly">
+													<a class="nav-link" data-toggle="tab" href="">
 														Weekly
 													</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" href="#Today">
+													<a class="nav-link" data-toggle="tab" href="">
 														Today
 													</a>
 												</li>
@@ -1754,11 +1754,11 @@ $data = Register::where('email', $_SESSION['email'])->first();
 										</div>
 									</div>
 									<div class="card-footer border-0 p-0 caret mt-1">
-										<a href="coin-details.html" class="btn-link"><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+										<a href="#" class="btn-link"><i class="fa fa-caret-down" aria-hidden="true"></i></a>
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-12 mt-2">
+							<!-- <div class="col-xl-12 mt-2">
 								<div class="card">
 									<div class="card-header d-sm-flex d-block pb-0 border-0">
 										<div>
@@ -1842,7 +1842,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
