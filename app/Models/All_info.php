@@ -5,6 +5,7 @@ namespace App\Models;
 use DB;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+
 session_start();
 class All_info extends Model
 {
@@ -23,6 +24,7 @@ class All_info extends Model
         $long_service,
         $current_bill
     ) {
+        date_default_timezone_set('Asia/Manila');
         DB::table('profile_info')->insert([
             'first_name' => $f_name,
             'last_name' => $l_name,

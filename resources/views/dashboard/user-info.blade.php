@@ -2,35 +2,34 @@
 session_start();
 
 use App\Models\Register;
+use App\Models\Business_info;
+use App\Http\Controllers\user;
 
 $data = Register::where('email', $_SESSION['email'])->first();
 
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta charset="utf-8">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
 	<meta name="robots" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>G-Pay Administrator - Compose Message </title>
+	<title>G-Pay Administrator - Clients </title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png') }}">
 	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/chartist/css/chartist.min.css') }}">
 	<link href="{{ URL::asset('/dash/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
-	<link href="{{ URL::asset('/dash/vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<script src="https://kit.fontawesome.com/a7413258b8.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/datatables/css/jquery.dataTables.min.css') }}">
 	<link href="{{ URL::asset('/dash/css/style.css') }}" rel="stylesheet">
+	<link href="{{ URL::asset('/dash/vendor/lightgallery/css/lightgallery.min.css') }}" rel="stylesheet">
+
 
 
 </head>
-
 
 <body>
 
@@ -47,7 +46,6 @@ $data = Register::where('email', $_SESSION['email'])->first();
 	<!--*******************
         Preloader end
     ********************-->
-
 
 	<!--**********************************
         Main wrapper start
@@ -67,6 +65,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 				</div>
 
 			</a>
+
 
 			<div class="nav-control">
 				<div class="hamburger">
@@ -629,9 +628,6 @@ $data = Register::where('email', $_SESSION['email'])->first();
             Chat box End
         ***********************************-->
 
-
-
-
 		<!--**********************************
             Header start
         ***********************************-->
@@ -837,7 +833,8 @@ $data = Register::where('email', $_SESSION['email'])->first();
 									</a>
 									<a href="/gpay.com/email-inbox" class="dropdown-item ai-icon">
 										<svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+											<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+											</path>
 											<polyline points="22,6 12,13 2,6"></polyline>
 										</svg>
 										<span class="ml-2">Inbox </span>
@@ -849,6 +846,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 											<line x1="21" y1="12" x2="9" y2="12"></line>
 										</svg>
 										<span class="ml-2">Logout </span>
+
 									</a>
 								</div>
 							</li>
@@ -857,7 +855,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 				</nav>
 				<div class="sub-header">
 					<div class="d-flex align-items-center flex-wrap mr-auto">
-						<h5 class="dashboard_bar">Dashboard</h5>
+						<h5 class="dashboard_bar">User's Information</h5>
 					</div>
 
 				</div>
@@ -870,6 +868,8 @@ $data = Register::where('email', $_SESSION['email'])->first();
 		<!--**********************************
             Sidebar start
         ***********************************-->
+
+
 		<div class="deznav">
 			<div class="deznav-scroll">
 				<div class="main-profile">
@@ -942,174 +942,407 @@ $data = Register::where('email', $_SESSION['email'])->first();
         ***********************************-->
 		<div class="content-body">
 			<div class="container-fluid">
-				<!-- Add Project -->
-				<div class="modal fade" id="addProjectSidebar">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">Create Project</h5>
-								<button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<form>
-									<div class="form-group">
-										<label class="text-black font-w500">Project Name</label>
-										<input type="text" class="form-control">
-									</div>
-									<div class="form-group">
-										<label class="text-black font-w500">Deadline</label>
-										<input type="date" class="form-control">
-									</div>
-									<div class="form-group">
-										<label class="text-black font-w500">Client Name</label>
-										<input type="text" class="form-control">
-									</div>
-									<div class="form-group">
-										<button type="button" class="btn btn-primary">CREATE</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row page-titles mx-0">
-					<div class="col-sm-6 p-md-0">
+				<div class="card" style="width: 80%;">
 
-					</div>
-					<div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="javascript:void(0)">Email</a></li>
-							<li class="breadcrumb-item active"><a href="javascript:void(0)">Compose</a></li>
-						</ol>
-					</div>
-				</div>
-				<!-- row -->
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="card">
-							<div class="card-body">
-								<div class="email-left-box px-0 mb-3">
-									<div class="p-0">
-										<a href="/gpay.com/email-compose" class="btn btn-primary btn-block">Compose</a>
-									</div>
-									<div class="mail-list mt-4">
-										<a href="/gpay.com/email-inbox" class="list-group-item active"><i class="fa fa-inbox font-18 align-middle mr-2"></i> Inbox <span class="badge badge-primary badge-sm float-right">198</span> </a>
-										<a href="javascript:void()" class="list-group-item"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Sent</a> <a href="javascript:void()" class="list-group-item"><i class="fa fa-star-o font-18 align-middle mr-2"></i>Important <span class="badge badge-danger text-white badge-sm float-right">47</span>
-										</a>
-										<a href="javascript:void()" class="list-group-item"><i class="mdi mdi-file-document-box font-18 align-middle mr-2"></i>Draft</a><a href="javascript:void()" class="list-group-item"><i class="fa fa-trash font-18 align-middle mr-2"></i>Trash</a>
-									</div>
-									<div class="intro-title d-flex justify-content-between">
-										<h5>Categories</h5>
-										<i class="fa fa-chevron-down" aria-hidden="true"></i>
-									</div>
-									<div class="mail-list mt-4">
-										<a href="email-inbox.html" class="list-group-item"><span class="icon-warning"><i class="fa fa-circle" aria-hidden="true"></i></span>
-											Work </a>
-										<a href="email-inbox.html" class="list-group-item"><span class="icon-primary"><i class="fa fa-circle" aria-hidden="true"></i></span>
-											Private </a>
-										<a href="email-inbox.html" class="list-group-item"><span class="icon-success"><i class="fa fa-circle" aria-hidden="true"></i></span>
-											Support </a>
-										<a href="email-inbox.html" class="list-group-item"><span class="icon-dpink"><i class="fa fa-circle" aria-hidden="true"></i></span>
-											Social </a>
-									</div>
-								</div>
-								<div class="email-right-box ml-0 ml-sm-4 ml-sm-0">
-									<div class="toolbar mb-4" role="toolbar">
-										<div class="btn-group mb-1">
-											<button type="button" class="btn btn-primary light px-3"><i class="fa fa-archive"></i></button>
-											<button type="button" class="btn btn-primary light px-3"><i class="fa fa-exclamation-circle"></i></button>
-											<button type="button" class="btn btn-primary light px-3"><i class="fa fa-trash"></i></button>
-										</div>
-										<div class="btn-group mb-1">
-											<button type="button" class="btn btn-primary light dropdown-toggle px-3" data-toggle="dropdown">
-												<i class="fa fa-folder"></i> <b class="caret m-l-5"></b>
-											</button>
-											<div class="dropdown-menu">
-												<a class="dropdown-item" href="javascript: void(0);">Social</a>
-												<a class="dropdown-item" href="javascript: void(0);">Promotions</a>
-												<a class="dropdown-item" href="javascript: void(0);">Updates</a>
-												<a class="dropdown-item" href="javascript: void(0);">Forums</a>
-											</div>
-										</div>
-										<div class="btn-group mb-1">
-											<button type="button" class="btn btn-primary light dropdown-toggle px-3" data-toggle="dropdown">
-												<i class="fa fa-tag"></i> <b class="caret m-l-5"></b>
-											</button>
-											<div class="dropdown-menu">
-												<a class="dropdown-item" href="javascript: void(0);">Updates</a>
-												<a class="dropdown-item" href="javascript: void(0);">Social</a>
-												<a class="dropdown-item" href="javascript: void(0);">Promotions</a>
-												<a class="dropdown-item" href="javascript: void(0);">Forums</a>
-											</div>
-										</div>
-										<div class="btn-group mb-1">
-											<button type="button" class="btn btn-primary light dropdown-toggle v" data-toggle="dropdown">More <span class="caret m-l-5"></span>
-											</button>
-											<div class="dropdown-menu"> <a class="dropdown-item" href="javascript: void(0);">Mark as Unread</a> <a class="dropdown-item" href="javascript: void(0);">Add to Tasks</a>
-												<a class="dropdown-item" href="javascript: void(0);">Add Star</a> <a class="dropdown-item" href="javascript: void(0);">Mute</a>
-											</div>
-										</div>
-									</div>
-									<div class="compose-content">
-										<form action="#">
-											<div class="form-group">
-												<input type="text" class="form-control bg-transparent" placeholder=" To:">
-											</div>
-											<div class="form-group">
-												<input type="text" class="form-control bg-transparent" placeholder=" Subject:">
-											</div>
-											<div class="form-group">
-												<textarea id="email-compose-editor" class="textarea_editor form-control bg-transparent" rows="15" placeholder="Enter text ..."></textarea>
-											</div>
-										</form>
-										<h5 class="mb-4"><i class="fa fa-paperclip"></i> Attatchment</h5>
-										<form action="#" class="dropzone">
-											<div class="fallback">
-												<input name="file" type="file" multiple="">
-											</div>
-										</form>
-									</div>
-									<div class="text-left mt-4 mb-3">
-										<button class="btn btn-primary btn-sl-sm mr-2" type="button"><span class="mr-2"><i class="fa fa-paper-plane"></i></span>Send</button>
-										<button class="btn btn-danger light btn-sl-sm" type="button"><span class="mr-2"><i class="fa fa-times" aria-hidden="true"></i></span>Discard</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+					<div class="card-body">
+						<form class="table-responsive table_update" >
+							<table class="table style-1" id="ListDatatableView">
+								<?php
+								$data2 = Register::find($_COOKIE['id_target']);
+								$data3 = Business_info::where('email', $data2->email)->first();
+								?>
 
+								<tbody>
+									@if($data2 != null && $data3 != null)
+									<tr>
+
+										<td>First Name<div class="media style-1">
+
+												<div class="media-body">
+													<small>cuurent value</small>
+													<h6>* {{$data2 ->first_name}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input style="display: none;" id="c_id" type="text" placeholder="{{$data2 ->id}}">
+											<input id="first_name" type="text" placeholder="{{$data2 ->first_name}}" readonly>
+										</td> -->
+
+									</tr>
+									<tr>
+										<td>Last Name<div class="media style-1">
+
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data2 ->last_name}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="text" id="last_name" value="{{$data2 ->last_name}}" readonly>
+										</td> -->
+
+									</tr>
+									<tr>
+										<td>Location<div class="media style-1">
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data2 ->Address}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="text" id="address" value="{{$data2 ->Address}}" readonly>
+										</td> -->
+
+
+									</tr>
+									<tr>
+										<td>Phone number<div class="media style-1">
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data2 ->phone}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="text" id="phone" value="{{$data2 ->phone}}" readonly>
+										</td> -->
+									</tr>
+									<tr>
+										<td>Email Address<div class="media style-1">
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data2 ->email}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="text" id="email" value="{{$data2 ->email}}" readonly>
+										</td> -->
+									</tr>
+									<tr>
+										<td>Password<div class="media style-1">
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data2 ->password}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="password" id="pass" value="{{$data2 ->password}}" readonly><br><br>
+											<input type="password" value="" placeholder="confirm password">
+										</td> -->
+									</tr>
+									<tr>
+										<td>Company Name<div class="media style-1">
+
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data3 ->company_name}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="text" id="c_name" value="{{$data3 ->company_name}}" readonly>
+										</td> -->
+									</tr>
+									<tr>
+										<td>Company Do<div class="media style-1">
+
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data3 ->company_do}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="text" id="c_do" value="{{$data3 ->company_do}}" readonly>
+										</td> -->
+									</tr>
+									<tr>
+										<td>Describe Business<div class="media style-1">
+
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data3 ->describe_business}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="text" id="d_busi" value="{{$data3 ->describe_business}}" readonly>
+										</td> -->
+									</tr>
+									<tr>
+										<td>Currency Type<div class="media style-1">
+
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data3 ->currency_type}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="text" id="c_type" value="{{$data3 ->currency_type}}" readonly>
+										</td> -->
+									</tr>
+									<tr>
+										<td>Estimate Revenue<div class="media style-1">
+
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data3 ->estimate_revenue}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="text" id="es_rev" value="{{$data3 ->estimate_revenue}}" readonly>
+										</td> -->
+									</tr>
+									<tr>
+										<td>Running status<div class="media style-1">
+
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data3 ->long_service}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="text" id="ser" value="{{$data3 ->long_service}}" readonly>
+										</td> -->
+									</tr>
+									<tr>
+										<td>Current Billing<div class="media style-1">
+
+												<div class="media-body">
+													<small>current value</small>
+													<h6>* {{$data3 ->current_bill}}</h6>
+												</div>
+											</div>
+										</td>
+										<!-- <td>
+											<input type="text" id="c_bill" value="{{$data3 ->current_bill}}" readonly>
+										</td> -->
+									</tr>
+
+									@endif
+
+								</tbody>
+
+							</table>
+							<div style="display: flex;justify-content: right;align-items: center;gap:15px;padding-right:50px">
+								<a href="/gpay.com/users/" class="btn btn-primary mb-1 info-btn cancel">Back</a>
+								
+
+							</div>
+
+						
+
+
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
-		<!--**********************************
-            Content body end
-        ***********************************-->
 
-
-		<!--**********************************
-            Footer start
-        ***********************************-->
 		<div class="footer">
 			<div class="copyright">
 				<p style="color: black !important;font-weight:600">Copyright © Designed &amp; Developed by <a href="#" target="_blank">G-Pay</a> 2022
 				</p>
 			</div>
 		</div>
-		<!--**********************************
-            Footer end
-        ***********************************-->
-
-		<!--**********************************
-           Support ticket button start
-        ***********************************-->
-
-		<!--**********************************
-           Support ticket button end
-        ***********************************-->
 
 
+		<?php
+		$data_client = Register::where('email', $_COOKIE['email_client'])->first();
+		$data_client_b_side = Business_info::where('email',  $_COOKIE['email_client'])->first();
+		?>
+		<div class="modal fade" id="sendMessageModal">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">All Details</h5>
+						<button type="button" class="close btn-close" data-dismiss="modal"><span>&times;</span></button>
+					</div>
+					<!-- email_client -->
+
+					<div class="modal-body">
+						<form class="comment-form">
+							<h4>Profile Information:</h4>
+							<div class="row">
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Name: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client->first_name}} {{$data_client->last_name}}
+									</label>
+
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Address: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client->Address}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Phone: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client->phone}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Email: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client->email}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Date Joined: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client->date}}
+									</label>
+								</div>
+							</div>
+							<br>
+							<h4>Other Information:</h4>
+							<div class="row">
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Company Name: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->company_name}}
+									</label>
+
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Company Do: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->company_do}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Business Description: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->describe_business}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Type of currency used: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->currency_type}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Estimated revenue: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->estimate_revenue}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Run of service: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->long_service}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Current use of billing: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->current_bill}}
+									</label>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="modal-dialog modal-delete" role="document">
+			<div class="modal-content">
+
+				<div class="modal-body">
+
+					<h6>Are you sure you want to delete?</h6>
+					<div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+						<button type="submit" id="exit" class="badge  btn-danger" data-dismiss="modal">Cancel</button>
+						<button type="submit" id="deleted" class="badge badge-warning">Delete</button>
+					</div>
+
+
+					<script>
+						document.querySelector('#exit').addEventListener('click', function() {
+							document.querySelector('.modal-delete').style.display = "none";
+						});
+						document.querySelector('#deleted').addEventListener('click', function() {
+							document.querySelector('.modal-delete').style.display = "none";
+							window.location.href = '/gpay.com/register/user/delete';
+						});
+					</script>
+
+				</div>
+			</div>
+		</div>
+
+
+
+		<script>
+			const info_btn = document.querySelectorAll('.info-btn');
+
+			info_btn.forEach((btn) => {
+				btn.addEventListener('click', function() {
+
+					var value = btn.parentElement.parentElement.querySelector('#client_email').innerText;
+					// createCookie('email_client', value, '1');
+					// alert(getCookie('email_client'));
+					// window.location.href = '/gpay.com/register/user';
+				});
+			});
+
+			const btn_close = document.querySelector('.btn-close');
+			btn_close.addEventListener('click', function() {
+				// document.cookie = "email_client=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+				// alert(getCookie('email_client'));
+				// window.location.href = '/gpay.com/register/user';
+			});
+
+
+
+			// function getCookie(cname) {
+			// 	let name = cname + "=";
+			// 	let ca = document.cookie.split(';');
+			// 	for (let i = 0; i < ca.length; i++) {
+			// 		let c = ca[i];
+			// 		while (c.charAt(0) == ' ') {
+			// 			c = c.substring(1);
+			// 		}
+			// 		if (c.indexOf(name) == 0) {
+			// 			return c.substring(name.length, c.length);
+			// 		}
+			// 	}
+			// 	return "";
+			// }
+
+			// // Function to create the cookie
+			// function createCookie(name, value, days) {
+			// 	var expires;
+
+			// 	if (days) {
+			// 		var date = new Date();
+			// 		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+			// 		expires = "; expires=" + date.toGMTString();
+			// 	} else {
+			// 		expires = "";
+			// 	}
+			// 	document.cookie = escape(name) + "=" +
+			// 		escape(value) + expires + "; path=/";
+			// }
+		</script>
 	</div>
+
 	<!--**********************************
         Main wrapper end
     ***********************************-->
@@ -1118,6 +1351,27 @@ $data = Register::where('email', $_SESSION['email'])->first();
         Scripts
     ***********************************-->
 	<!-- Required vendors -->
+	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
+
+	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
+	<script src="{{ URL::asset('/dash/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+	<script src="{{ URL::asset('/dash/vendor/chart.js/Chart.bundle.min.js') }}"></script>
+
+	<!-- Datatable -->
+	<script src="{{ URL::asset('/dash/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ URL::asset('/dash/js/plugins-init/datatables.init.js') }}"></script>
+
+	<script src="{{ URL::asset('/dash/js/custom.min.js') }}"></script>
+	<script src="{{ URL::asset('/dash/js/deznav-init.js') }}"></script>
+	<script src="{{ URL::asset('/dash/js/demo.js') }}"></script>
+	<script src="{{ URL::asset('/dash/js/styleSwitcher.js') }}"></script>
+
+
+
+
+
+
 	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
 	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
@@ -1155,6 +1409,8 @@ $data = Register::where('email', $_SESSION['email'])->first();
 	<script src="{{ URL::asset('/dash/js/deznav-init.js') }}"></script>
 	<script src="{{ URL::asset('/dash/js/demo.js') }}"></script>
 	<script src="{{ URL::asset('/dash/js/styleSwitcher.js') }}"></script>
+
+
 </body>
 
 </html>

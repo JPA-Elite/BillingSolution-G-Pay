@@ -188,11 +188,11 @@
             <p class="title_5">STAY ORGANIZED AND CONNECTED TO YOUR CLIENTS</p>
             <h1 class="mb-4">Accounting Software For <br>
                 Freelancers</h1>
-            <a href="https://youtube.com" class="text-decoration-none">
-                <div class="cust-btn ">
-                    <p>Try it Free</p>
-                </div>
-            </a>
+                <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
 
         </div>
         <div class="back-image-mask"></div>
@@ -208,9 +208,11 @@
                     and lets clients pay how they like. Recurring invoices,
                     Automated Payment Reminders, and Online Payments make it easy.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
             </div>
             <img src="/src/img/easier-invoicing.png" alt="mileage">
 
@@ -227,9 +229,11 @@
                     Know where every account stands to keep clients in the loop.
                     Estimates, Proposals, Time Tracking, and Client Account Statements make it easy.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
 
             </div>
 
@@ -260,9 +264,12 @@
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
-        <div class="f-page-btn">
-            <p>Let’s go</p>
-        </div>
+      
+        <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
     </div>
 
     <footer>

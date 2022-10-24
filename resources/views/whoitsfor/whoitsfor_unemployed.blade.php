@@ -193,7 +193,7 @@
                 handle your recruitment process easily.
             </p>
             <br>
-            <a href="https://youtube.com" class="text-decoration-none">
+            <a href="/gpay.com/register/" class="text-decoration-none">
                 <div class="cust-btn ">
                     <p>Start Now - Its Free</p>
                 </div>
@@ -216,9 +216,13 @@
                     No need to outsource your recruitment -
                     handle everything internally in a simple and professional way.
                 </p>
-                <div class="cust-btn">
-                    <p>Start Now - Its Free</p>
-                </div>
+                <br>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Start Now - Its Free</p>
+                    </div>
+                    <br>
+                </a>
             </div>
             <img src="/src/img/hr_recruitment_screenshot_02.gif" alt="mileage">
 
@@ -235,9 +239,13 @@
                     assigned to every job offer in order
                     route applications directly to the right one.
                 </p>
-                <div class="cust-btn">
-                    <p>Start Now - Its Free</p>
-                </div>
+                <br>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Start Now - Its Free</p>
+                    </div>
+                    <br>
+                </a>
 
             </div>
 
@@ -257,9 +265,13 @@
                     pre-qualification, first interview, second interview, negotiation, etc.
                     Get accurate statistics on your recruitment pipeline.
                 </p>
-                <div class="cust-btn">
-                    <p>Start Now - Its Free</p>
-                </div>
+                <br>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Start Now - Its Free</p>
+                    </div>
+                    <br>
+                </a>
             </div>
             <img src="/src/img/hr_recruitment_screenshot_04a.gif" alt="mileage">
         </div>
@@ -303,9 +315,11 @@
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
-        <div class="f-page-btn">
-            <p>Let’s go</p>
-        </div>
+        <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
     </div>
 
     <footer>

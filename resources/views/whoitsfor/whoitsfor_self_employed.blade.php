@@ -189,11 +189,11 @@
             <p class="title_5">KNOW YOUR BUSINESS, GROW YOUR BUSINESS</p>
             <h1 class="mb-4">Accounting Software for <br>
                 Self-Employed Professionals</h1>
-            <a href="https://youtube.com" class="text-decoration-none">
-                <div class="cust-btn ">
-                    <p>Try it Free</p>
-                </div>
-            </a>
+                <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
 
         </div>
         <div class="back-image-mask"></div>
@@ -230,9 +230,11 @@
                     Business health and financial reports in G-Pay show your profitability,
                     cash flow, and where your money is going.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
 
             </div>
 
@@ -251,9 +253,11 @@
                 <p> Keep clients informed and impressed with things like Estimates, Proposals, Projects,
                     Time Tracking, Clients Profiles, and Account Statements. G-Pay makes it easy to stay on top of client work.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
             </div>
             <img src="/src/img/se-estimate.png" alt="mileage">
         </div>
@@ -261,9 +265,12 @@
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
-        <div class="f-page-btn">
-            <p>Let’s go</p>
-        </div>
+       
+        <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
     </div>
 
     <footer>

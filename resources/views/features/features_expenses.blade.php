@@ -193,7 +193,7 @@
                 business expenses ridiculously easy. You’ll know at a glance<br>
                 what you’re spending and how profitable you are, without the <br>
                 headache of spreadsheets or shoeboxes of receipts.</p>
-            <a href="https://youtube.com" class="text-decoration-none">
+            <a href="/gpay.com/register/" class="text-decoration-none">
                 <div class="cust-btn ">
                     <p>Try it Free</p>
                 </div>
@@ -214,9 +214,11 @@
                     updated with your most recent spending so your business is<br>
                     always automatically up-to-date.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -235,9 +237,11 @@
                     <li>Email receipts directly to your account to capture transactions</li>
                 </ul>
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -257,9 +261,11 @@
                     yourself. Snap a picture of a receipt, log it, and let G-Pay keep <br>
                     things organized for you in the cloud.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -276,9 +282,11 @@
                     in mind, so it’s easy for you (or your accountant) to file. At tax<br>
                     time you have all the information you need without any of the<br> complexity.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -298,9 +306,11 @@
                     markup and then automatically pull them onto an invoice for<br>
                     your client.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -317,9 +327,11 @@
                     tabs on what they’re spending on projects. It also means you<br>
                     can keep a close eye on how things are tracking to budget.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -390,18 +402,23 @@
                 save every month,<br>
                 G-Pay ends up paying for itself…</p>
 
-            <div class="cust-btn">
-                <p>Try it Free</p>
-            </div>
+            <a href="/gpay.com/register/" class="text-decoration-none">
+                <div class="cust-btn ">
+                    <p>Try it Free</p>
+                </div>
+            </a>
             <p class="text-center copy-info">No credit card required. Cancel anytime.</p>
         </div>
     </div>
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
-        <div class="f-page-btn">
-            <p>Let’s go</p>
-        </div>
+
+        <a href="/gpay.com/register/" class="text-decoration-none">
+            <div class="cust-btn ">
+                <p>Try it Free</p>
+            </div>
+        </a>
     </div>
 
     <footer>

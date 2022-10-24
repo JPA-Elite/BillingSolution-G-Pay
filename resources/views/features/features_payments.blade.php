@@ -191,7 +191,7 @@
             <p class="mb-5">G-Pay Payments make it easier for your clients to pay online,<br>
                 which means you get paid twice as fast. What better way to<br>
                 improve your cashflow!</p>
-            <a href="https://youtube.com" class="text-decoration-none">
+            <a href="/gpay.com/register/" class="text-decoration-none">
                 <div class="cust-btn ">
                     <p>Try it Free</p>
                 </div>
@@ -211,9 +211,11 @@
                     invoices and automatically records each payment in your <br>
                     account. It’s fast, easy, secure and perfectly integrated.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -230,9 +232,11 @@
                     deposits your money into the right account. Fast and easy, just <br>
                     like you’d expect.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -251,9 +255,11 @@
                 <p> Post Checkout Links on your website, social, or anywhere <br>
                     else online to simply let customers click and pay.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -269,9 +275,11 @@
                 <p> G-Pay Advanced Payments lets you accept credit card <br>
                     payments online, in person and over the phone.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -344,18 +352,22 @@
                 payments agree<br>
                 that it improves client relationships.</p>
 
-            <div class="cust-btn">
-                <p>Try it Free</p>
-            </div>
+            <a href="/gpay.com/register/" class="text-decoration-none">
+                <div class="cust-btn ">
+                    <p>Try it Free</p>
+                </div>
+            </a>
             <p class="text-center copy-info">No credit card required. Cancel anytime.</p>
         </div>
     </div>
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
-        <div class="f-page-btn">
-            <p>Let’s go</p>
-        </div>
+        <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
     </div>
 
     <footer>

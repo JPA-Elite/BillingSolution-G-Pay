@@ -263,9 +263,11 @@
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
-        <div class="f-page-btn">
-            <p>Let’s go</p>
-        </div>
+        <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
     </div>
 
     <footer>

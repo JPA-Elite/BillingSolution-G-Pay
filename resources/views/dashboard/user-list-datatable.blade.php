@@ -825,16 +825,17 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									</div>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
-									<a href="app-profile.html" class="dropdown-item ai-icon">
+									<a href="#" class="dropdown-item ai-icon">
 										<svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 											<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
 											<circle cx="12" cy="7" r="4"></circle>
 										</svg>
 										<span class="ml-2">Profile </span>
 									</a>
-									<a href="email-inbox.html" class="dropdown-item ai-icon">
+									<a href="/gpay.com/email-inbox" class="dropdown-item ai-icon">
 										<svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+											<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+											</path>
 											<polyline points="22,6 12,13 2,6"></polyline>
 										</svg>
 										<span class="ml-2">Inbox </span>
@@ -846,6 +847,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 											<line x1="21" y1="12" x2="9" y2="12"></line>
 										</svg>
 										<span class="ml-2">Logout </span>
+
 									</a>
 								</div>
 							</li>
@@ -854,7 +856,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 				</nav>
 				<div class="sub-header">
 					<div class="d-flex align-items-center flex-wrap mr-auto">
-						<h5 class="dashboard_bar">Dashboard</h5>
+						<h5 class="dashboard_bar">All Clients</h5>
 					</div>
 
 				</div>
@@ -996,9 +998,10 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 											</div>
 										</td>
 										<td>
-											<a href="javascript:void(0);" class="btn btn-primary mb-1 info-btn" data-toggle="modal" data-target="#sendMessageModal">Show info</a>
+											<a href="javascript:void(0);" class="btn btn-primary mb-1 info-btn">Show info</a>
 
 										</td>
+										
 
 										<td><span class="badge badge-warning">Active</span></td>
 										<td>
@@ -1021,6 +1024,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									<script>
 										var delete_btn = document.querySelectorAll('.delete');
 										var update_btn = document.querySelectorAll('.update');
+										var info_btn = document.querySelectorAll('.info-btn');
 										delete_btn.forEach((btn) => {
 											btn.addEventListener('click', function() {
 												var value = btn.parentElement.parentElement.parentElement.querySelector('#client_id').innerText;
@@ -1046,6 +1050,20 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 
 											});
 										});
+										info_btn.forEach((btn) => {
+											btn.addEventListener('click', function() {
+												var value = btn.parentElement.parentElement.querySelector('#client_id').innerText;
+												createCookie("id_target", value, "1");
+												// document.querySelector('.modal-delete').style.display = "block";
+											
+												window.location.href = '/gpay.com/users/info';
+
+
+
+											});
+										});
+
+
 
 										// Function to create the cookie
 										function createCookie(name, value, days) {
@@ -1239,17 +1257,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 
 
 		<script>
-			const info_btn = document.querySelectorAll('.info-btn');
-
-			info_btn.forEach((btn) => {
-				btn.addEventListener('click', function() {
-
-					var value = btn.parentElement.parentElement.querySelector('#client_email').innerText;
-					// createCookie('email_client', value, '1');
-					// alert(getCookie('email_client'));
-					// window.location.href = '/gpay.com/register/user';
-				});
-			});
+	
 
 			const btn_close = document.querySelector('.btn-close');
 			btn_close.addEventListener('click', function() {

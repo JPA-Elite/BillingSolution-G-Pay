@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "63564b52305e3736736f21a9"
+  },
+  "client_id": 12300,
+  "email": "oliverjean@gmail.com"
+},{
+  "_id": {
+    "$oid": "63564bc5305e3736736f21aa"
+  },
+  "client_id": 12300,
+  "email": "jamailapaquibas@gmail.com"
+},{
+  "_id": {
+    "$oid": "635658ec305e3736736f21af"
+  },
+  "client_id": 3002,
+  "email": "lorgembosque@gmail.com"
+},{
+  "_id": {
+    "$oid": "63565916305e3736736f21b0"
+  },
+  "client_id": 342,
+  "email": "larafuentes1234@gmail.com"
+}]

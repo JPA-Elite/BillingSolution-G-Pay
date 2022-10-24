@@ -193,7 +193,7 @@
                 you’ll be amazed at the time you have to focus on doing what <br>
                 you love and how much faster you get paid. Who would have <br>
                 thought invoice generator software could do that?</p>
-            <a href="https://youtube.com" class="text-decoration-none">
+            <a href="/gpay.com/register/" class="text-decoration-none">
                 <div class="cust-btn ">
                     <p>Try it Free</p>
                 </div>
@@ -220,9 +220,11 @@
                 <p> No more chasing clients for checks or waiting in the line at <br>
                     the bank. Let your clients pay their preferred way, online, and <br>get paid up to 11 days faster.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -239,9 +241,11 @@
                     business with G-Pay. Let G-Pay follow-up with clients so you<br>
                     can focus your time on what matters most.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -262,9 +266,11 @@
                     and you’ll sleep peacefully knowing you’ll get the money you<br>
                     need at the start.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -282,9 +288,11 @@
                     flow and make it easier to forecast upcoming workload and<br>
                     income.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -367,9 +375,11 @@
                 the average small business owner<br>
                 saves 192 hours* every year…</p>
 
-            <div class="cust-btn">
-                <p>Try it Free</p>
-            </div>
+            <a href="/gpay.com/register/" class="text-decoration-none">
+                <div class="cust-btn ">
+                    <p>Try it Free</p>
+                </div>
+            </a>
             <p class="text-center copy-info">No credit card required. Cancel anytime.</p>
         </div>
     </div>

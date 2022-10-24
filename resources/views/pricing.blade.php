@@ -212,7 +212,10 @@
                 <br>
                 <h3>5 Billable Clients</h3>
                 <br>
-                <button>Try it Free</button><br>
+                <a href="/gpay.com/register/">
+                    <button>Try it Free</button><br>
+                </a>
+
 
                 <small>Buy Now</small>
                 <br>
@@ -241,7 +244,9 @@
                     </li>
                 </ul>
 
-                <button>Try it Free</button><br>
+                <a href="/gpay.com/register/">
+                    <button>Try it Free</button><br>
+                </a>
                 <small>Buy Now</small>
 
             </div>
@@ -258,7 +263,9 @@
                 <h3>50 Billable Clients</h3>
                 <br>
 
-                <button>Try it Free</button><br>
+                <a href="/gpay.com/register/">
+                    <button>Try it Free</button><br>
+                </a>
                 <small>Buy Now</small>
                 <br><br><br>
                 <h2>TOP FEATURES</h2>
@@ -283,7 +290,9 @@
                     </li>
                 </ul>
 
-                <button>Try it Free</button><br>
+                <a href="/gpay.com/register/">
+                    <button>Try it Free</button><br>
+                </a>
                 <small>Buy Now</small>
 
             </div>
@@ -299,7 +308,9 @@
                 <img src="/src/img/55.png" alt="">
                 <h3>Unlimited Billable Clients</h3>
                 <br>
-                <button>Try it Free</button><br>
+                <a href="/gpay.com/register/">
+                    <button>Try it Free</button><br>
+                </a>
                 <small>Buy Now</small>
                 <br><br><br>
                 <h2>TOP FEATURES</h2>
@@ -323,7 +334,9 @@
                     <li>Advanced Payments ($20/mo)</li>
                 </ul>
 
-                <button>Try it Free</button><br>
+                <a href="/gpay.com/register/">
+                    <button>Try it Free</button><br>
+                </a>
                 <small>Buy Now</small>
 
             </div>
@@ -367,7 +380,9 @@
                     <li>Advanced Payments ($20/mo)</li>
                 </ul>
 
-                <button>Try it Free</button><br>
+                <a href="/gpay.com/register/">
+                    <button>Try it Free</button><br>
+                </a>
                 <small>Buy Now</small>
 
             </div>
@@ -407,9 +422,11 @@
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
-        <div class="f-page-btn">
-            <p>Let’s go</p>
-        </div>
+        <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
     </div>
 
     <footer>

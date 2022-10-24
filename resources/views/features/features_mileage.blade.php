@@ -190,10 +190,11 @@
             <h1 class="">Never Miss a Trip With Our<br>
                 Automated Mileage Tracker App</h1>
 
-            <a href="https://youtube.com" class="text-decoration-none  m-auto">
+            <a href="/gpay.com/register/" class="text-decoration-none  m-auto">
                 <div class="cust-btn cust-btn-mileage">
                     <p>Try it Free</p>
                 </div>
+
             </a>
             <img src="/src/img/m1.png" alt="">
         </div>
@@ -212,10 +213,11 @@
                     Tracking automatically logs each trip and also saves your travel <br>
                     history.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
-
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
             </div>
 
 
@@ -230,9 +232,11 @@
                     screen to classify a trip as business or personal, then send a <br>
                     mileage report directly to your email or download it from G-Pay.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -252,9 +256,11 @@
                     every business trip. Download accurate and ready-to-be-filed <br>
                     reports to deduct every mile and reduce your taxable income.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -271,9 +277,13 @@
             <p>WHAT ELSE?</p>
             <h1>Do Even More <br>
                 With Mileage Tracking</h1>
-            <div class="cust-btn cust-btn-mileage-app">
-                <p>Try it Free</p>
-            </div>
+
+
+            <a href="/gpay.com/register/" class="text-decoration-none">
+                <div class="cust-btn cust-btn-mileage-app">
+                    <p>Try it Free</p>
+                </div>
+            </a>
 
             <p class="copy-info">No credit card required. Cancel anytime.</p>
         </div>
@@ -311,9 +321,11 @@
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
-        <div class="f-page-btn">
-            <p>Let’s go</p>
-        </div>
+        <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
     </div>
 
     <footer>

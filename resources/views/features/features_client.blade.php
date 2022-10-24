@@ -186,17 +186,19 @@
     <div class="cl-background">
         <h1>Stay Connected to Clients With <br>
             Better Client Management</h1>
+        <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="cust-btn">
+                <p>Try Client Management</p>
+            </div>
+        </a>
 
-        <div class="cust-btn">
-            <p>Try Client Management</p>
-        </div>
 
         <img src="/src/img/client_pic.png" alt="">
     </div>
     <h1 class="text-center mb-4">Stay Connected to Clients With <br>
         Better Client Management</h1>
 
-    <a href="https://youtube.com" class="text-decoration-none">
+    <a href="/gpay.com/register/" class="text-decoration-none">
         <div class="cust-btn ">
             <p>Try it Free</p>
         </div>
@@ -211,9 +213,12 @@
                 <p>Keep clients informed and engaged with Projects, so<br>
                     you’re always on the same page. And log every billable<br> minute with Time Tracking to record all work and<br>
                     send more accurate invoices.</p>
-                <div class="cust-btn mt-3">
-                    <p>Try it Free</p>
-                </div>
+                <a href="" style="text-decoration: none;">
+                    <div class="cust-btn mt-3">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
+
             </div>
             <img src="/src/img/track_client.png" alt="">
         </div>
@@ -231,9 +236,12 @@
                     keep clients interested in their project. With Client<br>
                     Portal, Comments, Project Collaboration, File Sharing<br>
                     and more, relationships blossom.</p>
-                <div class="cust-btn mt-3">
-                    <p>Try it Free</p>
-                </div>
+
+                <a href="" style="text-decoration: none;">
+                    <div class="cust-btn mt-3">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
             </div>
             <img src="/src/img/trust_client.png" alt="">
         </div>
@@ -250,9 +258,11 @@
                     Client, Time Entry Details, Invoice Details, Payments <br>
                     Collected, Retainer Summary) tell you which clients<br>
                     help and hinder your business.</p>
-                <div class="cust-btn mt-3">
-                    <p>Try it Free</p>
-                </div>
+                <a href="" style="text-decoration: none;">
+                    <div class="cust-btn mt-3">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
             </div>
             <img src="/src/img/grow_client.png" alt="">
         </div>
@@ -270,9 +280,11 @@
                     prepayments through Credits so you know where you<br>
                     stand with each client. Then, auto-apply credits to <br>
                     invoices to keep your books accurate.</p>
-                <div class="cust-btn mt-3">
-                    <p>Try it Free</p>
-                </div>
+                <a href="" style="text-decoration: none;">
+                    <div class="cust-btn mt-3">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
             </div>
             <img src="/src/img/foster_client.png" alt="">
         </div>
@@ -283,9 +295,12 @@
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
-        <div class="f-page-btn">
-            <p>Let’s go</p>
-        </div>
+        <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
+
     </div>
 
     <footer>

@@ -194,7 +194,7 @@
                 for you and your client to get on the same page, start a project<br>
                 and even streamline your billing. From kickoff to billing, G-Pay<br>
                 supports your business every step of the way.</p>
-            <a href="https://youtube.com" class="text-decoration-none">
+            <a href="/gpay.com/register/" class="text-decoration-none">
                 <div class="cust-btn ">
                     <p>Try it Free</p>
                 </div>
@@ -214,9 +214,11 @@
                     ready-to-pay invoices in a flash. You’ll save time billing and<br>
                     pocket your money sooner.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -233,9 +235,11 @@
                     timeline and deliverables. Clients can’t help but be impressed <br>
                     and you’ll save time switching between other apps or emails.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -255,9 +259,11 @@
                     use Estimates and your client can approve a project with one<br>
                     click. You’ll be off to the races with confidence.
                 </p>
-                <div class="cust-btn">
-                    <p>Try it Free</p>
-                </div>
+                <a href="/gpay.com/register/" class="text-decoration-none">
+                    <div class="cust-btn ">
+                        <p>Try it Free</p>
+                    </div>
+                </a>
 
             </div>
 
@@ -329,19 +335,22 @@
             <p class="text-center app-header-txt">80% of users that accept online <br>
                 payments agree <br>
                 that it improves client relationships.</p>
-
-            <div class="cust-btn">
-                <p>Try it Free</p>
-            </div>
+            <a href="/gpay.com/register/" class="text-decoration-none">
+                <div class="cust-btn ">
+                    <p>Try it Free</p>
+                </div>
+            </a>
             <p class="text-center copy-info">No credit card required. Cancel anytime.</p>
         </div>
     </div>
 
     <div class="fo-page">
         <h1>Are you ready to get started?</h1>
-        <div class="f-page-btn">
-            <p>Let’s go</p>
-        </div>
+        <a href="/gpay.com/register/" style="text-decoration: none;">
+            <div class="f-page-btn">
+                <p>Let’s go</p>
+            </div>
+        </a>
     </div>
 
     <footer>

@@ -13,6 +13,7 @@ Route::view('/gpay.com/sign_up-confirmation_email-address/send_mail/', 'register
 Route::view('/gpay.com/sign_up-profile_information/', 'register/sign_up_profile_info');
 Route::view('/gpay.com/sign_up-about_business/', 'register/sign_up_about_business');
 Route::view('/gpay.com/sign_up-confirmation_email-address/', 'register/confirm_verification');
+Route::view('/gpay.com/register/forgot-password', 'dashboard/forgot-password');
 
 // Features
 Route::view('/gpay.com/features-client/', 'features/features_client');
@@ -32,6 +33,7 @@ Route::view('/gpay.com/whoitsfor_unemployed/', 'whoitsfor/whoitsfor_unemployed')
 Route::view('/gpay.com/whoitsfor_students/', 'whoitsfor/whoitsfor_students');
 
 // Landing Page
+Route::view('/', 'home');
 Route::view('/gpay.com/homepage/', 'home');
 Route::view('/gpay.com/about_us/', 'about');
 Route::view('/gpay.com/pricing/', 'pricing');
@@ -41,6 +43,8 @@ Route::view('/gpay.com/demo/', 'demo');
 // Dashboard Admin Page
 Route::view('/gpay.com/dashboard/', 'dashboard/index');
 Route::view('/gpay.com/users/', 'dashboard/user-list-datatable');
+Route::view('gpay.com/users/update_users', 'dashboard/user-update');
+Route::view('/gpay.com/users/info', 'dashboard/user-info');
 Route::view('/gpay.com/projects/', 'dashboard/project-list');
 Route::view('/gpay.com/analysis/', 'dashboard/analysis');
 Route::view('/gpay.com/transactions/', 'dashboard/transactions');

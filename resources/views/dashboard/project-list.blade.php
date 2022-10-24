@@ -1,6 +1,9 @@
-﻿<?php session_start();
+﻿<?php
+session_start();
 
 use App\Models\Register;
+use App\Models\projects;
+use App\Models\user_clients;
 use App\Models\Business_info;
 use App\Http\Controllers\user;
 
@@ -820,27 +823,29 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									</div>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
-									<a href="app-profile.html" class="dropdown-item ai-icon">
+									<a href="#" class="dropdown-item ai-icon">
 										<svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 											<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
 											<circle cx="12" cy="7" r="4"></circle>
 										</svg>
 										<span class="ml-2">Profile </span>
 									</a>
-									<a href="email-inbox.html" class="dropdown-item ai-icon">
+									<a href="/gpay.com/email-inbox" class="dropdown-item ai-icon">
 										<svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+											<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+											</path>
 											<polyline points="22,6 12,13 2,6"></polyline>
 										</svg>
 										<span class="ml-2">Inbox </span>
 									</a>
-									<a href="page-login.html" class="dropdown-item ai-icon">
+									<a href="/gpay.com/homepage/" class="dropdown-item ai-icon">
 										<svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 											<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
 											<polyline points="16 17 21 12 16 7"></polyline>
 											<line x1="21" y1="12" x2="9" y2="12"></line>
 										</svg>
 										<span class="ml-2">Logout </span>
+
 									</a>
 								</div>
 							</li>
@@ -965,53 +970,73 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 						</div>
 					</div>
 				</div>
+				<?php
+				// $data = projects::where('email', $_SESSION['email'])->first();
+				$data = projects::all();
+				$onprogress_count =  projects::where('status', 'progress');
+				$pending_count =  projects::where('status', 'pending');
+				$closed_count =  projects::where('status', 'closed');
+				?>
 				<div class="project-nav">
 					<div class="card-action card-tabs  mr-auto">
 						<ul class="nav nav-tabs style-2">
 							<li class="nav-item">
-								<a href="#navpills-1" class="nav-link active" data-toggle="tab" aria-expanded="false">All Projects <span class="badge badge-pill shadow-primary badge-primary">154</span></a>
+								<a href="#navpills-1" class="nav-link active" data-toggle="tab" aria-expanded="false">All Projects <span class="badge badge-pill shadow-primary badge-primary">{{$data -> count()}}</span></a>
 							</li>
 							<li class="nav-item">
-								<a href="#navpills-2" class="nav-link" data-toggle="tab" aria-expanded="false">On Progress <span class="badge badge-pill badge-info shadow-info">2</span></a>
+								<a href="#navpills-2" class="nav-link" data-toggle="tab" aria-expanded="false">On Progress <span class="badge badge-pill badge-info shadow-info">{{$onprogress_count -> count()}}</span></a>
 							</li>
 							<li class="nav-item">
-								<a href="#navpills-3" class="nav-link" data-toggle="tab" aria-expanded="true">Pending <span class="badge badge-pill badge-warning shadow-warning">4</span></a>
+								<a href="#navpills-3" class="nav-link" data-toggle="tab" aria-expanded="true">Pending <span class="badge badge-pill badge-warning shadow-warning">{{$pending_count -> count()}}</span></a>
 							</li>
 							<li class="nav-item">
-								<a href="#navpills-4" class="nav-link" data-toggle="tab" aria-expanded="true">Closed <span class="badge badge-pill badge-danger shadow-danger">1</span></a>
+								<a href="#navpills-4" class="nav-link" data-toggle="tab" aria-expanded="true">Closed <span class="badge badge-pill badge-danger shadow-danger">{{$closed_count -> count()}}</span></a>
 							</li>
 						</ul>
 					</div>
 					<a href="javascript:void(0);" class="btn btn-primary">+New Project</a>
 				</div>
 				<div class="tab-content project-list-group" id="myTabContent">
+
+
+
 					<div class="tab-pane fade active show" id="navpills-1">
+						@foreach($data as $i)
+
+
+						<?php $data2 = user_clients::where('client_id', $i->client_id)->get(); ?>
 						<div class="card">
 							<div class="project-info">
 								<div class="col-xl-3 my-2 col-lg-4 col-sm-6">
-									<p class="text-primary mb-1">#P-000441425</p>
-									<h5 class="title font-w600 mb-2"><a href="post-details.html" class="text-black">Redesign Kripton Mobile App</a></h5>
-									<div class="text-dark"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i>Created on Sep 8th, 2020</div>
+									<p class="text-primary mb-1">#P-{{$i -> project_id}}</p>
+									<h5 class="title font-w600 mb-2"><a href="post-details.html" class="text-black">{{$i -> project_title}}</a></h5>
+									<div class="text-dark"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i>Created on {{$i -> date_created}}</div>
 								</div>
 								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
 									<div class="d-flex align-items-center">
 										<div class="project-media">
-											<img src="/dash/images/users/pic1.jpg" alt="">
+											<!-- <img src="/dash/images/users/pic1.jpg" alt=""> -->
+											<img src="/dash/images/profile/pic1.jpg" width="20" alt="">
 										</div>
-										<div class="ml-2">
-											<span>Client</span>
-											<h5 class="mb-0 pt-1 font-w50 text-black">Alex Noer</h5>
+										<div class="ml-2" style="width:200px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">
+											<span>Client</span><br>
+											@foreach($data2 as $x)
+											<small class="mb-0 pt-1 font-w50 text-black" style="font-size: 10px;"> {{$x->email}}</small><br>
+											@endforeach
 										</div>
 									</div>
 								</div>
 								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
 									<div class="d-flex align-items-center">
 										<div class="project-media">
-											<img src="/dash/images/users/pic2.jpg" alt="">
+											<img src="/dash/images/profile/pic1.jpg" width="20" alt="">
 										</div>
 										<div class="ml-2">
 											<span>Person in charge</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Yoast Esec</h5>
+											<small class="mb-0 pt-1 font-w500 text-black">
+
+												{{$i -> in_charge}}
+											</small>
 										</div>
 									</div>
 								</div>
@@ -1022,13 +1047,13 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 										</div>
 										<div class="ml-2">
 											<span>Deadline</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Tuesday,Sep 29th 2020</h5>
+											<h5 class="mb-0 pt-1 font-w500 text-black">{{$i -> deadline}}</h5>
 										</div>
 									</div>
 								</div>
 								<div class="col-xl-2 my-2 col-lg-6 col-sm-6">
 									<div class="d-flex project-status align-items-center">
-										<span class="btn bgl-warning text-warning status-btn mr-3">Pending</span>
+										<span class="btn bgl-warning text-warning status-btn mr-3">{{$i -> status}}</span>
 										<div class="dropdown">
 											<a href="javascript:void(0);" data-toggle="dropdown" aria-expanded="false">
 												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1046,7 +1071,8 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 								</div>
 							</div>
 						</div>
-						<div class="card">
+						@endforeach
+						<!-- <div class="card">
 							<div class="project-info">
 								<div class="col-xl-3 my-2 col-lg-4 col-sm-6">
 									<p class="text-primary mb-1">#P-000441425</p>
@@ -1345,7 +1371,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<nav class="mt-5">
 							<ul class="pagination pagination-gutter pagination-primary no-bg">
 								<li class="page-item page-indicator">
@@ -1365,32 +1391,42 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 						</nav>
 					</div>
 					<div class="tab-pane fade" id="navpills-2">
+						@foreach($data as $i)
+
+						@if($i -> status == 'progress')
+						<?php $data2 = user_clients::where('client_id', $i->client_id)->get(); ?>
 						<div class="card">
 							<div class="project-info">
 								<div class="col-xl-3 my-2 col-lg-4 col-sm-6">
-									<p class="text-primary mb-1">#P-000441425</p>
-									<h5 class="title font-w600 mb-2"><a href="post-details.html" class="text-black">Build Branding Persona for Etza.id</a></h5>
-									<div class="text-dark"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i>Created on Sep 8th, 2020</div>
+									<p class="text-primary mb-1">#P-{{$i -> project_id}}</p>
+									<h5 class="title font-w600 mb-2"><a href="post-details.html" class="text-black">{{$i -> project_title}}</a></h5>
+									<div class="text-dark"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i>Created on {{$i -> date_created}}</div>
 								</div>
 								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
 									<div class="d-flex align-items-center">
 										<div class="project-media">
-											<img src="/dash/images/users/pic4.jpg" alt="">
+											<!-- <img src="/dash/images/users/pic1.jpg" alt=""> -->
+											<img src="/dash/images/profile/pic1.jpg" width="20" alt="">
 										</div>
-										<div class="ml-2">
-											<span>Client</span>
-											<h5 class="mb-0 pt-1 font-w50 text-black">Kevin Sigh</h5>
+										<div class="ml-2" style="width:200px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">
+											<span>Client</span><br>
+											@foreach($data2 as $x)
+											<small class="mb-0 pt-1 font-w50 text-black" style="font-size: 10px;"> {{$x->email}}</small><br>
+											@endforeach
 										</div>
 									</div>
 								</div>
 								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
 									<div class="d-flex align-items-center">
 										<div class="project-media">
-											<img src="/dash/images/users/pic3.jpg" alt="">
+											<img src="/dash/images/profile/pic1.jpg" width="20" alt="">
 										</div>
 										<div class="ml-2">
 											<span>Person in charge</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Kevin Sigh</h5>
+											<small class="mb-0 pt-1 font-w500 text-black">
+
+												{{$i -> in_charge}}
+											</small>
 										</div>
 									</div>
 								</div>
@@ -1401,13 +1437,13 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 										</div>
 										<div class="ml-2">
 											<span>Deadline</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Tuesday,Sep 29th 2020</h5>
+											<h5 class="mb-0 pt-1 font-w500 text-black">{{$i -> deadline}}</h5>
 										</div>
 									</div>
 								</div>
 								<div class="col-xl-2 my-2 col-lg-6 col-sm-6">
 									<div class="d-flex project-status align-items-center">
-										<span class="btn bgl-info text-info status-btn mr-3">Progress</span>
+										<span class="btn bgl-warning text-warning status-btn mr-3">{{$i -> status}}</span>
 										<div class="dropdown">
 											<a href="javascript:void(0);" data-toggle="dropdown" aria-expanded="false">
 												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1425,370 +1461,33 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 								</div>
 							</div>
 						</div>
-						<div class="card">
-							<div class="project-info">
-								<div class="col-xl-3 my-2 col-lg-4 col-sm-6">
-									<p class="text-primary mb-1">#P-000441425</p>
-									<h5 class="title font-w600 mb-2"><a href="post-details.html" class="text-black">Manage SEO for Eclan Company P..</a></h5>
-									<div class="text-dark"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i>Created on Sep 8th, 2020</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<img src="/dash/images/users/pic8.jpg" alt="">
-										</div>
-										<div class="ml-2">
-											<span>Client</span>
-											<h5 class="mb-0 pt-1 font-w50 text-black">Angela Moss</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<span class="img-placeholder bgl-danger text-danger">OJ</span>
-										</div>
-										<div class="ml-2">
-											<span>Person in charge</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Olivia Jonson</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-3 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="power-ic">
-											<i class="fa fa-bolt" aria-hidden="true"></i>
-										</div>
-										<div class="ml-2">
-											<span>Deadline</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Tuesday,Sep 29th 2020</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex project-status align-items-center">
-										<span class="btn bgl-info text-info status-btn mr-3">Progress</span>
-										<div class="dropdown">
-											<a href="javascript:void(0);" data-toggle="dropdown" aria-expanded="false">
-												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-												</svg>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right">
-												<a class="dropdown-item" href="javascript:void(0);">Edit</a>
-												<a class="dropdown-item" href="javascript:void(0);">Delete</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						@endif
+	
+						@endforeach
+						<nav class="mt-5">
+							<ul class="pagination pagination-gutter pagination-primary no-bg">
+								<li class="page-item page-indicator">
+									<a class="page-link" href="javascript:void(0)">
+										<i class="la la-angle-left"></i></a>
+								</li>
+								<li class="page-item "><a class="page-link" href="javascript:void(0)">1</a>
+								</li>
+								<li class="page-item active"><a class="page-link" href="javascript:void(0)">2</a></li>
+								<li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+								<li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+								<li class="page-item page-indicator">
+									<a class="page-link" href="javascript:void(0)">
+										<i class="la la-angle-right"></i></a>
+								</li>
+							</ul>
+						</nav>
+
 					</div>
 					<div class="tab-pane fade" id="navpills-3">
-						<div class="card">
-							<div class="project-info">
-								<div class="col-xl-3 my-2 col-lg-4 col-sm-6">
-									<p class="text-primary mb-1">#P-000441425</p>
-									<h5 class="title font-w600 mb-2"><a href="post-details.html" class="text-black">Build Branding Persona for Etza.id</a></h5>
-									<div class="text-dark"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i>Created on Sep 8th, 2020</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<img src="/dash/images/users/pic4.jpg" alt="">
-										</div>
-										<div class="ml-2">
-											<span>Client</span>
-											<h5 class="mb-0 pt-1 font-w50 text-black">Kevin Sigh</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<img src="/dash/images/users/pic3.jpg" alt="">
-										</div>
-										<div class="ml-2">
-											<span>Person in charge</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Kevin Sigh</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-3 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="power-ic">
-											<i class="fa fa-bolt" aria-hidden="true"></i>
-										</div>
-										<div class="ml-2">
-											<span>Deadline</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Tuesday,Sep 29th 2020</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex project-status align-items-center">
-										<span class="btn bgl-warning text-warning status-btn mr-3">Pending</span>
-										<div class="dropdown">
-											<a href="javascript:void(0);" data-toggle="dropdown" aria-expanded="false">
-												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-												</svg>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right">
-												<a class="dropdown-item" href="javascript:void(0);">Edit</a>
-												<a class="dropdown-item" href="javascript:void(0);">Delete</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="project-info">
-								<div class="col-xl-3 my-2 col-lg-4 col-sm-6">
-									<p class="text-primary mb-1">#P-000441425</p>
-									<h5 class="title font-w600 mb-2"><a href="post-details.html" class="text-black">Manage SEO for Eclan Company P..</a></h5>
-									<div class="text-dark"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i>Created on Sep 8th, 2020</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<img src="/dash/images/users/pic8.jpg" alt="">
-										</div>
-										<div class="ml-2">
-											<span>Client</span>
-											<h5 class="mb-0 pt-1 font-w50 text-black">Angela Moss</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<span class="img-placeholder bgl-danger text-danger">OJ</span>
-										</div>
-										<div class="ml-2">
-											<span>Person in charge</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Olivia Jonson</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-3 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="power-ic">
-											<i class="fa fa-bolt" aria-hidden="true"></i>
-										</div>
-										<div class="ml-2">
-											<span>Deadline</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Tuesday,Sep 29th 2020</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex project-status align-items-center">
-										<span class="btn bgl-warning text-warning status-btn mr-3">Pending</span>
-										<div class="dropdown">
-											<a href="javascript:void(0);" data-toggle="dropdown" aria-expanded="false">
-												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-												</svg>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right">
-												<a class="dropdown-item" href="javascript:void(0);">Edit</a>
-												<a class="dropdown-item" href="javascript:void(0);">Delete</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="project-info">
-								<div class="col-xl-3 my-2 col-lg-4 col-sm-6">
-									<p class="text-primary mb-1">#P-000441425</p>
-									<h5 class="title font-w600 mb-2"><a href="post-details.html" class="text-black">Reduce Website Page Size Omah</a></h5>
-									<div class="text-dark"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i>Created on Sep 8th, 2020</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<span class="img-placeholder bgl-info text-info">EA</span>
-										</div>
-										<div class="ml-2">
-											<span>Client</span>
-											<h5 class="mb-0 pt-1 font-w50 text-black">Endge Aes</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<span class="img-placeholder bgl-success text-success">BS</span>
-										</div>
-										<div class="ml-2">
-											<span>Person in charge</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Bella Sirait</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-3 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="power-ic">
-											<i class="fa fa-bolt" aria-hidden="true"></i>
-										</div>
-										<div class="ml-2">
-											<span>Deadline</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Tuesday,Sep 29th 2020</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex project-status align-items-center">
-										<span class="btn bgl-warning text-warning status-btn mr-3">Pending</span>
-										<div class="dropdown">
-											<a href="javascript:void(0);" data-toggle="dropdown" aria-expanded="false">
-												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-												</svg>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right">
-												<a class="dropdown-item" href="javascript:void(0);">Edit</a>
-												<a class="dropdown-item" href="javascript:void(0);">Delete</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="project-info">
-								<div class="col-xl-3 my-2 col-lg-4 col-sm-6">
-									<p class="text-primary mb-1">#P-000441425</p>
-									<h5 class="title font-w600 mb-2"><a href="post-details.html" class="text-black">Build Branding Persona for Etza.id</a></h5>
-									<div class="text-dark"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i>Created on Sep 8th, 2020</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<img src="/dash/images/users/pic4.jpg" alt="">
-										</div>
-										<div class="ml-2">
-											<span>Client</span>
-											<h5 class="mb-0 pt-1 font-w50 text-black">Kevin Sigh</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<img src="/dash/images/users/pic3.jpg" alt="">
-										</div>
-										<div class="ml-2">
-											<span>Person in charge</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Kevin Sigh</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-3 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="power-ic">
-											<i class="fa fa-bolt" aria-hidden="true"></i>
-										</div>
-										<div class="ml-2">
-											<span>Deadline</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Tuesday,Sep 29th 2020</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex project-status align-items-center">
-										<span class="btn bgl-warning text-warning status-btn mr-3">Pending</span>
-										<div class="dropdown">
-											<a href="javascript:void(0);" data-toggle="dropdown" aria-expanded="false">
-												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-												</svg>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right">
-												<a class="dropdown-item" href="javascript:void(0);">Edit</a>
-												<a class="dropdown-item" href="javascript:void(0);">Delete</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+
 					</div>
 					<div class="tab-pane fade" id="navpills-4">
-						<div class="card">
-							<div class="project-info">
-								<div class="col-xl-3 my-2 col-lg-4 col-sm-6">
-									<p class="text-primary mb-1">#P-000441425</p>
-									<h5 class="title font-w600 mb-2"><a href="post-details.html" class="text-black">Build Branding Persona for Etza.id</a></h5>
-									<div class="text-dark"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i>Created on Sep 8th, 2020</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<img src="/dash/images/users/pic4.jpg" alt="">
-										</div>
-										<div class="ml-2">
-											<span>Client</span>
-											<h5 class="mb-0 pt-1 font-w50 text-black">Kevin Sigh</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-4 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="project-media">
-											<img src="/dash/images/users/pic3.jpg" alt="">
-										</div>
-										<div class="ml-2">
-											<span>Person in charge</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Kevin Sigh</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-3 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex align-items-center">
-										<div class="power-ic">
-											<i class="fa fa-bolt" aria-hidden="true"></i>
-										</div>
-										<div class="ml-2">
-											<span>Deadline</span>
-											<h5 class="mb-0 pt-1 font-w500 text-black">Tuesday,Sep 29th 2020</h5>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-2 my-2 col-lg-6 col-sm-6">
-									<div class="d-flex project-status align-items-center">
-										<span class="btn bgl-danger text-danger status-btn mr-3">Closed</span>
-										<div class="dropdown">
-											<a href="javascript:void(0);" data-toggle="dropdown" aria-expanded="false">
-												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-												</svg>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right">
-												<a class="dropdown-item" href="javascript:void(0);">Edit</a>
-												<a class="dropdown-item" href="javascript:void(0);">Delete</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+
 					</div>
 				</div>
 			</div>
