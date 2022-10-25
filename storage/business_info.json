@@ -1,5 +1,41 @@
 [{
   "_id": {
+    "$oid": "6352511e16391e004806d1f3"
+  },
+  "company_name": "J-Bx",
+  "company_do": "Information Technology & Support",
+  "describe_business": "Its launching soon",
+  "currency_type": "PHP - Philippine Peso",
+  "estimate_revenue": "30000",
+  "long_service": "More than a week but less than a month",
+  "current_bill": "I don't use anything right now",
+  "email": "kc3452@gmail.com"
+},{
+  "_id": {
+    "$oid": "6353307ae666846bfc0dba73"
+  },
+  "company_name": "I dont have company name",
+  "company_do": "Other",
+  "describe_business": "Its a new business but its my full-time focus",
+  "currency_type": "PHP - Philippine Peso",
+  "estimate_revenue": "30000",
+  "long_service": "Less than a week",
+  "current_bill": "I don't use anything right now",
+  "email": "Janlord962qw@gmail.com"
+},{
+  "_id": {
+    "$oid": "63533210e666846bfc0dba75"
+  },
+  "company_name": "Santa",
+  "company_do": "Accounting & Finance",
+  "describe_business": "Its part-time or supplements my main income",
+  "currency_type": "USD - US Dollar",
+  "estimate_revenue": "Up to $30,000",
+  "long_service": "Less than a week",
+  "current_bill": "Spreadsheets and Word documents",
+  "email": "joshua.algadipe@student.passerellesnumeriques.org"
+},{
+  "_id": {
     "$oid": "6348ee133ff3a41b930bc33c"
   },
   "company_name": "i have no compnay",
@@ -116,4 +152,21 @@
   "long_service": "Real-time or within a few hours",
   "current_bill": "Spreadsheets and Word documents",
   "email": "jessicafuentes@gmail.com"
+},{
+  "_id": {
+    "$oid": "6357484b8422ff89ea0de1a3"
+  },
+  "company_name": "I don't have company yet",
+  "company_do": "Nothing",
+  "describe_business": "Not for now",
+  "currency_type": "Philippine Peso",
+  "estimate_revenue": "5000",
+  "long_service": "None as of now",
+  "current_bill": "No current billing",
+  "email": "leslybataluna@gmail.com",
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1666664570995"
+    }
+  }
 }]

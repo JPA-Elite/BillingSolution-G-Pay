@@ -2,6 +2,8 @@
 session_start();
 
 use App\Models\Register;
+use App\Models\projects;
+use App\Models\user_clients;
 
 $data = Register::where('email', $_SESSION['email'])->first();
 
@@ -1255,7 +1257,15 @@ $data = Register::where('email', $_SESSION['email'])->first();
 										<div class="tab-pane active show fade" id="monthly">
 											<div class="table-responsive">
 												<table class="table shadow-hover card-table border-no tbl-btn short-one">
+													<?php
+													// $data = projects::where('email', $_SESSION['email'])->first();
+													$data = projects::all();
+
+													?>
+
 													<tbody>
+														@foreach($data as $i)
+														<?php $data2 = user_clients::where('client_id', $i->client_id)->get(); ?>
 														<tr>
 															<td>
 																<span>
@@ -1266,160 +1276,43 @@ $data = Register::where('email', $_SESSION['email'])->first();
 																</span>
 															</td>
 															<td class="wspace-no">
-																<img src="https://www.etrustfund.org/static/media/icon.9966e768.png" alt="" width="24" height="24">
-																<span class="font-w600 text-black">Trust Forward</span>
+
+																<span class="font-w600 text-black">{{$i -> project_title}}</span><br>
+																<small>#P-{{$i -> project_id}}</small>
 															</td>
 															<td>
-																<span class="text-black">06:24:45 AM</span>
+																<span class="text-black">Created on {{$i -> date_created}}</span>
 															</td>
 															<td>
-																<span class="font-w600 text-black">+$5,553</span>
-															</td>
-															<td>
-																<span class="font-w600 ">Holder: Michael Lutchi</span>
-															</td>
-															<td><a class="btn btn-outline-success float-right" href="javascript:void(0);">Completed</a></td>
-														</tr>
-														<tr>
-															<td>
-																<span>
-																	<svg width="50" height="50" viewbox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<rect width="63" height="63" rx="14" fill="#747474"></rect>
-																		<path d="M22.1318 30.9043L22.1318 30.9043L22.1151 23.9961C22.1151 23.9922 22.1151 23.9887 22.1152 23.9854M22.1318 30.9043L22.6152 23.9909L22.1152 23.99C22.1152 23.9769 22.1157 23.9667 22.116 23.9623L22.1161 23.9608C22.1159 23.9641 22.1154 23.973 22.1152 23.9843C22.1152 23.9847 22.1152 23.985 22.1152 23.9854M22.1318 30.9043C22.1338 31.6982 22.7788 32.3403 23.5728 32.3384C24.3667 32.3365 25.0088 31.6914 25.0069 30.8975L25.0069 30.8975L24.9986 27.4687M22.1318 30.9043L24.9986 27.4687M22.1152 23.9854C22.1176 23.1968 22.7574 22.5545 23.5488 22.5524C23.5504 22.5524 23.5522 22.5523 23.554 22.5523L23.5561 22.5523L23.5732 22.5524L30.4671 22.569L30.4658 23.069L30.4671 22.569C31.2608 22.571 31.903 23.2159 31.9011 24.01C31.8992 24.8039 31.2541 25.446 30.4602 25.4441L30.4602 25.4441L27.0315 25.4358L40.2141 38.6184C40.7755 39.1798 40.7755 40.0899 40.2141 40.6513C39.6527 41.2127 38.7426 41.2127 38.1812 40.6513L24.9986 27.4687M22.1152 23.9854C22.1152 23.9874 22.1152 23.9894 22.1152 23.9914L24.9986 27.4687M23.5541 22.5524C23.5547 22.5524 23.5554 22.5524 23.5561 22.5524L23.5541 22.5524Z" fill="white" stroke="white"></path>
-																	</svg>
-																</span>
-															</td>
-															<td class="wspace-no">
-																<img src="https://static.vecteezy.com/system/resources/thumbnails/002/002/537/small/tax-obligation-seal-stamp-icon-free-vector.jpg" alt="" width="24" height="24">
-																<span class="font-w600 text-black">Tax-Pay</span>
-															</td>
-															<td>
-																<span class="text-black">06:24:45 AM</span>
-															</td>
-															<td>
-																<span class="font-w600 text-black">+$5,553</span>
-															</td>
-															<td>
-																<span class="font-w600">Holder: Cassandra Bai</span>
-															</td>
-															<td>
-																<a class="btn btn-outline-light float-right" href="javascript:void(0);">Pending</a>
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<span>
-																	<svg width="50" height="50" viewbox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<rect width="63" height="63" rx="14" fill="#FF5757"></rect>
-																		<path d="M22.1318 30.9043L22.1318 30.9043L22.1151 23.9961C22.1151 23.9922 22.1151 23.9887 22.1152 23.9854M22.1318 30.9043L22.6152 23.9909L22.1152 23.99C22.1152 23.9769 22.1157 23.9667 22.116 23.9623L22.1161 23.9608C22.1159 23.9641 22.1154 23.973 22.1152 23.9843C22.1152 23.9847 22.1152 23.985 22.1152 23.9854M22.1318 30.9043C22.1338 31.6982 22.7788 32.3403 23.5728 32.3384C24.3667 32.3365 25.0088 31.6914 25.0069 30.8975L25.0069 30.8975L24.9986 27.4687M22.1318 30.9043L24.9986 27.4687M22.1152 23.9854C22.1176 23.1968 22.7574 22.5545 23.5488 22.5524C23.5504 22.5524 23.5522 22.5523 23.554 22.5523L23.5561 22.5523L23.5732 22.5524L30.4671 22.569L30.4658 23.069L30.4671 22.569C31.2608 22.571 31.903 23.2159 31.9011 24.01C31.8992 24.8039 31.2541 25.446 30.4602 25.4441L30.4602 25.4441L27.0315 25.4358L40.2141 38.6184C40.7755 39.1798 40.7755 40.0899 40.2141 40.6513C39.6527 41.2127 38.7426 41.2127 38.1812 40.6513L24.9986 27.4687M22.1152 23.9854C22.1152 23.9874 22.1152 23.9894 22.1152 23.9914L24.9986 27.4687M23.5541 22.5524C23.5547 22.5524 23.5554 22.5524 23.5561 22.5524L23.5541 22.5524Z" fill="white" stroke="white"></path>
-																	</svg>
-																</span>
-															</td>
-															<td class="wspace-no">
-																<svg class="mr-2" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M12.2161 0.00189099C5.59822 -0.114662 0.118718 5.17136 0.00213245 11.7875C-0.0369579 13.869 0.462987 15.8373 1.36961 17.5623H5.14217V5.75207C5.14217 5.03013 6.12354 4.80045 6.44244 5.44835L12.0001 16.6998L17.5578 5.44903C17.8767 4.80045 18.8581 5.03013 18.8581 5.75207V17.5623H22.619C23.4625 15.9594 23.9645 14.1494 23.9981 12.2194C24.1147 5.60329 18.8341 0.1253 12.2161 0.00189099Z" fill="#FF782C"></path>
-																	<path d="M17.4865 18.2479V8.6892L12.6146 18.5516C12.3842 19.0199 11.6154 19.0199 11.385 18.5516L6.51376 8.6892V18.2479C6.51376 18.6264 6.20721 18.9335 5.82796 18.9335H2.22685C4.36036 21.9303 7.82911 23.9241 11.7841 23.9981C15.8968 24.0708 19.5672 22.0551 21.7871 18.9335H18.1723C17.793 18.9335 17.4865 18.6264 17.4865 18.2479Z" fill="#FF782C"></path>
-																</svg>
-																<span class="font-w600 text-black">Monero</span>
-															</td>
-															<td>
-																<span class="text-black">06:24:45 AM</span>
-															</td>
-															<td>
-																<span class="font-w600 text-black">-$912</span>
-															</td>
-															<td>
-																<span class="font-w600 ">Holder: Lara Fuentes</span>
+																<span class="font-w600 text-black">Clients:</span><br>
+																@foreach($data2 as $x)
+																<small class="mb-0 pt-1 font-w50 text-black" style="font-size: 10px;"> {{$x->email}}</small><br>
+																@endforeach
 
 															</td>
 															<td>
-																<a class="btn btn-outline-danger float-right" href="javascript:void(0);">Canceled</a>
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<span>
-																	<svg width="50" height="50" viewbox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<rect width="63" height="63" rx="14" fill="#71B945"></rect>
-																		<path d="M40.6186 32.7207L40.6186 32.7207L40.6353 39.6289C40.6354 39.6328 40.6354 39.6363 40.6353 39.6396M40.6186 32.7207L40.1353 39.6341L40.6353 39.635C40.6353 39.6481 40.6347 39.6583 40.6345 39.6627L40.6344 39.6642C40.6346 39.6609 40.6351 39.652 40.6353 39.6407C40.6353 39.6403 40.6353 39.64 40.6353 39.6396M40.6186 32.7207C40.6167 31.9268 39.9717 31.2847 39.1777 31.2866C38.3838 31.2885 37.7417 31.9336 37.7436 32.7275L37.7436 32.7275L37.7519 36.1563M40.6186 32.7207L37.7519 36.1563M40.6353 39.6396C40.6329 40.4282 39.9931 41.0705 39.2017 41.0726C39.2 41.0726 39.1983 41.0727 39.1965 41.0727L39.1944 41.0727L39.1773 41.0726L32.2834 41.056L32.2846 40.556L32.2834 41.056C31.4897 41.054 30.8474 40.4091 30.8494 39.615C30.8513 38.8211 31.4964 38.179 32.2903 38.1809L32.2903 38.1809L35.719 38.1892L22.5364 25.0066C21.975 24.4452 21.975 23.5351 22.5364 22.9737C23.0978 22.4123 24.0079 22.4123 24.5693 22.9737L37.7519 36.1563M40.6353 39.6396C40.6353 39.6376 40.6353 39.6356 40.6353 39.6336L37.7519 36.1563M39.1964 41.0726C39.1957 41.0726 39.1951 41.0726 39.1944 41.0726L39.1964 41.0726Z" fill="white" stroke="white"></path>
-																	</svg>
-																</span>
-															</td>
-															<td class="wspace-no">
-																<img src="https://www.clipartmax.com/png/middle/138-1386765_insured-cheaply-piggy-bank-logo-life-insurance-icon.png" alt="" width="24" height="24">
-																<span class="font-w600 text-black">Life Arc</span>
-															</td>
-															<td>
-																<span class="text-black">06:24:45 AM</span>
-															</td>
-															<td>
-																<span class="font-w600 text-black">+$7,762</span>
-															</td>
-															<td>
-																<span class="font-w600 ">Holder: Jhon Vincent Viscanyo</span>
-															</td>
-															<td>
-																<a class="btn btn-outline-success float-right" href="javascript:void(0);">Completed</a>
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<span>
-																	<svg width="50" height="50" viewbox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<rect width="63" height="63" rx="14" fill="#71B945"></rect>
-																		<path d="M40.6186 32.7207L40.6186 32.7207L40.6353 39.6289C40.6354 39.6328 40.6354 39.6363 40.6353 39.6396M40.6186 32.7207L40.1353 39.6341L40.6353 39.635C40.6353 39.6481 40.6347 39.6583 40.6345 39.6627L40.6344 39.6642C40.6346 39.6609 40.6351 39.652 40.6353 39.6407C40.6353 39.6403 40.6353 39.64 40.6353 39.6396M40.6186 32.7207C40.6167 31.9268 39.9717 31.2847 39.1777 31.2866C38.3838 31.2885 37.7417 31.9336 37.7436 32.7275L37.7436 32.7275L37.7519 36.1563M40.6186 32.7207L37.7519 36.1563M40.6353 39.6396C40.6329 40.4282 39.9931 41.0705 39.2017 41.0726C39.2 41.0726 39.1983 41.0727 39.1965 41.0727L39.1944 41.0727L39.1773 41.0726L32.2834 41.056L32.2846 40.556L32.2834 41.056C31.4897 41.054 30.8474 40.4091 30.8494 39.615C30.8513 38.8211 31.4964 38.179 32.2903 38.1809L32.2903 38.1809L35.719 38.1892L22.5364 25.0066C21.975 24.4452 21.975 23.5351 22.5364 22.9737C23.0978 22.4123 24.0079 22.4123 24.5693 22.9737L37.7519 36.1563M40.6353 39.6396C40.6353 39.6376 40.6353 39.6356 40.6353 39.6336L37.7519 36.1563M39.1964 41.0726C39.1957 41.0726 39.1951 41.0726 39.1944 41.0726L39.1964 41.0726Z" fill="white" stroke="white"></path>
-																	</svg>
-																</span>
-															</td>
-															<td class="wspace-no">
-																<svg class="mr-2" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M16 9.50011C15.9992 8.67201 15.216 8.00092 14.2501 8H9V11H14.2501C15.216 10.9993 15.9992 10.328 16 9.50011Z" fill="#FFAB2D"></path>
-																	<path d="M9 16H14.2501C15.2165 16 16 15.3285 16 14.5001C16 13.6715 15.2165 13 14.2501 13H9V16Z" fill="#FFAB2D"></path>
-																	<path d="M12 0C5.3726 0 0 5.3726 0 12C0 18.6274 5.3726 24 12 24C18.6274 24 24 18.6274 24 12C23.9924 5.37574 18.6243 0.00758581 12 0ZM18.0001 14.5713C17.9978 16.4641 16.4641 17.9978 14.5716 17.9999V18.8571C14.5716 19.3305 14.1876 19.7143 13.7144 19.7143C13.2409 19.7143 12.8572 19.3305 12.8572 18.8571V17.9999H11.1431V18.8571C11.1431 19.3305 10.7591 19.7143 10.2859 19.7143C9.8124 19.7143 9.42866 19.3305 9.42866 18.8571V17.9999H6.85733C6.38387 17.9999 6.00013 17.6161 6.00013 17.1429C6.00013 16.6695 6.38387 16.2857 6.85733 16.2857H7.71427V7.71427H6.85733C6.38387 7.71427 6.00013 7.33053 6.00013 6.85707C6.00013 6.38361 6.38387 5.99987 6.85733 5.99987H9.42866V5.14293C9.42866 4.66947 9.8124 4.28573 10.2859 4.28573C10.7593 4.28573 11.1431 4.66947 11.1431 5.14293V5.99987H12.8572V5.14293C12.8572 4.66947 13.2409 4.28573 13.7144 4.28573C14.1879 4.28573 14.5716 4.66947 14.5716 5.14293V5.99987C16.4571 5.99202 17.992 7.5139 18.0001 9.39937C18.0043 10.3978 17.5714 11.3481 16.8152 12C17.5643 12.6445 17.9967 13.5828 18.0001 14.5713Z" fill="#FFAB2D"></path>
-																</svg>
-																<span class="font-w600 text-black">Life Assurance</span>
-															</td>
-															<td>
-																<span class="text-black">06:24:45 AM</span>
-															</td>
-															<td>
-																<span class="font-w600 text-black">+$5,553</span>
-															</td>
-															<td>
-																<span class="font-w600 ">Holder: Kyle Flores</span>
+																<span class="font-w600 text-black">Deadline:</span><br>
+															
+																<small class="mb-0 pt-1 font-w50 text-black" style="font-size: 10px;"> {{$i -> deadline}}</small><br>
+																
 
 															</td>
 															<td>
-																<a class="btn btn-outline-success float-right" href="javascript:void(0);">Completed</a>
+																<span class="font-w600 ">Holder:</span> <br><small>{{$i -> in_charge}}</small>
+															</td>
+															<td>
+																@if($i -> status == 'progress')
+																<a class="btn btn-outline-success float-right"  href="javascript:void(0);">{{$i -> status}}</a>
+																@endif
+																@if($i -> status == 'pending')
+																<a class="btn btn-outline-warning float-right"  href="javascript:void(0);">{{$i -> status}}</a>
+																@endif
+																@if($i -> status == 'closed')
+																<a class="btn btn-outline-danger float-right"  href="javascript:void(0);">{{$i -> status}}</a>
+																@endif
 															</td>
 														</tr>
-														<tr>
-															<td>
-																<span>
-																	<svg width="50" height="50" viewbox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<rect width="63" height="63" rx="14" fill="#FF5757"></rect>
-																		<path d="M22.1318 30.9043L22.1318 30.9043L22.1151 23.9961C22.1151 23.9922 22.1151 23.9887 22.1152 23.9854M22.1318 30.9043L22.6152 23.9909L22.1152 23.99C22.1152 23.9769 22.1157 23.9667 22.116 23.9623L22.1161 23.9608C22.1159 23.9641 22.1154 23.973 22.1152 23.9843C22.1152 23.9847 22.1152 23.985 22.1152 23.9854M22.1318 30.9043C22.1338 31.6982 22.7788 32.3403 23.5728 32.3384C24.3667 32.3365 25.0088 31.6914 25.0069 30.8975L25.0069 30.8975L24.9986 27.4687M22.1318 30.9043L24.9986 27.4687M22.1152 23.9854C22.1176 23.1968 22.7574 22.5545 23.5488 22.5524C23.5504 22.5524 23.5522 22.5523 23.554 22.5523L23.5561 22.5523L23.5732 22.5524L30.4671 22.569L30.4658 23.069L30.4671 22.569C31.2608 22.571 31.903 23.2159 31.9011 24.01C31.8992 24.8039 31.2541 25.446 30.4602 25.4441L30.4602 25.4441L27.0315 25.4358L40.2141 38.6184C40.7755 39.1798 40.7755 40.0899 40.2141 40.6513C39.6527 41.2127 38.7426 41.2127 38.1812 40.6513L24.9986 27.4687M22.1152 23.9854C22.1152 23.9874 22.1152 23.9894 22.1152 23.9914L24.9986 27.4687M23.5541 22.5524C23.5547 22.5524 23.5554 22.5524 23.5561 22.5524L23.5541 22.5524Z" fill="white" stroke="white"></path>
-																	</svg>
-																</span>
-															</td>
-															<td class="wspace-no">
-																<img src="data:image/png;base64,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" alt="" width="24" height="24">
-																<span class="font-w600 text-black">X-Benefit</span>
-															</td>
-															<td>
-																<span class="text-black">06:24:45 AM</span>
-															</td>
-															<td>
-																<span class="font-w600 text-black">-$912</span>
-															</td>
-															<td>
-																<span class="font-w600 ">Holder: Peter Cordova</span>
-
-															</td>
-															<td>
-																<a class="btn btn-outline-danger float-right" href="javascript:void(0);">Canceled</a>
-															</td>
-														</tr>
+														@endforeach
 													</tbody>
 												</table>
 											</div>

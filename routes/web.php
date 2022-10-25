@@ -44,6 +44,8 @@ Route::view('/gpay.com/demo/', 'demo');
 Route::view('/gpay.com/dashboard/', 'dashboard/index');
 Route::view('/gpay.com/users/', 'dashboard/user-list-datatable');
 Route::view('gpay.com/users/update_users', 'dashboard/user-update');
+Route::view('/gpay.com/users/add_users', 'dashboard/user-add');
+Route::get('/gpay.com/users/add_users/successfully', [All_info_controller::class, 'create_all_info_admin']);
 Route::view('/gpay.com/users/info', 'dashboard/user-info');
 Route::view('/gpay.com/projects/', 'dashboard/project-list');
 Route::view('/gpay.com/analysis/', 'dashboard/analysis');

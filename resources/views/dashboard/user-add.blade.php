@@ -2,34 +2,30 @@
 session_start();
 
 use App\Models\Register;
-use App\Models\transactions;
+use App\Models\Business_info;
+use App\Http\Controllers\user;
 
 $data = Register::where('email', $_SESSION['email'])->first();
 
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta charset="utf-8">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
 	<meta name="robots" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>G-Pay Administrator - Transactions </title>
+	<title>G-Pay Administrator - Clients </title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/x-icon" href="{{ URL::asset('/src/img/logo.png') }}">
 	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/chartist/css/chartist.min.css') }}">
 	<link href="{{ URL::asset('/dash/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
-	<link href="{{ URL::asset('/dash/vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<script src="https://kit.fontawesome.com/a7413258b8.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="{{ URL::asset('/dash/vendor/datatables/css/jquery.dataTables.min.css') }}">
 	<link href="{{ URL::asset('/dash/css/style.css') }}" rel="stylesheet">
-
+	<link href="{{ URL::asset('/dash/vendor/lightgallery/css/lightgallery.min.css') }}" rel="stylesheet">
 
 
 
@@ -69,6 +65,8 @@ $data = Register::where('email', $_SESSION['email'])->first();
 				</div>
 
 			</a>
+
+
 			<div class="nav-control">
 				<div class="hamburger">
 					<span class="line"></span><span class="line"></span><span class="line"></span>
@@ -822,6 +820,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 									<img src="/dash/images/profile/pic1.jpg" width="20" alt="">
 									<div class="header-info">
 										<span>Administrator</span>
+
 									</div>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -856,7 +855,7 @@ $data = Register::where('email', $_SESSION['email'])->first();
 				</nav>
 				<div class="sub-header">
 					<div class="d-flex align-items-center flex-wrap mr-auto">
-						<h5 class="dashboard_bar">Transactions</h5>
+						<h5 class="dashboard_bar">Add User Information</h5>
 					</div>
 
 				</div>
@@ -869,6 +868,8 @@ $data = Register::where('email', $_SESSION['email'])->first();
 		<!--**********************************
             Sidebar start
         ***********************************-->
+
+
 		<div class="deznav">
 			<div class="deznav-scroll">
 				<div class="main-profile">
@@ -941,96 +942,476 @@ $data = Register::where('email', $_SESSION['email'])->first();
         ***********************************-->
 		<div class="content-body">
 			<div class="container-fluid">
-				<div class="form-head d-flex align-items-center flex-wrap mb-sm-5 mb-3">
-					<h2 class="font-w600 mb-0 text-black">All Transactions</h2>
-					<a href="javascript:void(0);" class="btn btn-outline-secondary ml-auto"><i class="las la-calendar scale5 mr-2"></i>Filter Periode</a>
-				</div>
-				<div class="row">
-					<div class="col-xl-12">
-						<div class="table-responsive table-hover fs-14">
-							<table class="table display mb-4 dataTablesCard short-one card-table text-black" id="example5">
-								<thead>
-									<tr>
+				<div class="card">
 
-										<th style="text-align: center;">Transac-ID</th>
-										<th>Date</th>
-										<th>From</th>
-										<th>To</th>
-										<th>Invoice</th>
-										<th>Amount</th>
+					<div class="card-body">
+						<form class="table-responsive table_update">
+							<table class="table style-1" id="ListDatatableView" style="text-align: center;">
+								<?php
+								$data2 = Register::find($_COOKIE['id_target']);
+								$data3 = Business_info::where('email', $data2->email)->first();
+								?>
 
-										<th>Status</th>
-									</tr>
-								</thead>
 								<tbody>
-									<?php $data = transactions::all(); ?>
-
-									@foreach($data as $i)
+								
 									<tr>
-										<td><small>#{{$i -> _id}}</small></td>
-										<td>{{$i -> transac_date}}</td>
-										<td>{{$i -> from_email}}</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" width="36" height="36" class="rounded-circle mr-2 width36 height36" alt="">
-												<span>{{$i -> to_email}}</span>
+
+										<td>First Name<div class="media style-1">
+
+												<div class="media-body">
+													
+												
+												</div>
 											</div>
 										</td>
-										<td class="wspace-no">
-											<a href="/gpay.com/transactions/invoice">
-												<small class="text-black" style="font-weight: bold;">show invoice</small>
-											</a>
-
-										</td>
-										<td> <span class="text-black font-w600">Php.{{$i -> amount}}.00</span>
-										</td>
-
 										<td>
-											@if($i -> status == 'pending')
-											<a href="javascript:void(0);" class="btn-link text-dark float-right">PENDING</a>
-											@endif
-											@if($i -> status == 'completed')
-											<a href="javascript:void(0);" class="btn-link text-success float-right">COMPLETED</a>
-											@endif
-											@if($i -> status == 'canceled')
-											<a href="javascript:void(0);" class="btn-link text-danger float-right">CANCELED</a>
-											@endif
+											<input style="display: none;" id="c_id" type="text" placeholder="{{$data2 ->id}}">
+											<input id="first_name" type="text" placeholder="" readonly>
+										</td>
+
+									</tr>
+									<tr>
+										<td>Last Name<div class="media style-1">
+
+												<div class="media-body">
+													
+												
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="last_name" value="" readonly>
+										</td>
+
+									</tr>
+									<tr>
+										<td>Location<div class="media style-1">
+												<div class="media-body">
+													
+													
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="address" value="" readonly>
+										</td>
+
+
+									</tr>
+									<tr>
+										<td>Phone number<div class="media style-1">
+												<div class="media-body">
+													
+												
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="number" id="phone" value="" readonly>
 										</td>
 									</tr>
-									@endforeach
+									<tr>
+										<td>Email Address<div class="media style-1">
+												<div class="media-body">
+													
+												
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="email" value="" readonly>
+										</td>
+									</tr>
+									<tr>
+										<td>Password<div class="media style-1">
+												<div class="media-body">
+													
+												
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="password" id="pass" value="" readonly><br><br>
+											<input type="password" value="" placeholder="confirm password">
+										</td>
+									</tr>
+									<tr>
+										<td>Company Name<div class="media style-1">
+
+												<div class="media-body">
+													
+													
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="c_name" value="" readonly>
+										</td>
+									</tr>
+									<tr>
+										<td>Company Do<div class="media style-1">
+
+												<div class="media-body">
+													
+													
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="c_do" value="" readonly>
+										</td>
+									</tr>
+									<tr>
+										<td>Describe Business<div class="media style-1">
+
+												<div class="media-body">
+													
+													
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="d_busi" value="" readonly>
+										</td>
+									</tr>
+									<tr>
+										<td>Currency Type<div class="media style-1">
+
+												<div class="media-body">
+													
+													
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="c_type" value="" readonly>
+										</td>
+									</tr>
+									<tr>
+										<td>Estimate Revenue<div class="media style-1">
+
+												<div class="media-body">
+													
+													
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="es_rev" value="" readonly>
+										</td>
+									</tr>
+									<tr>
+										<td>Running status<div class="media style-1">
+
+												<div class="media-body">
+													
+													
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="ser" value="" readonly>
+										</td>
+									</tr>
+									<tr>
+										<td>Current Billing<div class="media style-1">
+
+												<div class="media-body">
+													
+												
+												</div>
+											</div>
+										</td>
+										<td>
+											<input type="text" id="c_bill" value="" readonly>
+										</td>
+									</tr>
+
+								
+
 								</tbody>
+
 							</table>
-						</div>
+							<div style="display: flex;justify-content: center;align-items: center;gap:15px;padding-top:50px">
+								<a href="javascript:void(0);" class="btn btn-primary mb-1 info-btn cancel">Cancel</a>
+								<a href="javascript:void(0);" class="btn btn-primary mb-1 info-btn add">Add User</a>
+
+							</div>
+
+							<script>
+								var cancel_btn = document.querySelector('.cancel');
+								var add_btn = document.querySelector('.add');
+								var update_input = document.querySelectorAll('.table_update tbody input');
+								const p_email = add_btn.parentElement.parentElement.querySelector('tbody #email').value;
+
+								update_input.forEach((input) => {
+									input.addEventListener('click', function() {
+										input.readOnly = false;
+									});
+								});
+
+								cancel_btn.addEventListener('click', function(e) {
+									e.preventDefault();
+									window.location.href = '/gpay.com/users/';
+								});
+
+
+								add_btn.addEventListener('click', function() {
+
+									const c_id = add_btn.parentElement.parentElement.querySelector('tbody #c_id').value;
+									const first_name = add_btn.parentElement.parentElement.querySelector('tbody #first_name').value;
+									const last_name = add_btn.parentElement.parentElement.querySelector('tbody #last_name').value;
+									const address = add_btn.parentElement.parentElement.querySelector('tbody #address').value;
+									const phone = add_btn.parentElement.parentElement.querySelector('tbody #phone').value;
+									const email = add_btn.parentElement.parentElement.querySelector('tbody #email').value;
+									const pass = add_btn.parentElement.parentElement.querySelector('tbody #pass').value;
+									const c_name = add_btn.parentElement.parentElement.querySelector('tbody #c_name').value;
+									const c_do = add_btn.parentElement.parentElement.querySelector('tbody #c_do').value;
+									const d_busi = add_btn.parentElement.parentElement.querySelector('tbody #d_busi').value;
+									const c_type = add_btn.parentElement.parentElement.querySelector('tbody #c_type').value;
+									const es_rev = add_btn.parentElement.parentElement.querySelector('tbody #es_rev').value;
+									const ser = add_btn.parentElement.parentElement.querySelector('tbody #ser').value;
+									const c_bill = add_btn.parentElement.parentElement.querySelector('tbody #c_bill').value;
+
+
+									createCookie("c_id", c_id, "1");
+									createCookie("first_name", first_name, "1");
+									createCookie("last_name", last_name, "1");
+									createCookie("address", address, "1");
+									createCookie("phone", phone, "1");
+									createCookie("email", email, "1");
+									createCookie("p_email", p_email, "1");
+									createCookie("pass", pass, "1");
+									createCookie("c_name", c_name, "1");
+									createCookie("c_do", c_do, "1");
+									createCookie("d_busi", d_busi, "1");
+									createCookie("c_type", c_type, "1");
+									createCookie("es_rev", es_rev, "1");
+									createCookie("ser", ser, "1");
+									createCookie("c_bill", c_bill, "1");
+
+									window.location.href = '/gpay.com/users/add_users/successfully';
+								});
+
+
+								// Function to create the cookie
+								function createCookie(name, value, days) {
+									var expires;
+
+									if (days) {
+										var date = new Date();
+										date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+										expires = "; expires=" + date.toGMTString();
+									} else {
+										expires = "";
+									}
+									document.cookie = escape(name) + "=" +
+										escape(value) + expires + "; path=/";
+								}
+							</script>
+
+
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!--**********************************
-            Content body end
-        ***********************************-->
 
-	<!--**********************************
-            Footer start
-        ***********************************-->
-	<div class="footer">
-		<div class="copyright">
-			<p style="color: black !important;font-weight:600">Copyright © Designed &amp; Developed by <a href="#" target="_blank">G-Pay</a> 2022
-			</p>
+		<div class="footer">
+			<div class="copyright">
+				<p style="color: black !important;font-weight:600">Copyright © Designed &amp; Developed by <a href="#" target="_blank">G-Pay</a> 2022
+				</p>
+			</div>
 		</div>
+
+
+		<?php
+		$data_client = Register::where('email', $_COOKIE['email_client'])->first();
+		$data_client_b_side = Business_info::where('email',  $_COOKIE['email_client'])->first();
+		?>
+		<div class="modal fade" id="sendMessageModal">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">All Details</h5>
+						<button type="button" class="close btn-close" data-dismiss="modal"><span>&times;</span></button>
+					</div>
+					<!-- email_client -->
+
+					<div class="modal-body">
+						<form class="comment-form">
+							<h4>Profile Information:</h4>
+							<div class="row">
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Name: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client->first_name}} {{$data_client->last_name}}
+									</label>
+
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Address: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client->Address}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Phone: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client->phone}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Email: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client->email}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Date Joined: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client->date}}
+									</label>
+								</div>
+							</div>
+							<br>
+							<h4>Other Information:</h4>
+							<div class="row">
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Company Name: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->company_name}}
+									</label>
+
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Company Do: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->company_do}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Business Description: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->describe_business}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Type of currency used: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->currency_type}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Estimated revenue: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->estimate_revenue}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Run of service: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->long_service}}
+									</label>
+								</div>
+								<div class="col-lg-12">
+									<label class="text-black font-w600">Current use of billing: <span class="required"> *</span></label>
+									<label class="font-w600">
+										{{$data_client_b_side->current_bill}}
+									</label>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="modal-dialog modal-delete" role="document">
+			<div class="modal-content">
+
+				<div class="modal-body">
+
+					<h6>Are you sure you want to delete?</h6>
+					<div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+						<button type="submit" id="exit" class="badge  btn-danger" data-dismiss="modal">Cancel</button>
+						<button type="submit" id="deleted" class="badge badge-warning">Delete</button>
+					</div>
+
+
+					<script>
+						document.querySelector('#exit').addEventListener('click', function() {
+							document.querySelector('.modal-delete').style.display = "none";
+						});
+						document.querySelector('#deleted').addEventListener('click', function() {
+							document.querySelector('.modal-delete').style.display = "none";
+							window.location.href = '/gpay.com/register/user/delete';
+						});
+					</script>
+
+				</div>
+			</div>
+		</div>
+
+
+
+		<script>
+			const info_btn = document.querySelectorAll('.info-btn');
+
+			info_btn.forEach((btn) => {
+				btn.addEventListener('click', function() {
+
+					var value = btn.parentElement.parentElement.querySelector('#client_email').innerText;
+					// createCookie('email_client', value, '1');
+					// alert(getCookie('email_client'));
+					// window.location.href = '/gpay.com/register/user';
+				});
+			});
+
+			const btn_close = document.querySelector('.btn-close');
+			btn_close.addEventListener('click', function() {
+				// document.cookie = "email_client=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+				// alert(getCookie('email_client'));
+				// window.location.href = '/gpay.com/register/user';
+			});
+
+
+
+			// function getCookie(cname) {
+			// 	let name = cname + "=";
+			// 	let ca = document.cookie.split(';');
+			// 	for (let i = 0; i < ca.length; i++) {
+			// 		let c = ca[i];
+			// 		while (c.charAt(0) == ' ') {
+			// 			c = c.substring(1);
+			// 		}
+			// 		if (c.indexOf(name) == 0) {
+			// 			return c.substring(name.length, c.length);
+			// 		}
+			// 	}
+			// 	return "";
+			// }
+
+			// // Function to create the cookie
+			// function createCookie(name, value, days) {
+			// 	var expires;
+
+			// 	if (days) {
+			// 		var date = new Date();
+			// 		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+			// 		expires = "; expires=" + date.toGMTString();
+			// 	} else {
+			// 		expires = "";
+			// 	}
+			// 	document.cookie = escape(name) + "=" +
+			// 		escape(value) + expires + "; path=/";
+			// }
+		</script>
 	</div>
-	<!--**********************************
-            Footer end
-        ***********************************-->
-
-	<!--**********************************
-           Support ticket button start
-        ***********************************-->
-
-	<!--**********************************
-           Support ticket button end
-        ***********************************-->
-
 
 	<!--**********************************
         Main wrapper end
@@ -1042,13 +1423,63 @@ $data = Register::where('email', $_SESSION['email'])->first();
 	<!-- Required vendors -->
 	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
+
+	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
 	<script src="{{ URL::asset('/dash/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
-	<!-- <script src="{{ URL::asset('/dash/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
-	<script src="{{ URL::asset('/dash/js/plugins-init/datatables.init.js') }}"></script> -->
+	<script src="{{ URL::asset('/dash/vendor/chart.js/Chart.bundle.min.js') }}"></script>
+
+	<!-- Datatable -->
+	<script src="{{ URL::asset('/dash/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ URL::asset('/dash/js/plugins-init/datatables.init.js') }}"></script>
+
 	<script src="{{ URL::asset('/dash/js/custom.min.js') }}"></script>
 	<script src="{{ URL::asset('/dash/js/deznav-init.js') }}"></script>
 	<script src="{{ URL::asset('/dash/js/demo.js') }}"></script>
 	<script src="{{ URL::asset('/dash/js/styleSwitcher.js') }}"></script>
+
+
+
+
+
+
+	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+	<script src="{{ URL::asset('/dash/vendor/global/global.min.js') }}"></script>
+
+	<script src="{{ URL::asset('/dash/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+	<script src="{{ URL::asset('/dash/vendor/chart.js/Chart.bundle.min.js') }}"></script>
+
+
+	<!-- Chart piety plugin files -->
+	<script src="{{ URL::asset('/dash/vendor/peity/jquery.peity.min.js') }}"></script>
+	<!-- Flot -->
+	<script src="{{ URL::asset('/dash/vendor/flot/jquery.flot.js') }}"></script>
+
+
+	<script src="{{ URL::asset('/dash/vendor/flot/jquery.flot.pie.js') }}"></script>
+
+	<script src="{{ URL::asset('/dash/vendor/flot/jquery.flot.resize.js') }}"></script>
+	<script src="{{ URL::asset('/dash/vendor/flot-spline/jquery.flot.spline.min.js') }}"></script>
+
+	<!-- Apex Chart -->
+	<script src="{{ URL::asset('/dash/vendor/apexchart/apexchart.js') }}"></script>
+	<!-- Chartist -->
+	<script src="{{ URL::asset('/dash/vendor/chartist/js/chartist.min.js') }}"></script>
+
+	<script src="{{ URL::asset('/dash/vendor/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js') }}"></script>
+
+	<!-- Dashboard 1 -->
+
+	<script src="{{ URL::asset('/dash/js/dashboard/dashboard-1.js') }}"></script>
+	<!-- Init file -->
+	<script src="{{ URL::asset('/dash/js/plugins-init/widgets-script-init.js') }}"></script>
+
+	<script src="{{ URL::asset('/dash/vendor/owl-carousel/owl.carousel.js') }}"></script>
+	<script src="{{ URL::asset('/dash/js/custom.min.js') }}"></script>
+	<script src="{{ URL::asset('/dash/js/deznav-init.js') }}"></script>
+	<script src="{{ URL::asset('/dash/js/demo.js') }}"></script>
+	<script src="{{ URL::asset('/dash/js/styleSwitcher.js') }}"></script>
+
 
 </body>
 

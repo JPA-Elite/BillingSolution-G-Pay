@@ -950,7 +950,7 @@ $data2 = Register::where('email', '!=', $_SESSION['email'])->get();
 							<span>Below shows the list of clients</span>
 						</div>
 						<a href="javascript:void(0);" class="btn btn-info light mr-3"><i class="las la-download scale3 mr-2"></i>Import Csv</a>
-						<a href="javascript:void(0);" class="btn btn-info">+ Add Client</a>
+						<a href="/gpay.com/users/add_users" class="btn btn-info">+ Add Client</a>
 					</div>
 					<div class="card-body">
 						<div class="table-responsive">

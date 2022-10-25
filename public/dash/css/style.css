@@ -229,7 +229,9 @@ html {
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
-
+footer a{
+  background-color: black !important;
+}
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -2156,8 +2158,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #212529;
-  background-color: #eb8153;
-  border-color: #eb8153; }
+  background-color: #51A6F5 !important;
+  border-color: #51A6F5 !important; }
   .btn-primary:hover {
     color: #fff;
     background-color: #e76831;
@@ -9289,7 +9291,7 @@ a {
       color:white !important;
       margin: 0; }
     .footer .copyright a {
-      color: var(--primary); }
+      color: #6f42c1; }
 
 [data-sidebar-style="mini"] .nav-control,
 [data-layout="horizontal"] .nav-control {

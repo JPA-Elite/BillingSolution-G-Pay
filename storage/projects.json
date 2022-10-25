@@ -31,4 +31,15 @@
   "date_created": "January, 12, 2022",
   "status": "pending",
   "client_id": 342
+},{
+  "_id": {
+    "$oid": "635737244aaaf1ee6d983f68"
+  },
+  "project_id": 11,
+  "project_title": "Vornilla",
+  "in_charge": "joelalgadf@gmail.com",
+  "deadline": "June 1, 2022",
+  "date_created": "January, 12, 2022",
+  "status": "closed",
+  "client_id": 342
 }]
